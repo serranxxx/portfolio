@@ -5,13 +5,13 @@
         height: 20%;
         width: auto;
         position: absolute;
-        top: 20%;
+        top: 30%;
         right: 30%;
     }
 
     .image-text {
         height: auto;
-        width: 100%;
+        width: 80%;
         /* display:none */
     }
 
@@ -20,7 +20,7 @@
     }
 
     .button-container {
-        width: 100%;
+        width: 80%;
         height: 8vh;
 
     }

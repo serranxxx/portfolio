@@ -60,14 +60,6 @@ export const LayoutApp = () => {
           marginLeft: '5%'
         }} />
 
-
-
-
-
-
-
-
-
       </div>
 
       {/* <div
@@ -86,9 +78,9 @@ export const LayoutApp = () => {
           <HomeCards name="San Pancrasio" gif={gifs.pancrasio} />
 
 
-        </div> */}
+        </div>  */}
 
-      {/* <Footer style={{ backgroundColor: '#bcb8b1' }} /> */}
+  
     </>
 
 
