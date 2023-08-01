@@ -19,26 +19,28 @@ export const HomeCards = (props) => {
 
             }}>
                 <img src={props.gif} style={{
-                    height: '40vh', width: 'auto', borderRadius: '0.5vh',
+                    height: '20vw', width: 'auto', borderRadius: '0.5vh',
                     boxShadow: '0 0 20px #000000050',
                     border: '0px solid #463f3a',
-                    marginRight: `${props.order === 'row' ? '15vh' : '0vh'}`,
-                    marginLeft: `${props.order !== 'row' ? '15vh' : '0vh'}`,
+                    marginRight: `${props.order === 'row' ? '10vw' : '0vh'}`,
+                    marginLeft: `${props.order !== 'row' ? '10vw' : '0vh'}`,
                 }} />
 
                 <Col style={{
-                    width: '60vh',
-                    marginLeft: '5vh',
+                    width: '35vw',
+                    marginLeft: '1vw',
+                    marginRight:'1vw'
                     
                 }}>
                     <p style={{
-                        fontSize: '4vh', width: '100%', textAlign: 'center',
+                        fontSize: '2.2em', width: '100%', textAlign: 'center',
                         fontWeight: 650, color: '#463f3a'
                     }}>{props.name}</p>
 
                     <p style={{
-                        fontSize: '2vh', width: '100%', textAlign: 'left',
-                        fontWeight: 500, wordWrap: 'break-word', color: '#463f3a'
+                        fontSize: '1.2em', width: '100%', textAlign: 'left',
+                        fontWeight: 400, wordWrap: 'break-word', color: '#463f3a',
+                        // fontStyle:'italic'
                     }}>{props.text}</p>
 
                     <div style={{
@@ -50,9 +52,9 @@ export const HomeCards = (props) => {
                             <Button
                                 // onClick={() => props.action(props.gif)}
                                 style={{
-                                    width: '20vh', fontWeight: 500, height: '5vh',
+                                    width: '12vw', fontWeight: 500, height: 'auto',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1.5vh', fontSize: '2vh'
+                                    borderRadius: '1.5vh', fontSize: '1.3em'
                                 }}
                             >Full project</Button>
                         </Link>

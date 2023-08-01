@@ -55,8 +55,8 @@ export const MainProjects = () => {
                 }}>
 
                     <p style={{
-                        marginLeft: '3vh',
-                        fontSize: '5vh', fontWeight: 450, color: '#463f3a', fontFamily: 'Berlin Sans FB',
+                        marginLeft: '1vw',
+                        fontSize: '2.3em', fontWeight: 450, color: '#463f3a', fontFamily: 'Berlin Sans FB',
                     }}>Projects</p>
                     <Link to="/portfolio/main" style={{
                         marginRight: '3vh'
