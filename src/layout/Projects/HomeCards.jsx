@@ -90,7 +90,7 @@ export const HomeCards = (props) => {
                 }} />
 
                 <p style={{
-                    fontSize: '0.9em', width: '80%', textAlign: 'center',
+                    fontSize: '0.9em', width: '80%', textAlign: 'justify',
                     fontWeight: 400, wordWrap: 'break-word', color: '#463f3a',
                     // fontStyle:'italic'
                 }}>{props.text}</p>
