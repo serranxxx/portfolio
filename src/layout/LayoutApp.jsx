@@ -1,49 +1,53 @@
 import { Button, Carousel, Col, Layout, Row } from 'antd'
 import React from 'react'
-import { HomeCards } from './HomeCards'
+import { HomeCards } from './Projects/HomeCards'
 import { assets, gifs } from './hooks/gifsPaths'
+import {  useNavigate } from 'react-router-dom'
 const { Footer } = Layout
 
 export const LayoutApp = () => {
 
+  const navigate = useNavigate()
 
   return (
     <>
 
       <div
-      className='container'
+        className='container'
         style={{
           height: '100vh', width: 'auto', backgroundColor: '#f4f3ee',
           display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}
       >
         <Col style={{
-          height:'100%', 
-          display:'flex', alignItems:'center', justifyContent:'center',
-          flexDirection:'column'
+          height: '100%',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          flexDirection: 'column'
         }}>
           <img src={assets.text} className='image-text' />
 
-          <Row 
-          className='button-container'
-          style={{
-            display:'flex', alignItems:'center'
-          }}>
-            <Button
-            className='button-main'
-              style={{
-                fontWeight: 500, height: '60%', width: '30%',
-                color: '#f4f3ee', backgroundColor: '#7765e3',
-                borderRadius: '1.5vh', 
-              }}
-            >Projects</Button>
+          <Row
+            className='button-container'
+            style={{
+              display: 'flex', alignItems: 'center'
+            }}>
+           
+              <Button
+                className='button-main'
+                onClick={() => navigate(`/portfolio/main-projects`)}
+                style={{
+                  fontWeight: 500, height: '60%', width: '30%',
+                  color: '#f4f3ee', backgroundColor: '#7765e3',
+                  borderRadius: '1.5vh',
+                }}
+              >Projects</Button>
 
             <Button
-            className='button-main'
+              className='button-main'
               style={{
                 fontWeight: 500, height: '60%', width: '30%',
                 color: '#7765e3', border: '2px solid #7765e3',
-                borderRadius: '1.5vh',  marginLeft: '2vh',
+                borderRadius: '1.5vh', marginLeft: '2vh',
                 backgroundColor: '#f4f3ee'
               }}
             >About me</Button>
@@ -52,13 +56,13 @@ export const LayoutApp = () => {
 
 
 
-        <img 
-        className='image-draw'
-        src={assets.draw} style={{
-          
-          
-          marginLeft: '5%'
-        }} />
+        <img
+          className='image-draw'
+          src={assets.draw} style={{
+
+
+            marginLeft: '5%'
+          }} />
 
       </div>
 
@@ -80,7 +84,7 @@ export const LayoutApp = () => {
 
         </div>  */}
 
-  
+
     </>
 
 
