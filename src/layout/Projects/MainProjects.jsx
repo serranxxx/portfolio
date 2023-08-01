@@ -62,6 +62,7 @@ export const MainProjects = () => {
                         marginRight: '3vh'
                     }}>
                         <Button
+                        className='button'
                             type='ghost'
                             icon={<AiOutlineRollback size={30} style={{ color: '#463f3a' }} />} />
                     </Link>

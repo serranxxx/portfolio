@@ -33,22 +33,23 @@ export const LayoutApp = () => {
             }}>
            
               <Button
-                className='button-main'
+                className='button-main button'
                 onClick={() => navigate(`/portfolio/main-projects`)}
                 style={{
-                  fontWeight: 500, height: '60%', width: '30%',
+                  fontWeight: 500, height: 'auto', width: 'auto',
                   color: '#f4f3ee', backgroundColor: '#7765e3',
-                  borderRadius: '1.5vh',
+                  borderRadius: '1.5vh', padding:'1% 5% 1% 5%',
+                  border: '2px solid #7765e3',
                 }}
               >Projects</Button>
 
             <Button
-              className='button-main'
+              className='button-main button'
               style={{
-                fontWeight: 500, height: '60%', width: '30%',
+                fontWeight: 500, height:'auto', width: 'auto',
                 color: '#7765e3', border: '2px solid #7765e3',
                 borderRadius: '1.5vh', marginLeft: '2vh',
-                backgroundColor: '#f4f3ee'
+                backgroundColor: '#f4f3ee', padding:'1% 5% 1% 5%',
               }}
             >About me</Button>
           </Row>

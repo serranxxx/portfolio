@@ -10,14 +10,16 @@ export const HomeCards = (props) => {
 
         <>
 
-            
-            <div style={{
-                width: 'auto', height: 'auto', backgroundColor: '#f4f3ee',
-                marginTop: '2vh', display: 'flex', paddingTop: '5%', paddingBottom: '5%',
-                alignItems: 'center', justifyContent: 'center', flexDirection: `${props.order}`
-                // border:'2px solid #463f3a80',
 
-            }}>
+            <div
+                className='home-card-large'
+                style={{
+                    width: 'auto', height: 'auto', backgroundColor: '#f4f3ee',
+                    marginTop: '2vh', paddingTop: '5%', paddingBottom: '5%',
+                    alignItems: 'center', justifyContent: 'center', flexDirection: `${props.order}`
+                    // border:'2px solid #463f3a80',
+
+                }}>
                 <img src={props.gif} style={{
                     height: '20vw', width: 'auto', borderRadius: '0.5vh',
                     boxShadow: '0 0 20px #000000050',
@@ -29,8 +31,8 @@ export const HomeCards = (props) => {
                 <Col style={{
                     width: '35vw',
                     marginLeft: '1vw',
-                    marginRight:'1vw'
-                    
+                    marginRight: '1vw'
+
                 }}>
                     <p style={{
                         fontSize: '2.2em', width: '100%', textAlign: 'center',
@@ -48,11 +50,12 @@ export const HomeCards = (props) => {
                         display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}>
                         <Link to={props.action(props.gif)}
-                        target='_blank'>
+                            target='_blank'>
                             <Button
+                                className='button'
                                 // onClick={() => props.action(props.gif)}
                                 style={{
-                                    width: '12vw', fontWeight: 500, height: 'auto',
+                                    width: '10vw', fontWeight: 500, height: 'auto',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
                                     borderRadius: '1.5vh', fontSize: '1.3em'
                                 }}
@@ -65,6 +68,54 @@ export const HomeCards = (props) => {
 
 
             </div>
+
+            <div
+                className='home-card-small'
+                style={{
+                    width: 'auto', height: 'auto', backgroundColor: '#f4f3ee',
+                    marginTop: '2vh',  paddingBottom: '5%',
+                    alignItems: 'center', justifyContent: 'center', flexDirection: `column`
+                    // border:'2px solid #463f3a80',
+
+                }}>
+                <p style={{
+                    fontSize: '2.2em', width: '100%', textAlign: 'center',
+                    fontWeight: 650, color: '#463f3a'
+                }}>{props.name}</p>
+                
+                <img src={props.gif} style={{
+                    height: 'auto', width: '80%', borderRadius: '0.5vh',
+                    boxShadow: '0 0 20px #000000050',
+                    border: '0px solid #463f3a',marginBottom:'2vh'
+                }} />
+
+                <p style={{
+                    fontSize: '0.9em', width: '80%', textAlign: 'center',
+                    fontWeight: 400, wordWrap: 'break-word', color: '#463f3a',
+                    // fontStyle:'italic'
+                }}>{props.text}</p>
+
+                <div style={{
+                    width: '100%', height: '10vh',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+                    <Link to={props.action(props.gif)}
+                        target='_blank'>
+                        <Button
+                            className='button'
+                            // onClick={() => props.action(props.gif)}
+                            style={{
+                                width: 'auto', fontWeight: 500, height: 'auto',
+                                color: '#f4f3ee', backgroundColor: '#7765e3',
+                                borderRadius: '1.5vh', fontSize: '1.3em'
+                            }}
+                        >Full project</Button>
+                    </Link>
+
+                </div>
+
+            </div>
+
             <hr style={{
                 width: '90%', border: '2px solid #463f3a20',
                 borderRadius: '2vh'

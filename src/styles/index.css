@@ -12,3 +12,10 @@ code {
     monospace;
 }
 
+.button {
+  transition: transform 0.35s ease-out;
+}
+
+.button:hover{
+  transform: translateY(-5px);
+}
