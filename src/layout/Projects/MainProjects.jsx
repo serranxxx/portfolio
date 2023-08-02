@@ -1,10 +1,11 @@
 import React from 'react'
 import { HomeCards } from './HomeCards'
 import { gifs } from '../hooks/gifsPaths'
-import { Button } from 'antd'
+import { Button, Row } from 'antd'
 import { Link, useNavigate } from 'react-router-dom'
 import { GrProjects } from "react-icons/gr";
 import { AiOutlineRollback } from "react-icons/ai";
+import { HiOutlineTranslate } from "react-icons/hi";
 
 const taskify_text = "A classic to-do list project with a twist! While rooted in the simplicity of a traditional to-do list, Taskify is meticulously crafted to focus on delivering a truly unique and creative user experience. It goes beyond the standard by offering users the exciting option to create projects with multiple tasks"
 const avatar_text = "The ultimate platform to craft your fully personalized avatars! Unleash your creativity as you select everything from skin tone to accessories, designing avatars that truly reflect your unique identity. Save, delete, and favorite your creations."
@@ -58,14 +59,51 @@ export const MainProjects = () => {
                         marginLeft: '1vw',
                         fontSize: '2.3em', fontWeight: 450, color: '#463f3a', fontFamily: 'Berlin Sans FB',
                     }}>Projects</p>
-                    <Link to="/portfolio/main" style={{
-                        marginRight: '3vh'
+
+                    <Row style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
                     }}>
+
+
+                        <Link to="/portfolio/resume" style={{
+                            marginRight: '0vh'
+                        }}>
+                            <Button
+                                className='button'
+                                style={{
+                                    margin: '0 0vh 0 1vh',
+                                    width: 'auto', fontWeight: 500, height: 'auto',
+                                    color: '#f4f3ee', backgroundColor: '#7765e3',
+                                    borderRadius: '1vh', fontSize: '1.1em'
+                                }}>Resume</Button>
+                        </Link>
+
                         <Button
-                        className='button'
-                            type='ghost'
-                            icon={<AiOutlineRollback size={30} style={{ color: '#463f3a' }} />} />
-                    </Link>
+                            icon={<HiOutlineTranslate style={{ color: '#f4f3ee' }} />}
+                            className='button'
+                            style={{
+                                margin: '0 0.5vh 0 0.5vh',
+                                aspectRatio: '1/1', fontWeight: 500, height: 'auto',
+                                color: '#f4f3ee', backgroundColor: '#7765e3',
+                                borderRadius: '1vh', fontSize: '1.1em'
+                            }} />
+
+                        <Link to="/portfolio/main" style={{
+                            marginRight: '2vh'
+                        }}>
+                            <Button
+                                className='button'
+                                style={{
+                                    aspectRatio: '1/1', fontWeight: 500, height: 'auto',
+                                    color: '#f4f3ee', backgroundColor: '#7765e3',
+                                    borderRadius: '1vh', fontSize: '1.1em'
+                                }}
+                                icon={<AiOutlineRollback size={20} style={{ color: '#f4f3ee' }} />} />
+                        </Link>
+
+
+
+                    </Row>
 
                 </div>
 

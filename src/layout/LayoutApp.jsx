@@ -2,7 +2,8 @@ import { Button, Carousel, Col, Layout, Row } from 'antd'
 import React from 'react'
 import { HomeCards } from './Projects/HomeCards'
 import { assets, gifs } from './hooks/gifsPaths'
-import {  useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { HiOutlineTranslate } from 'react-icons/hi'
 const { Footer } = Layout
 
 export const LayoutApp = () => {
@@ -19,6 +20,16 @@ export const LayoutApp = () => {
           display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}
       >
+        <Button
+          icon={<HiOutlineTranslate style={{ color: '#f4f3ee' }} />}
+          className='button'
+          style={{
+            position:'absolute', top:'3%', right:'3%',
+            margin: '0 0.5vh 0 0.5vh',
+            aspectRatio: '1/1', fontWeight: 500, height: 'auto',
+            color: '#f4f3ee', backgroundColor: '#7765e3',
+            borderRadius: '1vh', fontSize: '1.1em'
+          }} />
         <Col style={{
           height: '100%',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -31,25 +42,26 @@ export const LayoutApp = () => {
             style={{
               display: 'flex', alignItems: 'center'
             }}>
-           
-              <Button
-                className='button-main button'
-                onClick={() => navigate(`/portfolio/main-projects`)}
-                style={{
-                  fontWeight: 500, height: 'auto', width: 'auto',
-                  color: '#f4f3ee', backgroundColor: '#7765e3',
-                  borderRadius: '1.5vh', padding:'1% 5% 1% 5%',
-                  border: '2px solid #7765e3',
-                }}
-              >Projects</Button>
 
             <Button
               className='button-main button'
+              onClick={() => navigate(`/portfolio/main-projects`)}
               style={{
-                fontWeight: 500, height:'auto', width: 'auto',
+                fontWeight: 500, height: 'auto', width: 'auto',
+                color: '#f4f3ee', backgroundColor: '#7765e3',
+                borderRadius: '1.5vh', padding: '1% 7% 1% 7%',
+                border: '2px solid #7765e3',
+              }}
+            >Projects</Button>
+
+            <Button
+              className='button-main button'
+              onClick={() => navigate(`/portfolio/resume`)}
+              style={{
+                fontWeight: 500, height: 'auto', width: 'auto',
                 color: '#7765e3', border: '2px solid #7765e3',
                 borderRadius: '1.5vh', marginLeft: '2vh',
-                backgroundColor: '#f4f3ee', padding:'1% 5% 1% 5%',
+                backgroundColor: '#f4f3ee', padding: '1% 5% 1% 5%',
               }}
             >About me</Button>
           </Row>
