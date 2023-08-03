@@ -4,7 +4,7 @@ import { gifs } from '../hooks/gifsPaths'
 import { Button, Row } from 'antd'
 import { Link, useNavigate } from 'react-router-dom'
 import { GrProjects } from "react-icons/gr";
-import { AiOutlineRollback } from "react-icons/ai";
+import { AiOutlineRollback, AiFillHome } from "react-icons/ai";
 import { HiOutlineTranslate } from "react-icons/hi";
 
 const taskify_text = "A classic to-do list project with a twist! While rooted in the simplicity of a traditional to-do list, Taskify is meticulously crafted to focus on delivering a truly unique and creative user experience. It goes beyond the standard by offering users the exciting option to create projects with multiple tasks"
@@ -98,7 +98,7 @@ export const MainProjects = () => {
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
                                     borderRadius: '1vh', fontSize: '1.1em'
                                 }}
-                                icon={<AiOutlineRollback size={20} style={{ color: '#f4f3ee' }} />} />
+                                icon={<AiFillHome size={20} style={{ color: '#f4f3ee' }} />} />
                         </Link>
 
 

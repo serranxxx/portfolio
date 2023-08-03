@@ -1,14 +1,27 @@
 import { Button, Carousel, Col, Layout, Row } from 'antd'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { HomeCards } from './Projects/HomeCards'
 import { assets, gifs } from './hooks/gifsPaths'
 import { useNavigate } from 'react-router-dom'
 import { HiOutlineTranslate } from 'react-icons/hi'
+import { useTranslation } from 'react-i18next';
+import i18n from '../languages/i18n'
+
 const { Footer } = Layout
+
+
 
 export const LayoutApp = () => {
 
   const navigate = useNavigate()
+  const { t } = useTranslation();
+  const [language, setLanguage] = useState(false)
+
+  useEffect(() => {
+    if (!language) i18n.changeLanguage('en')
+    else i18n.changeLanguage('es')
+  }, [language])
+
 
   return (
     <>
@@ -21,14 +34,16 @@ export const LayoutApp = () => {
         }}
       >
         <Button
-          icon={<HiOutlineTranslate style={{ color: '#f4f3ee' }} />}
+          icon={<HiOutlineTranslate style={{ color: `${!language? '#7765e3': '#f4f3ee'}` }} />}
           className='button'
+          onClick={() => setLanguage(!language)}
           style={{
-            position:'absolute', top:'3%', right:'3%',
+            position: 'absolute', top: '3%', right: '3%',
             margin: '0 0.5vh 0 0.5vh',
             aspectRatio: '1/1', fontWeight: 500, height: 'auto',
-            color: '#f4f3ee', backgroundColor: '#7765e3',
-            borderRadius: '1vh', fontSize: '1.1em'
+             backgroundColor: `${language? '#7765e3': 'transparent'}`,
+            borderRadius: '1vh', fontSize: '1.1em',
+            border:`${language? '' : '2px solid #7765e3'}`
           }} />
         <Col style={{
           height: '100%',
@@ -52,7 +67,7 @@ export const LayoutApp = () => {
                 borderRadius: '1.5vh', padding: '1% 7% 1% 7%',
                 border: '2px solid #7765e3',
               }}
-            >Projects</Button>
+            >{t('Login.button.projects')}</Button>
 
             <Button
               className='button-main button'
@@ -63,7 +78,7 @@ export const LayoutApp = () => {
                 borderRadius: '1.5vh', marginLeft: '2vh',
                 backgroundColor: '#f4f3ee', padding: '1% 5% 1% 5%',
               }}
-            >About me</Button>
+            >{t('Login.button.about')}</Button>
           </Row>
         </Col>
 

@@ -41,7 +41,9 @@ export const HomeCards = (props) => {
 
                     <p style={{
                         fontSize: '1.2em', width: '100%', textAlign: 'left',
-                        fontWeight: 400, wordWrap: 'break-word', color: '#463f3a',
+                        fontWeight: 400, wordWrap: 'break-word', color: '#463f3a80',
+                        fontStyle:'italic'
+                        
                         // fontStyle:'italic'
                     }}>{props.text}</p>
 
