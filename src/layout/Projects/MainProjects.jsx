@@ -1,20 +1,34 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { HomeCards } from './HomeCards'
 import { gifs } from '../hooks/gifsPaths'
 import { Button, Row } from 'antd'
-import { Link, useNavigate } from 'react-router-dom'
-import { GrProjects } from "react-icons/gr";
-import { AiOutlineRollback, AiFillHome } from "react-icons/ai";
+import { Link } from 'react-router-dom'
+import { AiFillHome } from "react-icons/ai";
 import { HiOutlineTranslate } from "react-icons/hi";
+import { appContext } from '../../context/appContext'
+import i18n from '../../languages/i18n'
+import { useTranslation } from 'react-i18next'
 
-const taskify_text = "A classic to-do list project with a twist! While rooted in the simplicity of a traditional to-do list, Taskify is meticulously crafted to focus on delivering a truly unique and creative user experience. It goes beyond the standard by offering users the exciting option to create projects with multiple tasks"
-const avatar_text = "The ultimate platform to craft your fully personalized avatars! Unleash your creativity as you select everything from skin tone to accessories, designing avatars that truly reflect your unique identity. Save, delete, and favorite your creations."
-const send_text = "A simple but pretty interface that's all about style! With a stylish login screen and a beautifully crafted layout, this project mixes colors, tools, and styles. While it is not loaded with functionality yet, it shows off a great design and offers a good user experience."
-const pancrasio_text = "A Point of Sale (POS) solution! Managing your business. Add products to your inventory and keep track of sales with detailed daily and monthly reports, including profits. Stay on top of your stock levels with an inventory report, ensuring you know exactly when to restock. Plus, export all this valuable data to Excel for your convenience."
 
 export const MainProjects = () => {
 
-    const navigate = useNavigate()
+
+    const { newLanguage, language } = useContext(appContext)
+    const [language_, setLanguage] = useState(true)
+    const { t } = useTranslation();
+
+    const setnewLanguage = () => {
+        // setLanguage(!language_)
+        if (language_) i18n.changeLanguage('en')
+        else i18n.changeLanguage('es')
+        newLanguage(language_)
+    }
+
+    useEffect(() => {
+        setnewLanguage()
+    }, [language_])
+
+
 
     const goTo = (index) => {
         switch (index) {
@@ -58,7 +72,7 @@ export const MainProjects = () => {
                     <p style={{
                         marginLeft: '1vw',
                         fontSize: '2.3em', fontWeight: 450, color: '#463f3a', fontFamily: 'Berlin Sans FB',
-                    }}>Projects</p>
+                    }}>{t('Projects.title')}</p>
 
                     <Row style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
@@ -74,32 +88,39 @@ export const MainProjects = () => {
                                     margin: '0 0vh 0 1vh',
                                     width: 'auto', fontWeight: 500, height: 'auto',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1vh', fontSize: '1.1em'
-                                }}>Resume</Button>
+                                    borderRadius: '1vh 0 0 1vh', fontSize: '1.1em'
+                                }}>{t('Projects.button')}</Button>
                         </Link>
 
-                        <Button
-                            icon={<HiOutlineTranslate style={{ color: '#f4f3ee' }} />}
-                            className='button'
-                            style={{
-                                margin: '0 0.5vh 0 0.5vh',
-                                aspectRatio: '1/1', fontWeight: 500, height: 'auto',
-                                color: '#f4f3ee', backgroundColor: '#7765e3',
-                                borderRadius: '1vh', fontSize: '1.1em'
-                            }} />
-
                         <Link to="/portfolio/main" style={{
-                            marginRight: '2vh'
+                            marginRight: '0vh'
                         }}>
                             <Button
                                 className='button'
                                 style={{
-                                    aspectRatio: '1/1', fontWeight: 500, height: 'auto',
+                                    width:'auto', fontWeight: 500, height: 'auto',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1vh', fontSize: '1.1em'
+                                    borderRadius: '0 1vh 1vh 0', fontSize: '1.1em'
                                 }}
-                                icon={<AiFillHome size={20} style={{ color: '#f4f3ee' }} />} />
+                                >
+                                    {t('button.home')}
+                                </Button>
                         </Link>
+
+
+                        <Button
+                            icon={<HiOutlineTranslate style={{ color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}` }} />}
+                            className='button'
+                            onClick={() => setLanguage(!language_)}
+                            style={{
+                                // position: 'absolute', top: '3%', right: '3%',
+                                margin: '0 2vh 0 2vh',
+                                fontWeight: 500, height: 'auto',
+                                backgroundColor: `${language_ ? '#bcb8b1' : 'transparent'}`,
+                                borderRadius: '1vh', fontSize: '1em', color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}`,
+                                border: `${language_ ? '2px solid #bcb8b1' : '2px solid #bcb8b1'}`
+                            }}>{t('button.translate')}</Button>
+
 
 
 
@@ -112,10 +133,10 @@ export const MainProjects = () => {
                     borderRadius: '2vh'
                 }} />
 
-                <HomeCards name="Taskify" action={goTo} gif={gifs.taskify} order={'row'} text={taskify_text} />
-                <HomeCards name="Avatar Studio" action={goTo} gif={gifs.avatar} order={'row-reverse'} text={avatar_text} />
-                <HomeCards name="Sender Reviewer" action={goTo} gif={gifs.send} order={'row'} text={send_text} />
-                <HomeCards name="San Pancrasio" action={goTo} gif={gifs.pancrasio} order={'row-reverse'} text={pancrasio_text} />
+                <HomeCards name="Taskify" action={goTo} gif={gifs.taskify} order={'row'} text={t('Projects.taskify')} />
+                <HomeCards name="Avatar Studio" action={goTo} gif={gifs.avatar} order={'row-reverse'} text={t('Projects.avatar')} />
+                <HomeCards name="Sender Reviewer" action={goTo} gif={gifs.send} order={'row'} text={t('Projects.send')} />
+                <HomeCards name="San Pancrasio" action={goTo} gif={gifs.pancrasio} order={'row-reverse'} text={t('Projects.POS')} />
 
 
             </div>

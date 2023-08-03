@@ -8,7 +8,7 @@ export const AppReducer = (state = {}, action) => {
         case types.example:
             return {
                 ...state,
-                value: action.payload
+                language: action.payload
             }
         default:
             break;

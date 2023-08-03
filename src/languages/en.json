@@ -1,4 +1,65 @@
 {
     "Login.button.projects": "Projects",
-    "Login.button.about": "About me"
+    "Login.button.about": "About me",
+    
+    "button.translate": "TRANSLATE",
+    "button.home": "HOME",
+
+    "Projects.title": "Projects",
+    "Projects.button": "RESUME", 
+
+    "Projects.taskify": "A classic to-do list project with a twist! While rooted in the simplicity of a traditional to-do list, Taskify is meticulously crafted to focus on delivering a truly unique and creative user experience. It goes beyond the standard by offering users the exciting option to create projects with multiple tasks",
+    "Projects.avatar":"The ultimate platform to craft your fully personalized avatars! Unleash your creativity as you select everything from skin tone to accessories, designing avatars that truly reflect your unique identity. Save, delete, and favorite your creations.",
+    "Projects.send": "A simple but pretty interface that's all about style! With a stylish login screen and a beautifully crafted layout, this project mixes colors, tools, and styles. While it is not loaded with functionality yet, it shows off a great design and offers a good user experience.",
+    "Projects.POS": "A Point of Sale (POS) solution! Managing your business. Add products to your inventory and keep track of sales with detailed daily and monthly reports, including profits. Stay on top of your stock levels with an inventory report, ensuring you know exactly when to restock. Plus, export all this valuable data to Excel for your convenience.",
+    
+    "HomeCards.button": "Quick view",
+
+    "Resume.Description": "Frontend developer - UI/UX designer",
+    "Resume.download": "DOWNLOAD",
+    "Resume.projects": "PROJECTS",
+    "Resume.phone": "Phone: ",
+    "Resume.email": "Email: ",
+    "Resume.linkedin": "Linkedin: ",
+
+    "Resume.experience": "EXPERIENCE",
+    "Resume.metamapDate": "DEC 2021 - Currently",
+
+    "Resume.Meta.description": "Frontend developer / UI/UX designer / Python developer",
+    "Resume.frontendDev": "Frontend developer",
+    "Resume.uiux": "UI/UX designer",
+    "Resume.PythonDev": "Python developer",
+
+    "Resume.React1": "Currently, I specialize in React JS as my primary set of technologies. I am actively involved in the development of user interfaces and interactive web applications.",
+    "Resume.React2": "My experience in React JS has allowed me to efficiently build robust and scalable frontend solutions. To streamline development and maintain design consistency, I rely on antd (Ant Design) as my go-to UI library.",
+
+    "Resume.uiux.text": "I played a key role in the development of various projects by creating Mockups. I used Adobe Illustrator and Adobe XD as my primary tools to design detailed and appealing visual layouts. These Mockups became an essential reference for the team throughout the development process.",
+    "Resume.python.text": "I worked as a Full Stack Developer, creating desktop applications (Windows) with multiple functionalities using Python. I was involved in the entire development process, from designing the frontend of the application using Illustrator and Adobe XD to its implementation in the QT Creator development environment.",
+
+    "Resume.internship": "Professional internships",
+    "Resume.internship_": "Graduate Laboratory of Instituto tecnológico de Chihauhua",
+    "Resume.internshipDate": "AUG 2021 - JAN 2022",
+    "Resume.internshipSubtitle":"Internship - Computer Vision and Machine Learning Curriculum Renewal",
+
+    "Resume.intern.text": "I actively participated in the renewal of the curriculum for Computer Vision and Machine Learning Systems. My main responsibilities included developing Python-based exercises using the Google Colab environment.",
+    "Resume.intern.text2": "I designed a series of practical exercises covering various topics, from the fundamentals of machine learning to digital image processing. These hands-on sessions involved the use of Python libraries such as Matplotlib, OpenCV, scikit-learn, among others.",
+    "Resume.intern.text3": "My work aimed to enhance the learning experience of students by providing them with engaging exercises that reinforced their understanding of computer vision and machine learning concepts.",
+    
+    "Resume.Summary": "SUMMARY",
+    "Resume.summary.text": "I am a creative and perfectionist person, passionate about both design and programming. Throughout my career, I discovered that my true calling lies in the world of programming, and becoming a frontend developer has been the perfect combination of my passion for coding and design.",
+    "Resume.summary.text1": "My background in electronic engineering has provided me with a solid technical foundation and problem-solving skills.",
+
+    "Resume.education": "EDUCATION",
+    "Resume.education.text": "Electronic Engineer",
+    "Resume.education.speacilization": "Specialization in Embedded Systems",
+    "Resume.education.date": "DEC 2021",
+
+    "Resume.skills": "SKILLS",
+    "Resume.languages": "LANGUAGUES",
+    "Resume.lan.spanish": "Spanish: ",
+    "Resume.spanish": "Native",
+    "Resume.lan.english": "English: ",
+
+    
+    "":""
 }

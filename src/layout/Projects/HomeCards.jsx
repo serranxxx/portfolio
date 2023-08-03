@@ -2,10 +2,13 @@ import React from 'react'
 import { gifs } from '../hooks/gifsPaths'
 import { Button, Col } from 'antd'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod "
 
 export const HomeCards = (props) => {
+
+    const { t } = useTranslation();
     return (
 
         <>
@@ -42,8 +45,8 @@ export const HomeCards = (props) => {
                     <p style={{
                         fontSize: '1.2em', width: '100%', textAlign: 'left',
                         fontWeight: 400, wordWrap: 'break-word', color: '#463f3a80',
-                        fontStyle:'italic'
-                        
+                        fontStyle: 'italic'
+
                         // fontStyle:'italic'
                     }}>{props.text}</p>
 
@@ -61,7 +64,7 @@ export const HomeCards = (props) => {
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
                                     borderRadius: '1.5vh', fontSize: '1.3em'
                                 }}
-                            >Full project</Button>
+                            >{t('HomeCards.button')}</Button>
                         </Link>
 
                     </div>
@@ -75,7 +78,7 @@ export const HomeCards = (props) => {
                 className='home-card-small'
                 style={{
                     width: 'auto', height: 'auto', backgroundColor: '#f4f3ee',
-                    marginTop: '2vh',  paddingBottom: '5%',
+                    marginTop: '2vh', paddingBottom: '5%',
                     alignItems: 'center', justifyContent: 'center', flexDirection: `column`
                     // border:'2px solid #463f3a80',
 
@@ -84,11 +87,11 @@ export const HomeCards = (props) => {
                     fontSize: '2.2em', width: '100%', textAlign: 'center',
                     fontWeight: 650, color: '#463f3a'
                 }}>{props.name}</p>
-                
+
                 <img src={props.gif} style={{
                     height: 'auto', width: '80%', borderRadius: '0.5vh',
                     boxShadow: '0 0 20px #000000050',
-                    border: '0px solid #463f3a',marginBottom:'2vh'
+                    border: '0px solid #463f3a', marginBottom: '2vh'
                 }} />
 
                 <p style={{

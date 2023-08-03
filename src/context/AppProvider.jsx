@@ -6,7 +6,7 @@ import { AppReducer } from "./appReudcer";
 const init = () => {
 
     return {
-        example: ''
+        language: true
     }
 }
 
@@ -14,11 +14,11 @@ export const AppProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(AppReducer, {}, init)
 
-    const setExample = (example = '') => {
-        const Example = example
+    const newLanguage = (language = true) => {
+        const Language = language
         const action = {
-            type: types.example,
-            payload: Example
+            type: types.language,
+            payload: Language
         }
         // localStorage.setItem('items', JSON.stringify(allItems))
         dispatch(action)
@@ -27,7 +27,7 @@ export const AppProvider = ({ children }) => {
     return (
         <appContext.Provider value={{
             ...state,
-            setExample
+            newLanguage
         }}>
             {children}
         </appContext.Provider >

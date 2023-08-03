@@ -1,17 +1,54 @@
 import { Button, Col, Row, Switch } from 'antd'
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AiFillHome, AiOutlineRollback } from 'react-icons/ai'
 import { HiOutlineTranslate } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 import { textsExperience } from './textsExperience'
+import { appContext } from '../../context/appContext'
+import i18n from '../../languages/i18n'
+import { useTranslation } from 'react-i18next'
+import { assets } from '../hooks/gifsPaths'
+
 
 export const CurriculumV = () => {
+
+    const { newLanguage, language } = useContext(appContext)
+    const [language_, setLanguage] = useState(true)
+    const { t } = useTranslation();
+
+    const setnewLanguage = () => {
+        // setLanguage(!language_)
+        if (language_) i18n.changeLanguage('en')
+        else i18n.changeLanguage('es')
+        newLanguage(language_)
+    }
+
+    useEffect(() => {
+        setnewLanguage()
+    }, [language_])
+
+    const handleDownload = () => {
+        // Ruta relativa al archivo PDF en la carpeta "assets"
+        const pdfPath = `${language_? assets.resume : assets.cv}`;
+
+        // Crear un enlace temporal
+        const link = document.createElement('a');
+        link.href = pdfPath;
+        link.target = '_blank'; // Abre en una nueva pestaña (opcional)
+        link.download = `${language_? 'AlbertoSerrano-Resume' : 'AlbertoSerrano-CV'}`; // Nombre del archivo al descargar (opcional)
+
+        // Simular el clic en el enlace para iniciar la descarga
+        link.click();
+    };
+
+
+
     return (
         <>
             <div className='resume-large'
                 style={{
                     height: 'auto', width: 'auto', backgroundColor: '#f4f3ee',
-                     alignItems: 'center', justifyContent: 'center', overflowY: 'auto',
+                    alignItems: 'center', justifyContent: 'center', overflowY: 'auto',
                     flexDirection: 'column', padding: '0 5% 5% 5%'
                 }}
             >
@@ -33,7 +70,7 @@ export const CurriculumV = () => {
                             // marginLeft: '1vw',
                             fontSize: '1.5em', fontWeight: 400, color: '#463f3a', fontFamily: 'Berlin Sans FB',
                             margin: '0vh 0 0 1vw'
-                        }}>Frontend developer - UI/UX designer</p>
+                        }}>{t('Resume.Description')}</p>
                     </Col>
 
 
@@ -43,48 +80,59 @@ export const CurriculumV = () => {
                         marginTop: '3vh'
                     }}>
 
+
+
                         <Button
                             className='button'
+                            onClick={handleDownload}
                             style={{
-                                width: 'auto', fontWeight: 500, height: 'auto',
+                                width: 'auto', fontWeight: 500, height: '4.5vh',
                                 color: '#f4f3ee', backgroundColor: '#7765e3',
-                                borderRadius: '1vh', fontSize: '1.1em'
-                            }}>Download resume</Button>
+                                borderRadius: '1vh 0 0 1vh', fontSize: '1.1em'
+                            }}>{t('Resume.download')}</Button>
                         <Link to="/portfolio/main-projects" style={{
                             marginRight: '0vh'
                         }}>
                             <Button
                                 className='button'
                                 style={{
-                                    margin: '0 0vh 0 1vh',
-                                    width: 'auto', fontWeight: 500, height: 'auto',
+                                    margin: '0 0 0 0',
+                                    width: 'auto', fontWeight: 500, height: '4.5vh',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1vh', fontSize: '1.1em'
-                                }}>Projects</Button>
+                                    borderRadius: '0 0 0 0', fontSize: '1.1em'
+                                }}>{t('Resume.projects')}</Button>
                         </Link>
 
-                        <Button
-                            icon={<HiOutlineTranslate style={{ color: '#f4f3ee' }} />}
-                            className='button'
-                            style={{
-                                margin: '0 1vh 0 1vh',
-                                aspectRatio: '1/1', fontWeight: 500, height: 'auto',
-                                color: '#f4f3ee', backgroundColor: '#7765e3',
-                                borderRadius: '1vh', fontSize: '1.1em'
-                            }} />
+
 
                         <Link to="/portfolio/main" style={{
-                            marginRight: '2vh'
+                            marginRight: '0vh'
                         }}>
                             <Button
                                 className='button'
                                 style={{
-                                    aspectRatio: '1/1', fontWeight: 500, height: 'auto',
+                                    width: 'auto', fontWeight: 500, height: '4.5vh',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1vh', fontSize: '1.1em'
+                                    borderRadius: '0 1vh 1vh 0', fontSize: '1.1em'
                                 }}
-                                icon={<AiFillHome size={20} style={{ color: '#f4f3ee' }} />} />
+                            // icon={<AiFillHome size={20} style={{ color: '#f4f3ee' }} />}
+                            >
+                                {t('button.home')}
+                            </Button>
                         </Link>
+
+                        <Button
+                            icon={<HiOutlineTranslate style={{ color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}` }} />}
+                            className='button'
+                            onClick={() => setLanguage(!language_)}
+                            style={{
+                                // position: 'absolute', top: '3%', right: '3%',
+                                margin: '0 2vh 0 2vh',
+                                fontWeight: 500, height: 'auto',
+                                backgroundColor: `${language_ ? '#bcb8b1' : 'transparent'}`,
+                                borderRadius: '1vh', fontSize: '1em', color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}`,
+                                border: `${language_ ? '2px solid #bcb8b1' : '2px solid #bcb8b1'}`
+                            }}>{t('button.translate')}</Button>
 
 
                     </Row>
@@ -103,18 +151,14 @@ export const CurriculumV = () => {
                 }}>
                     <p style={{
                         fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                    }}><b>Phone: </b>614 539 48 36</p>
+                    }}><b>{t('Resume.phone')}</b>614 539 48 36</p>
                     <p style={{
                         fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                    }}><b>Email: </b>albserrano8@gmail.com</p>
+                    }}><b>{t('Resume.email')}</b>albserrano8@gmail.com</p>
                     <p style={{
                         fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                    }}><b>Linkedin: </b>albserranog</p>
-                    {/* <Switch
-                    style={{
-                        backgroundColor: '#463f3a80',
-                    }}
-                    checkedChildren={'Español'} unCheckedChildren={'English'} /> */}
+                    }}><b>{t('Resume.linkedin')}</b>albserranog</p>
+
                 </Row>
                 <hr style={{
                     width: '90%',
@@ -137,7 +181,7 @@ export const CurriculumV = () => {
                             <p style={{
 
                                 fontWeight: 500, color: '#463f3a', fontSize: '1.4em'
-                            }}>EXPERIENCE</p>
+                            }}>{t('Resume.experience')}</p>
 
                             <div style={{
                                 width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -151,7 +195,7 @@ export const CurriculumV = () => {
                                 <p style={{
                                     margin: '0 0 0 0',
                                     fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                                }}>DEC 2021 - Currently</p>
+                                }}>{t('Resume.metamapDate')}</p>
 
                             </div>
 
@@ -160,35 +204,35 @@ export const CurriculumV = () => {
                             <p style={{
                                 margin: '0 0 0 0',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}>Frontend developer / UI/UX designer / Python developer</p>
+                            }}>{t('Resume.Meta.description')}</p>
 
                             <ul>
 
                                 <li style={{ marginTop: '3vh' }}><p style={{
                                     margin: '0 0 0 0', fontStyle: 'italic',
                                     fontWeight: 500, color: '#463f3a80', fontSize: '1.2em'
-                                }}>Frontend developer</p>
+                                }}>{t('Resume.frontendDev')}</p>
                                     <p style={{
                                         margin: '1vh 0 0 0', fontStyle: 'italic',
                                         fontWeight: 400, color: '#463f3a80', fontSize: '1.2em',
                                         textAlign: 'justify'
-                                    }}>{textsExperience.react}</p>
+                                    }}>{t('Resume.React1')}</p>
                                     <p style={{
                                         margin: '1vh 0 0 0', fontStyle: 'italic',
                                         fontWeight: 400, color: '#463f3a80', fontSize: '1.2em',
                                         textAlign: 'justify'
-                                    }}>{textsExperience.react_1}</p>
+                                    }}>{t('Resume.React2')}</p>
 
                                 </li>
 
                                 <li style={{ marginTop: '3vh' }}><p style={{
                                     margin: '0 0 0 0', fontStyle: 'italic',
                                     fontWeight: 500, color: '#463f3a80', fontSize: '1.2em'
-                                }}>UI/UX designer</p>
+                                }}>{t('Resume.uiux')}</p>
                                     <p style={{
                                         margin: '1vh 0 0 0', fontStyle: 'italic', textAlign: 'justify',
                                         fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                                    }}>{textsExperience.uiux}</p>
+                                    }}>{t('Resume.uiux.text')}</p>
 
 
                                 </li>
@@ -197,11 +241,11 @@ export const CurriculumV = () => {
                                 <li style={{ marginTop: '3vh' }}><p style={{
                                     margin: '0 0 0 0', fontStyle: 'italic', textAlign: 'justify',
                                     fontWeight: 500, color: '#463f3a80', fontSize: '1.2em'
-                                }}>Python developer</p>
+                                }}>{t('Resume.PythonDev')}</p>
                                     <p style={{
                                         margin: '1vh 0 0 0', fontStyle: 'italic', textAlign: 'justify',
                                         fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                                    }}>{textsExperience.python}</p>
+                                    }}>{t('Resume.python.text')}</p>
 
                                 </li>
 
@@ -215,18 +259,18 @@ export const CurriculumV = () => {
                                     <p style={{
                                         margin: '5vh 0 0 0',
                                         fontWeight: 650, color: '#463f3a', fontSize: '1.3em'
-                                    }}>Professional internships</p>
+                                    }}>{t('Resume.internship')}</p>
                                     <p style={{
                                         margin: '0 0 0 0',
                                         fontWeight: 550, color: '#463f3a', fontSize: '1.3em'
-                                    }}>Graduate Laboratory of Instituto tecnológico de Chihauhua</p>
+                                    }}>{t('Resume.internship_')}</p>
                                 </Col>
 
 
                                 <p style={{
                                     margin: '0 0 0 0',
                                     fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                                }}>AUG 2021 - JAN 2022</p>
+                                }}>{t('Resume.internshipDate')}</p>
 
                             </div>
 
@@ -235,23 +279,23 @@ export const CurriculumV = () => {
                             <p style={{
                                 margin: '0 0 0 0',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}> Internship - Computer Vision and Machine Learning Curriculum Renewal</p>
+                            }}>{t('Resume.internshipSubtitle')}</p>
 
                             <p style={{
                                 margin: '3vh 0 0 0', fontStyle: 'italic',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em',
                                 textAlign: 'justify'
-                            }}>{textsExperience.internship}</p>
+                            }}>{t('Resume.intern.text')}</p>
                             <p style={{
                                 margin: '1vh 0 0 0', fontStyle: 'italic',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em',
                                 textAlign: 'justify'
-                            }}>{textsExperience.internship_1}</p>
+                            }}>{t('Resume.intern.text2')}</p>
                             <p style={{
                                 margin: '1vh 0 0 0', fontStyle: 'italic',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em',
                                 textAlign: 'justify'
-                            }}>{textsExperience.internship_2}</p>
+                            }}>{t('Resume.intern.text3')}</p>
 
                         </div>
 
@@ -268,16 +312,16 @@ export const CurriculumV = () => {
                             <p style={{
 
                                 fontWeight: 500, color: '#463f3a', fontSize: '1.4em'
-                            }}>SUMMARY</p>
+                            }}>{t('Resume.Summary')}</p>
 
                             <p style={{
                                 margin: '0 0 0 0', textAlign: 'justify',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}>{textsExperience.summary}</p>
+                            }}>{t('Resume.summary.text')}</p>
                             <p style={{
                                 margin: '1vh 0 0 0', textAlign: 'justify',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}>{textsExperience.summary_1}</p>
+                            }}>{t('Resume.summary.text1')}</p>
 
 
                         </div>
@@ -291,12 +335,12 @@ export const CurriculumV = () => {
                             <p style={{
 
                                 fontWeight: 500, color: '#463f3a', fontSize: '1.4em'
-                            }}>EDUCATION</p>
+                            }}>{t('Resume.education')}</p>
 
                             <p style={{
                                 margin: '0 0 0 0',
                                 fontWeight: 550, color: '#463f3a', fontSize: '1.3em'
-                            }}>Electronic Engineer</p>
+                            }}>{t('Resume.education.text')}</p>
                             <p style={{
                                 margin: '0 0 0 0',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
@@ -305,12 +349,12 @@ export const CurriculumV = () => {
                             <p style={{
                                 margin: '0 0 0 0', fontStyle: 'italic',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}>Specialization in Embedded Systems</p>
+                            }}>{t('Resume.education.speacilization')}</p>
 
                             <p style={{
                                 margin: '1vh 0 0 0',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}>DEC 2021</p>
+                            }}>{t('Resume.education.date')}</p>
                         </div>
 
                         <hr style={{
@@ -323,7 +367,7 @@ export const CurriculumV = () => {
                             <p style={{
 
                                 fontWeight: 500, color: '#463f3a', fontSize: '1.4em'
-                            }}>SKILLS</p>
+                            }}>{t('Resume.skills')}</p>
 
 
                             <p style={{
@@ -362,17 +406,17 @@ export const CurriculumV = () => {
                             <p style={{
 
                                 fontWeight: 500, color: '#463f3a', fontSize: '1.4em'
-                            }}>LANGUAGUES</p>
+                            }}>{t('Resume.languages')}</p>
 
                             <p style={{
                                 margin: '0 0 0 0',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}>Spanish: <b>Native</b></p>
+                            }}>{t('Resume.lan.spanish')}<b>{t('Resume.spanish')}</b></p>
 
                             <p style={{
                                 margin: '0.5vh 0 0 0',
                                 fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                            }}>English: <b>B1</b></p>
+                            }}>{t('Resume.lan.english')}<b>B1</b></p>
 
 
                         </div>
@@ -384,7 +428,7 @@ export const CurriculumV = () => {
             <div className='resume-small'
                 style={{
                     height: 'auto', width: 'auto', backgroundColor: '#f4f3ee',
-                     alignItems: 'center', justifyContent: 'center', overflowY: 'auto',
+                    alignItems: 'center', justifyContent: 'center', overflowY: 'auto',
                     flexDirection: 'column', padding: '0 5% 5% 5%'
                 }}
             >
@@ -402,46 +446,52 @@ export const CurriculumV = () => {
 
                         <Button
                             className='button'
+                            onClick={handleDownload}
                             style={{
-                                width: 'auto', fontWeight: 500, height: 'auto',
+                                width: 'auto', fontWeight: 500, height: '4.5vh',
                                 color: '#f4f3ee', backgroundColor: '#7765e3',
-                                borderRadius: '1vh', fontSize: '1.1em'
-                            }}>Download</Button>
+                                borderRadius: '1vh 0 0 1vh', fontSize: '1.1em'
+                            }}>DOWNLOAD</Button>
                         <Link to="/portfolio/main-projects" style={{
                             marginRight: '0vh'
                         }}>
                             <Button
                                 className='button'
                                 style={{
-                                    margin: '0 0vh 0 1vh',
-                                    width: 'auto', fontWeight: 500, height: 'auto',
+                                    margin: '0',
+                                    width: 'auto', fontWeight: 500, height: '4.5vh',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1vh', fontSize: '1.1em'
-                                }}>Projects</Button>
+                                    borderRadius: '0', fontSize: '1.1em'
+                                }}>PROJECTS</Button>
                         </Link>
 
-                        <Button
-                            icon={<HiOutlineTranslate style={{ color: '#f4f3ee' }} />}
-                            className='button'
-                            style={{
-                                margin: '0 1vh 0 1vh',
-                                aspectRatio: '1/1', fontWeight: 500, height: 'auto',
-                                color: '#f4f3ee', backgroundColor: '#7765e3',
-                                borderRadius: '1vh', fontSize: '1.1em'
-                            }} />
+
 
                         <Link to="/portfolio/main" style={{
-                            marginRight: '2vh'
+                            marginRight: '0vh'
                         }}>
                             <Button
                                 className='button'
                                 style={{
-                                    aspectRatio: '1/1', fontWeight: 500, height: 'auto',
+                                    aspectRatio: '1/1', fontWeight: 500, height: '4.5vh',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1vh', fontSize: '1.1em'
+                                    borderRadius: '0 1vh 1vh 0', fontSize: '1.1em'
                                 }}
                                 icon={<AiFillHome size={20} style={{ color: '#f4f3ee' }} />} />
                         </Link>
+
+                        <Button
+                            icon={<HiOutlineTranslate style={{ color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}` }} />}
+                            className='button'
+                            onClick={() => setLanguage(!language_)}
+                            style={{
+                                // position: 'absolute', top: '3%', right: '3%',
+                                margin: '0 2vh 0 2vh',
+                                fontWeight: 500, height: 'auto',
+                                backgroundColor: `${language_ ? '#bcb8b1' : 'transparent'}`,
+                                borderRadius: '1vh', fontSize: '1em', color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}`,
+                                border: `${language_ ? '2px solid #bcb8b1' : '2px solid #bcb8b1'}`
+                            }} />
 
 
                     </Row>
@@ -550,7 +600,7 @@ export const CurriculumV = () => {
                     border: '1.5px solid #463f3a'
                 }} />
                 <div style={{
-                    width:'80%'
+                    width: '80%'
                 }} className='Experience'>
                     <p style={{
 

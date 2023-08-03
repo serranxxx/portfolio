@@ -6,7 +6,7 @@ const uiux_1 = 'Colaboré estrechamente con el equipo de desarrollo, asegurándo
 
 const react = 'Actualmente me especializo en React JS como mi principal conjunto de tecnologías. Me encuentro activamente involucrado en el desarrollo de interfaces de usuario y aplicaciones web interactivas.'
 const react_1 ='Mi experiencia en React JS me ha permitido construir soluciones frontend robustas y escalables de manera eficiente. Para agilizar el desarrollo y mantener la consistencia en el diseño, confío en antd (Ant Design) como mi librería de interfaz de usuario por excelencia.'
-const react_2 = 'Esforzandome por mantenerme actualizado con las últimas tecnologías y mejores prácticas en el desarrollo frontend. Comprometido con entregar código de alta calidad y aplicaciones amigables para el usuario.'
+// const react_2 = 'Esforzandome por mantenerme actualizado con las últimas tecnologías y mejores prácticas en el desarrollo frontend. Comprometido con entregar código de alta calidad y aplicaciones amigables para el usuario.'
 
 const internship = 'Participé activamente en la renovación del temario de Sistemas de Visión y Aprendizaje de Máquina. Mis principales responsabilidades incluyeron el desarrollo de prácticas en Python utilizando el entorno de Google Colab.'
 const internship_1 = 'Diseñé una serie de ejercicios prácticos que abarcaban diversos temas, desde los fundamentos del aprendizaje de máquina hasta el procesamiento digital de imágenes. Estas sesiones prácticas involucraron el uso de librerías de Python como Matplotlib, OpenCV, scikit-learn, entre otras.'
@@ -22,7 +22,7 @@ export const textsExperience = {
     uiux,
     react,
     react_1,
-    react_2,
+    // react_2,
     internship,
     internship_1,
     internship_2,

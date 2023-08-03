@@ -1,11 +1,11 @@
-import { Button, Carousel, Col, Layout, Row } from 'antd'
-import React, { useEffect, useState } from 'react'
-import { HomeCards } from './Projects/HomeCards'
-import { assets, gifs } from './hooks/gifsPaths'
+import { Button, Col, Layout, Row } from 'antd'
+import React, { useContext, useEffect, useState } from 'react'
+import { assets } from './hooks/gifsPaths'
 import { useNavigate } from 'react-router-dom'
 import { HiOutlineTranslate } from 'react-icons/hi'
 import { useTranslation } from 'react-i18next';
 import i18n from '../languages/i18n'
+import { appContext } from '../context/appContext'
 
 const { Footer } = Layout
 
@@ -14,13 +14,21 @@ const { Footer } = Layout
 export const LayoutApp = () => {
 
   const navigate = useNavigate()
+  const { newLanguage, language } = useContext(appContext)
+  const [language_, setLanguage] = useState(true)
   const { t } = useTranslation();
-  const [language, setLanguage] = useState(false)
+
+  const setnewLanguage = () => {
+    // setLanguage(!language_)
+    if (language_) i18n.changeLanguage('en')
+    else i18n.changeLanguage('es')
+    newLanguage(language_)
+  }
 
   useEffect(() => {
-    if (!language) i18n.changeLanguage('en')
-    else i18n.changeLanguage('es')
-  }, [language])
+    setnewLanguage()
+  }, [language_])
+  
 
 
   return (
@@ -34,23 +42,23 @@ export const LayoutApp = () => {
         }}
       >
         <Button
-          icon={<HiOutlineTranslate style={{ color: `${!language? '#7765e3': '#f4f3ee'}` }} />}
+          icon={<HiOutlineTranslate style={{ color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}` }} />}
           className='button'
-          onClick={() => setLanguage(!language)}
+          onClick={() => setLanguage(!language_)}
           style={{
             position: 'absolute', top: '3%', right: '3%',
             margin: '0 0.5vh 0 0.5vh',
-            aspectRatio: '1/1', fontWeight: 500, height: 'auto',
-             backgroundColor: `${language? '#7765e3': 'transparent'}`,
-            borderRadius: '1vh', fontSize: '1.1em',
-            border:`${language? '' : '2px solid #7765e3'}`
-          }} />
+             fontWeight: 500, height: 'auto',
+            backgroundColor: `${language_ ? '#bcb8b1' : 'transparent'}`,
+            borderRadius: '1vh', fontSize: '1em', color:`${!language_ ? '#bcb8b1' : '#f4f3ee'}`,
+            border: `${language_ ? '0px solid #bcb8b1' : '2px solid #bcb8b1'}`
+          }}>{t('button.translate')}</Button>
         <Col style={{
           height: '100%',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           flexDirection: 'column'
         }}>
-          <img src={assets.text} className='image-text' />
+          <img src={language_ ? assets.text : assets.text_spanish} className='image-text' />
 
           <Row
             className='button-container'
