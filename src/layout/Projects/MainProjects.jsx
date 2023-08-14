@@ -47,6 +47,9 @@ export const MainProjects = () => {
             case gifs.pancrasio:
                 return `https://serranxxx.github.io/san-pancrasio/`
 
+            case gifs.journal:
+                return `https://serranxxx.github.io/journal/`
+
 
             default:
 
@@ -98,13 +101,13 @@ export const MainProjects = () => {
                             <Button
                                 className='button'
                                 style={{
-                                    width:'auto', fontWeight: 500, height: 'auto',
+                                    width: 'auto', fontWeight: 500, height: 'auto',
                                     color: '#f4f3ee', backgroundColor: '#7765e3',
                                     borderRadius: '0 1vh 1vh 0', fontSize: '1.1em'
                                 }}
-                                >
-                                    {t('button.home')}
-                                </Button>
+                            >
+                                {t('button.home')}
+                            </Button>
                         </Link>
 
 
@@ -133,6 +136,7 @@ export const MainProjects = () => {
                     borderRadius: '2vh'
                 }} />
 
+                <HomeCards name="Mindscribe" action={goTo} gif={gifs.journal} order={'row-reverse'} text={t('Projects.journal')} />
                 <HomeCards name="Taskify" action={goTo} gif={gifs.taskify} order={'row'} text={t('Projects.taskify')} />
                 <HomeCards name="Avatar Studio" action={goTo} gif={gifs.avatar} order={'row-reverse'} text={t('Projects.avatar')} />
                 <HomeCards name="Sender Reviewer" action={goTo} gif={gifs.send} order={'row'} text={t('Projects.send')} />
