@@ -19,3 +19,13 @@ code {
 .button:hover{
   transform: translateY(-5px);
 }
+
+.scrollable-div::-webkit-scrollbar {
+  width: 0px;
+  /* Ancho del scroll */
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Color del track */
+}

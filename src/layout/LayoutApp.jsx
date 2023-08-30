@@ -102,24 +102,6 @@ export const LayoutApp = () => {
 
       </div>
 
-      {/* <div
-          style={{
-            height: 'auto', width: 'auto', backgroundColor: '#bcb8b1',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', overflowY: 'auto',
-            flexDirection: 'column', padding: '5%'
-
-          }}
-        >
-         
-
-          <HomeCards name="Avatar Studio" gif={gifs.avatar} />
-          <HomeCards name="Taskify" gif={gifs.taskify} />
-          <HomeCards name="Sender Reviewer" gif={gifs.send} />
-          <HomeCards name="San Pancrasio" gif={gifs.pancrasio} />
-
-
-        </div>  */}
-
 
     </>
 
