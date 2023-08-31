@@ -72,11 +72,11 @@
     }
 
     .home-card-small {
-        display: flex;
+        display: none;
     }
 
     .home-card-large {
-        display: none;
+        display: flex;
     }
 
     .resume-large {

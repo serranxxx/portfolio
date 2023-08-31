@@ -28,7 +28,7 @@ export const HeaderMobile = (props) => {
                     // marginLeft: '1vw',
                     fontSize: '2em', fontWeight: 650, color: '#f4f3ee', fontFamily: 'Poppins',
                     margin: '0'
-                }}>L. Alberto Serrano G.</p>
+                }}>Alberto Serrano</p>
 
                 <p style={{
                     // marginLeft: '1vw',
