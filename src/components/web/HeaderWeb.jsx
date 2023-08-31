@@ -27,33 +27,43 @@ export const HeaderWeb = (props) => {
         }}>
 
 
-            <Col style={{ height: '100%' }}>
-                <p style={{
-                    // marginLeft: '1vw',
-                    fontSize: '2.5em', fontWeight: 500, color: '#f4f3ee', fontFamily: 'Berlin Sans FB',
-                    margin: '0'
-                }}>Luis Alberto Serrano García</p>
+            <Row style={{
+                width: '70%', height: 'auto', 
+                display:'flex', alignItems:'center', justifyContent:'flex-start',
+                flexDirection:'row'
+            }}>
+                <Button
+                    className='button'
+                    type='ghost'
+                    icon={<MdDownload size={40} style={{ color: '#f4f3ee' }} />}
+                    onClick={handleDownload}
+                    style={{marginBottom:'20px'}}
+                />
+                <Col style={{ height: '100%',marginLeft:'3vh' }}>
+                    <p style={{
+                        // marginLeft: '1vw',
+                        fontSize: '2.5em', fontWeight: 650, color: '#f4f3ee', 
+                        margin: '0'
+                    }}>Luis Alberto Serrano García</p>
 
-                <p style={{
-                    // marginLeft: '1vw',
-                    fontSize: '1.5em', fontWeight: 400, color: '#f4f3ee', fontFamily: 'Berlin Sans FB',
-                    margin: '-4.5vh 0 0 0'
-                }}>{t('Resume.Description')}</p>
-            </Col>
+                    <p style={{
+                        // marginLeft: '1vw',
+                        fontSize: '1.5em', fontWeight: 300, color: '#f4f3ee', 
+                        margin: '-4.5vh 0 0 0'
+                    }}>{t('Resume.Description')}</p>
+                </Col>
+
+            </Row>
+
 
 
 
             <Row style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                width: '20%'
+                width: '15%'
 
             }}>
-                <Button
-                    className='button'
-                    type='ghost'
-                    icon={<AiOutlineDownload size={25} style={{ color: '#f4f3ee' }} />}
-                    onClick={handleDownload}
-                />
+
 
 
                 <Button
@@ -84,13 +94,13 @@ export const HeaderWeb = (props) => {
 
 
                 <Button
-                    icon={!language_ ? <IoLanguageOutline size={25} style={{ color: '#f4f3ee' }} /> : <IoLanguageSharp size={25} style={{ color: '#f4f3ee' }}  />}
+                    icon={language_ ? <IoLanguageOutline size={25} style={{ color: '#f4f3ee' }} /> : <IoLanguageSharp size={25} style={{ color: '#f4f3ee' }} />}
                     className='button'
                     onClick={() => setLanguage(!language_)}
                     type='ghost' />
 
 
-                
+
             </Row>
 
 

@@ -4,7 +4,7 @@ import { HiOutlineTranslate, HiOutlineUser } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { MdDownload } from "react-icons/md";
-import { IoHammer, IoHammerOutline } from "react-icons/io5";
+import { IoHammer, IoHammerOutline, IoLanguageOutline, IoLanguageSharp } from "react-icons/io5";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
 import { HiMiniUser } from "react-icons/hi2";
@@ -29,14 +29,15 @@ export const HeaderProjects = (props) => {
 
             <p style={{
                 // marginLeft: '1vw',
-                fontSize: '2.5em', fontWeight: 400, color: '#f4f3ee', fontFamily: 'Berlin Sans FB',
+                width:'70%',
+                fontSize: '2.5em', fontWeight: 650, color: '#f4f3ee',
 
             }}>{t('Projects.title')}</p>
 
 
             <Row style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                width: '14%'
+                width: '15%'
 
             }}>
 
@@ -67,8 +68,8 @@ export const HeaderProjects = (props) => {
 
 
 
-                <Button
-                    icon={<HiOutlineTranslate size={25} style={{ color: `${!language_ ? '#7765e3' : '#f4f3ee'}` }} />}
+<Button
+                    icon={language_ ? <IoLanguageOutline size={25} style={{ color: '#f4f3ee' }} /> : <IoLanguageSharp size={25} style={{ color: '#f4f3ee' }}  />}
                     className='button'
                     onClick={() => setLanguage(!language_)}
                     type='ghost' />
