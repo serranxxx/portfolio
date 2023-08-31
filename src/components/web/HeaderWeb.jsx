@@ -4,10 +4,12 @@ import { HiOutlineTranslate } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { MdDownload } from "react-icons/md";
-import { IoHammer } from "react-icons/io5";
+import { IoHammer, IoHammerOutline } from "react-icons/io5";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
-
+import { AiOutlineHome, AiOutlineDownload } from "react-icons/ai";
+import { HiMiniUser } from 'react-icons/hi2';
+import { IoLanguageOutline, IoLanguageSharp } from "react-icons/io5";
 const { Header } = Layout;
 const { Option } = Select
 export const HeaderWeb = (props) => {
@@ -43,14 +45,21 @@ export const HeaderWeb = (props) => {
 
             <Row style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                width: '15%'
+                width: '20%'
 
             }}>
+                <Button
+                    className='button'
+                    type='ghost'
+                    icon={<AiOutlineDownload size={25} style={{ color: '#f4f3ee' }} />}
+                    onClick={handleDownload}
+                />
+
 
                 <Button
                     className='button'
                     type='ghost'
-                    icon={<BiSolidHomeAlt2 size={25} style={{ color: '#f4f3ee' }} />}
+                    icon={<AiOutlineHome size={25} style={{ color: '#f4f3ee' }} />}
                     onClick={() => navigate("/portfolio/home", {
                         replace: true
                     })}
@@ -60,25 +69,28 @@ export const HeaderWeb = (props) => {
                     onClick={() => navigate("/portfolio/main-projects", {
                         replace: true
                     })}
-                    icon={<IoHammer size={25} style={{ color: '#f4f3ee' }} />}
+                    icon={<IoHammerOutline size={25} style={{ color: '#f4f3ee' }} />}
+                    className='button'
+                    type='ghost' />
+
+                <Button
+                    onClick={() => navigate("/portfolio/resume", {
+                        replace: true
+                    })}
+                    icon={<HiMiniUser size={25} style={{ color: '#f4f3ee' }} />}
                     className='button'
                     type='ghost' />
 
 
 
                 <Button
-                    icon={<HiOutlineTranslate size={25} style={{ color: `${!language_ ? '#7765e3' : '#f4f3ee'}` }} />}
+                    icon={!language_ ? <IoLanguageOutline size={25} style={{ color: '#f4f3ee' }} /> : <IoLanguageSharp size={25} style={{ color: '#f4f3ee' }}  />}
                     className='button'
                     onClick={() => setLanguage(!language_)}
                     type='ghost' />
 
 
-                <Button
-                    className='button'
-                    type='ghost'
-                    icon={<MdDownload size={25} style={{ color: '#f4f3ee' }} />}
-                    onClick={handleDownload}
-                />
+                
             </Row>
 
 

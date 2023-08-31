@@ -3,9 +3,11 @@ import { Button, Layout, Row } from 'antd';
 import { PiUsersFill, PiChartDonutFill, PiBookFill, PiAddressBookFill, PiArrowSquareLeftFill, PiSignOutFill } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
 import { BiSolidHomeAlt2 } from 'react-icons/bi';
-import { IoHammer } from 'react-icons/io5';
+import { IoHammer, IoHammerOutline, IoLanguageOutline, IoLanguageSharp } from 'react-icons/io5';
 import { HiOutlineTranslate } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
+import { HiMiniUser } from 'react-icons/hi2';
+import { AiOutlineHome } from 'react-icons/ai';
 const { Footer } = Layout;
 export const FooterMobile = (props) => {
 
@@ -29,20 +31,30 @@ export const FooterMobile = (props) => {
                     onClick={() => navigate("/portfolio/main-projects", {
                         replace: true
                     })}
-                    icon={<IoHammer size={25} style={{ color: '#7765e399' }} />}
+                    icon={<IoHammerOutline size={25} style={{ color: '#7765e399' }} />}
                     className='button'
                     type='ghost' />
 
                 <Button
                     className='button'
                     type='ghost'
-                    icon={<BiSolidHomeAlt2 size={25} style={{ color: '#7765e399' }} />}
+                    icon={<AiOutlineHome size={25} style={{ color: '#7765e399' }} />}
                     onClick={() => navigate("/portfolio/home", {
                         replace: true
                     })}
                 />
+
                 <Button
-                    icon={<HiOutlineTranslate size={25} style={{ color: `${!language_ ? '#877ebf' : '#7765e399'}` }} />}
+                    onClick={() => navigate("/portfolio/resume", {
+                        replace: true
+                    })}
+                    icon={<HiMiniUser size={25} style={{ color: '#7765e399' }} />}
+                    className='button'
+                    type='ghost' />
+
+
+                <Button
+                     icon={language_ ? <IoLanguageOutline size={25} style={{ color: '#7765e399' }} /> : <IoLanguageSharp size={25} style={{ color: '#7765e399' }}  />}
                     className='button'
                     onClick={() => setLanguage(!language_)}
                     type='ghost' />

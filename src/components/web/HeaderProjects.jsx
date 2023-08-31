@@ -1,13 +1,14 @@
 import React from 'react'
 import { Button, Col, Layout, Row, Select } from 'antd';
-import { HiOutlineTranslate } from 'react-icons/hi';
+import { HiOutlineTranslate, HiOutlineUser } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { MdDownload } from "react-icons/md";
-import { IoHammer } from "react-icons/io5";
+import { IoHammer, IoHammerOutline } from "react-icons/io5";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
 import { HiMiniUser } from "react-icons/hi2";
+import { AiOutlineHome } from 'react-icons/ai';
 
 const { Header } = Layout;
 const { Option } = Select
@@ -35,24 +36,32 @@ export const HeaderProjects = (props) => {
 
             <Row style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                width: '12%'
+                width: '14%'
 
             }}>
 
                 <Button
                     className='button'
                     type='ghost'
-                    icon={<BiSolidHomeAlt2 size={25} style={{ color: '#f4f3ee' }} />}
+                    icon={<AiOutlineHome size={25} style={{ color: '#f4f3ee' }} />}
                     onClick={() => navigate("/portfolio/home", {
                         replace: true
                     })}
                 />
 
                 <Button
+                    onClick={() => navigate("/portfolio/main-projects", {
+                        replace: true
+                    })}
+                    icon={<IoHammer size={25} style={{ color: '#f4f3ee' }} />}
+                    className='button'
+                    type='ghost' />
+
+                <Button
                     onClick={() => navigate("/portfolio/resume", {
                         replace: true
                     })}
-                    icon={<HiMiniUser size={25} style={{ color: '#f4f3ee' }} />}
+                    icon={<HiOutlineUser size={25} style={{ color: '#f4f3ee' }} />}
                     className='button'
                     type='ghost' />
 
