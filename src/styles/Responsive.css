@@ -45,6 +45,18 @@
         display: flex;
     }
 
+    .login-large {
+        display: none;
+    }
+
+    .login-medium {
+        display: none;
+    }
+
+    /* .login-small {
+        display: none;
+    } */
+
 }
 
 @media screen and (min-width: 751px) and (max-width: 1200px) {
@@ -84,6 +96,18 @@
     }
 
     .resume-small {
+        display: none;
+    }
+
+    .login-large {
+        display: none;
+    }
+
+    .login-medium {
+        display: flex;
+    }
+
+    .login-small {
         display: none;
     }
 
@@ -129,6 +153,18 @@
     }
 
     .resume-small {
+        display: none;
+    }
+
+    .login-large {
+        display: flex;
+    }
+
+    .login-medium {
+        display: none;
+    }
+
+    .login-small {
         display: none;
     }
 }

@@ -103,7 +103,7 @@ export const HomeCards = (props) => {
                                             className='button'
                                             // onClick={() => props.action(props.gif)}
                                             style={{
-                                                width: '10vw', fontWeight: 500, height: 'auto',
+                                                width: 'auto', fontWeight: 500, height: 'auto',
                                                 color: '#f4f3ee', backgroundColor: '#a99fea',
                                                 borderRadius: '3vh', fontSize: '1.3em'
                                             }}
@@ -117,7 +117,7 @@ export const HomeCards = (props) => {
                                             type='secondary'
                                             // onClick={() => props.action(props.gif)}
                                             style={{
-                                                width: '10vw', fontWeight: 500, height: 'auto',
+                                                width: 'auto', fontWeight: 500, height: 'auto',
                                                 color: '#a99fea', backgroundColor: '#f4f3ee',
                                                 borderRadius: '3vh', fontSize: '1.3em',
                                                 marginLeft: '2vh', border: '1.5px solid #a99fea'

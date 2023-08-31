@@ -1,6 +1,10 @@
 {
     "Login.button.projects": "Projects",
     "Login.button.about": "About me",
+
+    "Login.Hello": "Hello.",
+    "Login.Alberto": "I'm Alberto.",
+    "Login.text": "an Electronic Engineer and creative person. My journery has led me to become a Frontend Developer and UI/UX designer. I believe in crafting digital experiencies that blend technology and creativity.",
     
     "button.translate": "TRANSLATE",
     "button.home": "HOME",

@@ -29,7 +29,7 @@ export const HeaderProjects = (props) => {
 
             <p style={{
                 // marginLeft: '1vw',
-                width:'70%',
+                width: '70%',
                 fontSize: '2.5em', fontWeight: 650, color: '#f4f3ee',
 
             }}>{t('Projects.title')}</p>
@@ -68,8 +68,8 @@ export const HeaderProjects = (props) => {
 
 
 
-<Button
-                    icon={language_ ? <IoLanguageOutline size={25} style={{ color: '#f4f3ee' }} /> : <IoLanguageSharp size={25} style={{ color: '#f4f3ee' }}  />}
+                <Button
+                    icon={language_ ? <IoLanguageOutline size={25} style={{ color: '#f4f3ee' }} /> : <IoLanguageSharp size={25} style={{ color: '#f4f3ee' }} />}
                     className='button'
                     onClick={() => setLanguage(!language_)}
                     type='ghost' />

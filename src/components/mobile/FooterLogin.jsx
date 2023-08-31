@@ -4,16 +4,16 @@ import { PiUsersFill, PiChartDonutFill, PiBookFill, PiAddressBookFill, PiArrowSq
 import { useNavigate } from 'react-router-dom';
 import { BiSolidHomeAlt2 } from 'react-icons/bi';
 import { IoHammer, IoHammerOutline, IoLanguageOutline, IoLanguageSharp } from 'react-icons/io5';
-import { HiOutlineTranslate } from 'react-icons/hi';
+import { HiOutlineTranslate, HiOutlineUser } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
 import { HiMiniUser } from 'react-icons/hi2';
-import { AiOutlineHome, AiFillHome } from 'react-icons/ai';
+import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 const { Footer } = Layout;
-export const FooterMobile = (props) => {
+export const FooterLogin = (props) => {
 
     const { t } = useTranslation();
     const navigate = useNavigate()
-    const { language_, setLanguage, handleDownload } = props
+    const { language_, setLanguage } = props
 
     return (
         <Footer style={{
@@ -38,7 +38,7 @@ export const FooterMobile = (props) => {
                 <Button
                     className='button'
                     type='ghost'
-                    icon={<AiOutlineHome size={25} style={{ color: '#7765e399' }} />}
+                    icon={<AiFillHome size={25} style={{ color: '#7765e399' }} />}
                     onClick={() => navigate("/portfolio/home", {
                         replace: true
                     })}
@@ -48,7 +48,7 @@ export const FooterMobile = (props) => {
                     onClick={() => navigate("/portfolio/resume", {
                         replace: true
                     })}
-                    icon={<HiMiniUser size={25} style={{ color: '#7765e399' }} />}
+                    icon={<HiOutlineUser size={25} style={{ color: '#7765e399' }} />}
                     className='button'
                     type='ghost' />
 
