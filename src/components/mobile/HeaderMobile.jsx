@@ -27,14 +27,14 @@ export const HeaderMobile = (props) => {
             <Col style={{ height: '100%' }}>
                 <p style={{
                     // marginLeft: '1vw',
-                    fontSize: '2em', fontWeight: 650, color: '#f4f3ee', fontFamily: 'Poppins',
+                    fontSize: '2em', fontWeight: 650, color: '#f4f3ee',
                     margin: '0'
                 }}>Alberto Serrano</p>
 
                 <p style={{
                     // marginLeft: '1vw',
-                    fontSize: '0.9em', fontWeight: 400, color: '#f4f3ee', fontFamily: 'Poppins',
-                    margin: '-4.5vh 0 0 0'
+                    fontSize: '1em', fontWeight: 400, color: '#f4f3ee',
+                    margin: '-5vh 0 0 0'
                 }}>{t('Resume.Description')}</p>
             </Col>
 

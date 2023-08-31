@@ -152,7 +152,7 @@ export const LayoutApp = () => {
           }}>{t('Login.Hello')}</p>
 
           <p style={{
-            width: '100%', textAlign: 'left', margin: '-3vh 0 0 0',
+            width: '100%', textAlign: 'left', margin: '-1vh 0 0 0',
             fontSize: '6em', fontWeight: 650, color: '#463f3a'
           }}>{t('Login.Alberto')}</p>
 

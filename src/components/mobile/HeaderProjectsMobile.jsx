@@ -28,7 +28,7 @@ export const HeaderProjectsMobile = (props) => {
 
             <p style={{
                 // marginLeft: '1vw',
-                fontSize: '2.5em', fontWeight: 400, color: '#f4f3ee', fontFamily: 'Berlin Sans FB',
+                fontSize: '2em', fontWeight: 650, color: '#f4f3ee', 
 
             }}>{t('Projects.title')}</p>
 
