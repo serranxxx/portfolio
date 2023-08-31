@@ -12,7 +12,7 @@ export const ContentLogin = (props) => {
     return (
         <Content className='scrollable-div'
             style={{
-                marginTop: '2vh', // Ajusta este valor para que el contenido no quede detrás del header
+                marginTop: '5vh', // Ajusta este valor para que el contenido no quede detrás del header
                 marginBottom: '14vh', // Ajusta este valor para que el contenido no quede detrás del footer
                 overflowY: 'scroll',
                 height: 'auto', // Ajusta estos valores según el header y footer
@@ -36,17 +36,17 @@ export const ContentLogin = (props) => {
                     }} />
 
                 <p style={{
-                    width: '70%', textAlign: 'left', margin: 0,
+                    width: '80%', textAlign: 'left', margin: 0,
                     fontSize: '6em', fontWeight: 650, color: '#463f3a'
                 }}>{t('Login.Hello')}</p>
 
                 <p style={{
-                    width: '70%', textAlign: 'left', margin: '-4vh 0 1vh 0',
-                    fontSize: '3em', fontWeight: 650, color: '#463f3a'
+                    width: '80%', textAlign: 'left', margin: '-3vh 0 1vh 0',
+                    fontSize: '2.5em', fontWeight: 650, color: '#463f3a'
                 }}>{t('Login.Alberto')}</p>
 
                 <p style={{
-                    width: '70%', fontSize: '1.5em', fontWeight: 600, color: '#463f3a', margin: 0,
+                    width: '80%', fontSize: '1.5em', fontWeight: 600, color: '#463f3a', margin: 0,
                     textAlign: 'justify'
                 }}>{t('Login.text')}</p>
 
