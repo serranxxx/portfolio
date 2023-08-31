@@ -7,13 +7,14 @@ import { MdDownload } from "react-icons/md";
 import { IoHammer } from "react-icons/io5";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
+import { HiMiniUser } from "react-icons/hi2";
 
 const { Header } = Layout;
 const { Option } = Select
-export const HeaderWeb = (props) => {
+export const HeaderProjectsMobile = (props) => {
     const { t } = useTranslation();
     const navigate = useNavigate()
-    const { language_, setLanguage, handleDownload, location } = props
+    const { language_, setLanguage, } = props
     return (
         <Header style={{
             position: 'fixed', zIndex: 1, width: '100%',
@@ -25,25 +26,16 @@ export const HeaderWeb = (props) => {
         }}>
 
 
-            <Col style={{ height: '100%' }}>
-                <p style={{
-                    // marginLeft: '1vw',
-                    fontSize: '2.5em', fontWeight: 500, color: '#f4f3ee', fontFamily: 'Berlin Sans FB',
-                    margin: '0'
-                }}>Luis Alberto Serrano García</p>
+            <p style={{
+                // marginLeft: '1vw',
+                fontSize: '2.5em', fontWeight: 400, color: '#f4f3ee', fontFamily: 'Berlin Sans FB',
 
-                <p style={{
-                    // marginLeft: '1vw',
-                    fontSize: '1.5em', fontWeight: 400, color: '#f4f3ee', fontFamily: 'Berlin Sans FB',
-                    margin: '-4.5vh 0 0 0'
-                }}>{t('Resume.Description')}</p>
-            </Col>
+            }}>{t('Projects.title')}</p>
 
 
-
-            <Row style={{
+            {/* <Row style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                width: '15%'
+                width: '12%'
 
             }}>
 
@@ -57,10 +49,10 @@ export const HeaderWeb = (props) => {
                 />
 
                 <Button
-                    onClick={() => navigate("/portfolio/main-projects", {
+                    onClick={() => navigate("/portfolio/resume", {
                         replace: true
                     })}
-                    icon={<IoHammer size={25} style={{ color: '#f4f3ee' }} />}
+                    icon={<HiMiniUser size={25} style={{ color: '#f4f3ee' }} />}
                     className='button'
                     type='ghost' />
 
@@ -72,14 +64,7 @@ export const HeaderWeb = (props) => {
                     onClick={() => setLanguage(!language_)}
                     type='ghost' />
 
-
-                <Button
-                    className='button'
-                    type='ghost'
-                    icon={<MdDownload size={25} style={{ color: '#f4f3ee' }} />}
-                    onClick={handleDownload}
-                />
-            </Row>
+            </Row> */}
 
 
 

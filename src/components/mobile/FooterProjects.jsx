@@ -6,8 +6,9 @@ import { BiSolidHomeAlt2 } from 'react-icons/bi';
 import { IoHammer } from 'react-icons/io5';
 import { HiOutlineTranslate } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
+import { HiMiniUser } from 'react-icons/hi2';
 const { Footer } = Layout;
-export const FooterMobile = (props) => {
+export const FooterProjects = (props) => {
 
     const { t } = useTranslation();
     const navigate = useNavigate()
@@ -25,13 +26,16 @@ export const FooterMobile = (props) => {
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between'
             }}>
 
+                
+
                 <Button
-                    onClick={() => navigate("/portfolio/main-projects", {
+                    onClick={() => navigate("/portfolio/resume", {
                         replace: true
                     })}
-                    icon={<IoHammer size={25} style={{ color: '#7765e399' }} />}
+                    icon={<HiMiniUser size={25} style={{ color: '#7765e399' }} />}
                     className='button'
                     type='ghost' />
+
 
                 <Button
                     className='button'

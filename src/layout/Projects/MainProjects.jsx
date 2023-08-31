@@ -1,13 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { HomeCards } from './HomeCards'
 import { gifs } from '../hooks/gifsPaths'
-import { Button, Row } from 'antd'
+import { Button, Layout, Row } from 'antd'
 import { Link } from 'react-router-dom'
 import { AiFillHome } from "react-icons/ai";
 import { HiOutlineTranslate } from "react-icons/hi";
 import { appContext } from '../../context/appContext'
 import i18n from '../../languages/i18n'
 import { useTranslation } from 'react-i18next'
+import { HeaderProjects } from '../../components/web/HeaderProjects'
+import { ContentProjects } from '../../components/web/ContentProjects'
+import { FooterMobile } from '../../components/mobile/FooterMobile'
+import { HeaderProjectsMobile } from '../../components/mobile/HeaderProjectsMobile'
+import { FooterProjects } from '../../components/mobile/FooterProjects'
+
 
 
 export const MainProjects = () => {
@@ -59,7 +65,23 @@ export const MainProjects = () => {
     return (
         <>
 
-            <div
+            <Layout
+                className='resume-large'
+                style={{ minHeight: '100vh', backgroundColor: '#f4f3ee' }}>
+                <HeaderProjects language_={language_} setLanguage={setLanguage}  />
+                <ContentProjects goTo={goTo}/>
+            </Layout>
+
+            <Layout
+                className='resume-small'
+                style={{ minHeight: '100vh', backgroundColor: '#f4f3ee' }}>
+                <HeaderProjectsMobile language_={language_} setLanguage={setLanguage}  />
+                <ContentProjects goTo={goTo}/>
+                <FooterProjects language_={language_} setLanguage={setLanguage} />
+            </Layout>
+
+
+            {/* <div
                 style={{
                     height: 'auto', width: 'auto', backgroundColor: '#f4f3ee',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', overflowY: 'auto',
@@ -143,7 +165,7 @@ export const MainProjects = () => {
                 <HomeCards name="San Pancrasio" action={goTo} gif={gifs.pancrasio} order={'row-reverse'} text={t('Projects.POS')} />
 
 
-            </div>
+            </div> */}
 
         </>
     )
