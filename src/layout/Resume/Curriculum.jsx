@@ -36,7 +36,7 @@ export const CurriculumV = () => {
         const link = document.createElement('a');
         link.href = pdfPath;
         link.target = '_blank'; // Abre en una nueva pestaña (opcional)
-        link.download = `${language_ ? 'AlbertoSerrano-Resume' : 'AlbertoSerrano-CV'}`; // Nombre del archivo al descargar (opcional)
+        link.download = `${language_ ? 'AlbertoSerrano-Resume' : 'AlbertoSerrano-Curriculum'}`; // Nombre del archivo al descargar (opcional)
 
         // Simular el clic en el enlace para iniciar la descarga
         link.click();

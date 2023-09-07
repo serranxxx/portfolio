@@ -17,7 +17,10 @@
     "Projects.avatar":"The ultimate platform to craft your fully personalized avatars! Unleash your creativity as you select everything from skin tone to accessories, designing avatars that truly reflect your unique identity. Save, delete, and favorite your creations.",
     "Projects.send": "A simple but pretty interface that's all about style! With a stylish login screen and a beautifully crafted layout, this project mixes colors, tools, and styles. While it is not loaded with functionality yet, it shows off a great design and offers a good user experience.",
     "Projects.POS": "A Point of Sale (POS) solution! Managing your business. Add products to your inventory and keep track of sales with detailed daily and monthly reports, including profits. Stay on top of your stock levels with an inventory report, ensuring you know exactly when to restock. Plus, export all this valuable data to Excel for your convenience.",
-    
+    "Projects.azzhakrutt": "An application focused on the development of a versatile database that manages information from four distinct profiles with two levels of access: administrator and guest. Each profile stores specific data, while administrators have the ability to add, edit, delete data, and access advanced statistics, while guests can only view the data and statistics. All of this is achieved through the efficient use of MongoDB as the primary database, ensuring effective information management and data privacy protection.",
+
+
+
     "HomeCards.button": "Full project",
 
     "Resume.Description": "Frontend developer - UI/UX designer",
@@ -38,7 +41,7 @@
     "Resume.React1": "Currently, I specialize in React JS as my primary set of technologies. I am actively involved in the development of user interfaces and interactive web applications.",
     "Resume.React2": "My experience in React JS has allowed me to efficiently build robust and scalable frontend solutions. To streamline development and maintain design consistency, I rely on antd (Ant Design) as my go-to UI library.",
 
-    "Resume.uiux.text": "I played a key role in the development of various projects by creating Mockups. I used Adobe Illustrator and Adobe XD as my primary tools to design detailed and appealing visual layouts. These Mockups became an essential reference for the team throughout the development process.",
+    "Resume.uiux.text": "I played a key role in the development of various projects by creating Mockups. I used Adobe Illustrator, Adobe XD and Figma as my primary tools to design detailed and appealing visual layouts. These Mockups became an essential reference for the team throughout the development process.",
     "Resume.python.text": "I worked as a Full Stack Developer, creating desktop applications (Windows) with multiple functionalities using Python. I was involved in the entire development process, from designing the frontend of the application using Illustrator and Adobe XD to its implementation in the QT Creator development environment.",
 
     "Resume.internship": "Professional internships",

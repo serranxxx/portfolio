@@ -23,17 +23,6 @@ export const ContentProjects = (props) => {
                 // backgroundColor: `${bg}70`
             }}
         >
-            {/* <Row style={{
-                width:'30%', display:'flex', alignItems:'center', justifyContent:'space-between',
-                flexDirection:'row', marginBottom:'5vh'
-            }}>
-                <Button style={{
-                    borderRadius:'2vh', height:'5vh'
-                }}>React.JS</Button>
-                <Button>Node.JS</Button>
-                <Button>AdobeXD</Button>
-                <Button>Python</Button>
-            </Row> */}
             <HomeCards action={goTo} data={projects} />
 
         </Content>

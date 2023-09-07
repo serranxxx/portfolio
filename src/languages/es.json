@@ -18,10 +18,10 @@
     "Projects.avatar": "¡La plataforma para crear avatares totalmente personalizados! Desata tu creatividad mientras seleccionas todo, desde el tono de piel hasta los accesorios, diseñando avatares que realmente reflejen tu identidad única. Guarda, elimina y marca como favoritas tus creaciones.",
     "Projects.send": "¡Una interfaz sencilla pero bonita que se centra en el estilo! Con una elegante pantalla de inicio de sesión y un diseño bellamente elaborado, este proyecto combina colores, herramientas y estilos. Aunque aún no está cargado de funcionalidades, muestra un gran diseño y ofrece una buena experiencia de usuario.",
     "Projects.POS": "¡Una solución de Punto de Venta (POS)! Administra tu negocio. Agrega productos a tu inventario y lleva un registro de las ventas con informes detallados diarios y mensuales, incluyendo ganancias. Mantén el control de los niveles de stock con un informe de inventario, asegurándote de saber exactamente cuándo reponer existencias. Además, exporta todos estos valiosos datos a Excel para tu comodidad.",
-    
+    "Projects.azzhakrutt":"Una aplicación centrada en el desarrollo de una base de datos versátil que gestiona información de cuatro perfiles distintos con dos niveles de acceso: administrador e invitado. Cada perfil almacena datos específicos, mientras que los administradores tienen la capacidad de agregar, editar, eliminar datos y acceder a estadísticas avanzadas, mientras que los invitados solo pueden visualizar los datos y estadísticas. Todo esto se logra mediante el uso eficiente de MongoDB como base de datos principal, asegurando una gestión efectiva de la información y la protección de la privacidad de los datos.",
     "HomeCards.button": "Vista rápida",
 
-    "Resume.Description": "Desarrollador Frontend - diseñador UI/UX",
+    "Resume.Description": "Desarrollador Frontend - UI/UX",
     "Resume.download": "DESCARGAR",
     "Resume.projects": "PROYECTOS",
     "Resume.phone": "Teléfono: ",
@@ -39,7 +39,7 @@
     "Resume.React1": "Actualmente me especializo en React JS como mi principal conjunto de tecnologías. Me encuentro activamente involucrado en el desarrollo de interfaces de usuario y aplicaciones web interactivas.",
     "Resume.React2": "Mi experiencia en React JS me ha permitido construir soluciones frontend robustas y escalables de manera eficiente. Para agilizar el desarrollo y mantener la consistencia en el diseño, confío en antd (Ant Design) como mi librería de interfaz de usuario por excelencia.",
 
-    "Resume.uiux.text": "Tuve un papel fundamental en el desarrollo de diversos proyectos al crear Mockups. Utilicé Adobe Illustrator y Adobe XD como mi herramienta principal para diseñar detallados y atractivos diseños visuales. Estos Mockups se convirtieron en una referencia esencial para el equipo durante todo el proceso de desarrollo.",
+    "Resume.uiux.text": "Tuve un papel fundamental en el desarrollo de diversos proyectos al crear Mockups. Utilicé Adobe Illustrator, Adobe XD y Figma como mi herramienta principal para diseñar detallados y atractivos diseños visuales. Estos Mockups se convirtieron en una referencia esencial para el equipo durante todo el proceso de desarrollo.",
     "Resume.python.text": "Trabajé como Desarrollador Full Stack, creando aplicaciones de escritorio (windows) con múltiples funcionalidades utilizando Python. Participé en todo el proceso de desarrollo, desde el diseño del frontend de la aplicación utilizando Illustrator y Adobe XD hasta su implementación en el entorno de desarrollo de QT Creator.",
     
     "Resume.internship": "Residencias profesionales",

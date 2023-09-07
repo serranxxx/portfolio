@@ -20,7 +20,7 @@ export const ContentMobile = (props) => {
                 // backgroundColor: `${bg}70`
             }}
         >
-            <FloatButton.BackTop visibilityHeight={0} style={{right:'30px', bottom:'100px', opacity:'60%'}} />
+            <FloatButton.BackTop visibilityHeight={0} style={{ right: '30px', bottom: '100px', opacity: '60%' }} />
             <div className='Summary' style={{
                 width: '80%'
             }}>
@@ -218,30 +218,56 @@ export const ContentMobile = (props) => {
                 }}>{t('Resume.skills')}</p>
 
 
-                <p style={{
-                    margin: '0 0 0 0',
-                    fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                }}>React JS</p>
-                <p style={{
-                    margin: '0.5vh 0 0 0',
-                    fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                }}>MongoDB</p>
-                <p style={{
-                    margin: '0.5vh 0 0 0',
-                    fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                }}>GitHub / GitLab</p>
-                <p style={{
-                    margin: '0.5vh 0 0 0',
-                    fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                }}>Adobe Illustrator</p>
-                <p style={{
-                    margin: '0.5vh 0 0 0',
-                    fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                }}>Adobe XD</p>
-                <p style={{
-                    margin: '0.5vh 0 0 0',
-                    fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
-                }}>QT Creator</p>
+                <Row style={{
+                    display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                    flexDirection: 'row', width: '70%',
+                }}>
+                    <Col>
+                        <p style={{
+                            margin: '0 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>React JS</p>
+                        <p style={{
+                            margin: '0.5vh 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>MongoDB</p>
+                        <p style={{
+                            margin: '0.5vh 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>GitHub / GitLab</p>
+                        <p style={{
+                            margin: '0.5vh 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>Postman</p>
+                        <p style={{
+                            margin: '0.5vh 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>Node JS</p>
+                    </Col>
+                    <Col style={{
+                        display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
+                        flexDirection: 'column',
+                    }}>
+                        <p style={{
+                            margin: '0 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>Figma</p>
+                        <p style={{
+                            margin: '0.5vh 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>Adobe Illustrator</p>
+                        <p style={{
+                            margin: '0.5vh 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>Adobe XD</p>
+                        <p style={{
+                            margin: '0.5vh 0 0 0',
+                            fontWeight: 400, color: '#463f3a80', fontSize: '1.2em'
+                        }}>QT Creator</p>
+
+
+                    </Col>
+                </Row>
 
             </div>
             <hr style={{

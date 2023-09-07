@@ -97,7 +97,7 @@ export const HomeCards = (props) => {
                                     display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                                     flexDirection: 'row'
                                 }}>
-                                    <Link to={props.action(project.gif)}
+                                    <Link to={project.link}
                                         target='_blank'>
                                         <Button
                                             className='button'
@@ -110,20 +110,29 @@ export const HomeCards = (props) => {
                                         >{t('HomeCards.button')}</Button>
                                     </Link>
 
-                                    <Link to={props.action(project.gif)}
-                                        target='_blank'>
-                                        <Button
-                                            className='button'
-                                            type='secondary'
-                                            // onClick={() => props.action(props.gif)}
-                                            style={{
-                                                width: 'auto', fontWeight: 500, height: 'auto',
-                                                color: '#a99fea', backgroundColor: '#f4f3ee',
-                                                borderRadius: '3vh', fontSize: '1.3em',
-                                                marginLeft: '2vh', border: '1.5px solid #a99fea'
-                                            }}
-                                        >Mock-up</Button>
-                                    </Link>
+                                    {
+                                        project.mock ?
+                                            <>
+                                                <Link to={project.web}
+                                                    target='_blank'>
+                                                    <Button
+                                                        className='button'
+                                                        type='secondary'
+                                                        // onClick={() => props.action(props.gif)}
+                                                        style={{
+                                                            width: 'auto', fontWeight: 500, height: 'auto',
+                                                            color: '#a99fea', backgroundColor: '#f4f3ee',
+                                                            borderRadius: '3vh', fontSize: '1.3em',
+                                                            marginLeft: '2vh', border: '1.5px solid #a99fea'
+                                                        }}
+                                                    >Mock-up</Button>
+                                                </Link>
+
+                                            </>
+
+                                            : <></>
+                                    }
+
 
                                 </div>
 
@@ -134,15 +143,15 @@ export const HomeCards = (props) => {
                             className='home-card-small'
                             style={{
                                 width: '80%', height: 'auto', backgroundColor: '#f4f3ee',
-                                margin: '4vh 0 2vh 0', 
+                                margin: '4vh 0 2vh 0',
                                 // paddingBottom: '5%',
                                 alignItems: 'center', justifyContent: 'center', flexDirection: `column`,
-                                border:'2px solid #7765e360',
-                                padding:'3% 2% 2% 2%', borderRadius:'2vh',
-                                boxShadow:'0px 0px 10px #00000030'
+                                border: '2px solid #7765e360',
+                                padding: '3% 2% 2% 2%', borderRadius: '2vh',
+                                boxShadow: '0px 0px 10px #00000030'
 
                             }}>
-                            
+
 
                             <img src={project.gif} style={{
                                 height: 'auto', width: '98%', borderRadius: '2vh',
@@ -154,7 +163,7 @@ export const HomeCards = (props) => {
                                 fontWeight: 650, color: '#a99fea', margin: '2vh 0 0vh 0'
                             }}>{project.name}</p>
 
-                            
+
 
 
                             <Row style={{
@@ -182,11 +191,11 @@ export const HomeCards = (props) => {
 
 
                             <div style={{
-                                width: '95%',  margin: '2vh 0 1vh 0',
+                                width: '95%', margin: '2vh 0 1vh 0',
                                 display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                                 flexDirection: 'row'
                             }}>
-                                <Link to={props.action(project.gif)}
+                                <Link to={project.link}
                                     target='_blank'>
                                     <Button
                                         className='button'
@@ -199,156 +208,42 @@ export const HomeCards = (props) => {
                                     >{t('HomeCards.button')}</Button>
                                 </Link>
 
-                                <Link to={props.action(project.gif)}
-                                    target='_blank'>
-                                    <Button
-                                        className='button'
-                                        type='secondary'
-                                        // onClick={() => props.action(props.gif)}
-                                        style={{
-                                            width: 'auto', fontWeight: 500, height: 'auto',
-                                            color: '#a99fea', backgroundColor: '#f4f3ee',
-                                            fontSize: '1.3em',
-                                            marginLeft: '2vh', border: '1.5px solid #a99fea'
-                                        }}
-                                    >Mock-up</Button>
-                                </Link>
+                                {
+                                    project.mock ?
+                                        <>
+                                            <Link to={project.web}
+                                                target='_blank'>
+                                                <Button
+                                                    className='button'
+                                                    type='secondary'
+                                                    // onClick={() => props.action(props.gif)}
+                                                    style={{
+                                                        width: 'auto', fontWeight: 500, height: 'auto',
+                                                        color: '#a99fea', backgroundColor: '#f4f3ee',
+                                                         fontSize: '1.3em',
+                                                        marginLeft: '2vh', border: '1.5px solid #a99fea'
+                                                    }}
+                                                >Mock-up</Button>
+                                            </Link>
 
-                                {/* <Button
-                                    className='button'
-                                    type='ghost'
-                                    // onClick={() => props.action(props.gif)}
-                                    style={{
-                                        width: 'auto', fontWeight: 500, height: 'auto',
-                                        color: '#a99fea', backgroundColor: '#f4f3ee',
-                                        borderRadius: '3vh', fontSize: '1.3em',
-                                        marginLeft: '2vh',
-                                        // border: '1.5px solid #a99fea'
-                                    }}
-                                >About</Button> */}
+                                        </>
+
+                                        : <></>
+                                }
+
 
 
                             </div>
 
                         </div >
 
-                        {/* <div style={{
-                            width: '65%',
-                            border: '3px solid #7765e360', borderRadius: '2vh',
-                            margin: 0
-                        }} /> */}
 
 
                     </>
                 ))
             }
 
-            {/* <div
-                className='home-card-large'
-                style={{
-                    width: 'auto', height: 'auto', backgroundColor: '#f4f3ee',
-                    marginTop: '2vh', paddingTop: '5%', paddingBottom: '5%',
-                    alignItems: 'center', justifyContent: 'center', flexDirection: `${props.order}`
-                    // border:'2px solid #463f3a80',
 
-                }}>
-                <img src={props.gif} style={{
-                    height: '20vw', width: 'auto', borderRadius: '0.5vh',
-                    boxShadow: '0 0 20px #000000050',
-                    border: '0px solid #463f3a',
-                    marginRight: `${props.order === 'row' ? '10vw' : '0vh'}`,
-                    marginLeft: `${props.order !== 'row' ? '10vw' : '0vh'}`,
-                }} />
-
-                <Col style={{
-                    width: '35vw',
-                    marginLeft: '1vw',
-                    marginRight: '1vw'
-
-                }}>
-                    <p style={{
-                        fontSize: '2.2em', width: '100%', textAlign: 'center',
-                        fontWeight: 650, color: '#463f3a'
-                    }}>{props.name}</p>
-
-                    <p style={{
-                        fontSize: '1.2em', width: '100%', textAlign: 'left',
-                        fontWeight: 400, wordWrap: 'break-word', color: '#463f3a80',
-                        fontStyle: 'italic'
-
-                        // fontStyle:'italic'
-                    }}>{props.text}</p>
-
-                    <div style={{
-                        width: '100%', height: '10vh',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center'
-                    }}>
-                        <Link to={props.action(props.gif)}
-                            target='_blank'>
-                            <Button
-                                className='button'
-                                // onClick={() => props.action(props.gif)}
-                                style={{
-                                    width: '10vw', fontWeight: 500, height: 'auto',
-                                    color: '#f4f3ee', backgroundColor: '#7765e3',
-                                    borderRadius: '1.5vh', fontSize: '1.3em'
-                                }}
-                            >{t('HomeCards.button')}</Button>
-                        </Link>
-
-                    </div>
-
-                </Col>
-
-
-            </div>
-
-            <div
-                className='home-card-small'
-                style={{
-                    width: 'auto', height: 'auto', backgroundColor: '#f4f3ee',
-                    marginTop: '2vh', paddingBottom: '5%',
-                    alignItems: 'center', justifyContent: 'center', flexDirection: `column`
-                    // border:'2px solid #463f3a80',
-
-                }}>
-                <p style={{
-                    fontSize: '2.2em', width: '100%', textAlign: 'center',
-                    fontWeight: 650, color: '#463f3a'
-                }}>{props.name}</p>
-
-                <img src={props.gif} style={{
-                    height: 'auto', width: '80%', borderRadius: '0.5vh',
-                    boxShadow: '0 0 20px #000000050',
-                    border: '0px solid #463f3a', marginBottom: '2vh'
-                }} />
-
-                <p style={{
-                    fontSize: '0.9em', width: '80%', textAlign: 'justify',
-                    fontWeight: 400, wordWrap: 'break-word', color: '#463f3a',
-                    // fontStyle:'italic'
-                }}>{props.text}</p>
-
-                <div style={{
-                    width: '100%', height: '10vh',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}>
-                    <Link to={props.action(props.gif)}
-                        target='_blank'>
-                        <Button
-                            className='button'
-                            // onClick={() => props.action(props.gif)}
-                            style={{
-                                width: 'auto', fontWeight: 500, height: 'auto',
-                                color: '#f4f3ee', backgroundColor: '#7765e3',
-                                borderRadius: '1.5vh', fontSize: '1.3em'
-                            }}
-                        >Full project</Button>
-                    </Link>
-
-                </div>
-
-            </div> */}
 
 
         </>
