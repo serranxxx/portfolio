@@ -197,10 +197,10 @@ export const HeaderAppMobile = ({
     return (
         <Header style={{
             position: 'fixed', zIndex: 1, width: '100%',
-            backgroundColor: theme ? primary : '#25252590', backdropFilter: 'blur(16px)',
+            backgroundColor: theme ? '#f5f5f5' : '#252525', backdropFilter: 'blur(16px)',
             // padding:'0 5% 0 5%',
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
-            // boxShadow: '10px 0px 10px #00000040',
+            boxShadow: '10px 0px 10px #00000040',
             borderBottom: '1px solid #463f3a20',
             height: '12vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
@@ -223,7 +223,7 @@ export const HeaderAppMobile = ({
                     display: position === 'resume' ? '' : 'none',
                 }}>-</p> */}
                 <p style={{
-                    fontSize: '1.2em', color: theme ? text : '#f5f5f580',
+                    fontSize: '0.9em', color: theme ? text : '#f5f5f580',
                     fontWeight: 500, marginRight: '10px',
                     display: position === 'resume' ? '' : 'none',
                     marginTop: '-8vh'

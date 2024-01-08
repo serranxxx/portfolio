@@ -247,10 +247,10 @@ export const FooterApp = ({
     return (
         <Footer style={{
             position: 'fixed', zIndex: 1, width: '100%', bottom: 0,
-            backgroundColor: theme ? primary : '#25252590', backdropFilter: 'blur(16px)',
+            backgroundColor: theme ? '#f5f5f5' : '#252525', backdropFilter: 'blur(16px)',
             // padding:'0 5% 0 5%',
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
-            // boxShadow: '10px 0px 10px #00000040',
+            boxShadow: '10px 0px 10px #00000040',
             borderTop: '1px solid #463f3a20',
             height: '12vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
