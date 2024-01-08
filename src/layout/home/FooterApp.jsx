@@ -343,7 +343,7 @@ export const FooterApp = ({
 
                 {
                     // onSettings ?
-                    <Dropdown overlay={menu} onClick={() => setVisible(!visible)} visible={visible}>
+                    <Dropdown overlay={menu} onVisibleChange={() => setVisible(!visible)}  visible={visible}>
                         <Button
                             onClick={() => setOnSettings(false)}
                             style={{

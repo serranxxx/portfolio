@@ -434,7 +434,7 @@ export const ContentResume = ({ handleDownload }) => {
 
             <Content className='scrollable-div resume-small'
                 style={{
-                    marginTop: '15vh', // Ajusta este valor para que el contenido no quede detrás del header
+                    marginTop: '10vh', // Ajusta este valor para que el contenido no quede detrás del header
                     marginBottom: '14vh', // Ajusta este valor para que el contenido no quede detrás del footer
                     overflowY: 'scroll',
                     height: 'auto', // Ajusta estos valores según el header y footer
@@ -446,7 +446,7 @@ export const ContentResume = ({ handleDownload }) => {
                 <Row style={{
                     width: '93%',
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    flexDirection: 'row', margin: '1vh 0 1vh 0', position: 'relative',
+                    flexDirection: 'row', margin: '0 0 1vh 0', position: 'relative',
                     // borderBottom:'1px solid #000'
                 }}>
                     <Row style={{
