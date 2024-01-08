@@ -202,7 +202,7 @@ export const HeaderAppMobile = ({
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             boxShadow: '10px 0px 10px #00000040',
             borderBottom: '1px solid #463f3a20',
-            height: '12vh',
+            height: '8vh',
             display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
         }}>
 
@@ -226,7 +226,7 @@ export const HeaderAppMobile = ({
                     fontSize: '1em', color: theme ? text : '#f5f5f580',
                     fontWeight: 500, marginRight: '10px',
                     display: position === 'resume' ? '' : 'none',
-                    marginTop: '-8vh'
+                    marginTop: '-8.5vh'
                 }}> Developer - {t('Resume.uiux')}</p>
             </Col>
 

@@ -252,7 +252,7 @@ export const FooterApp = ({
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             boxShadow: '10px 0px 10px #00000040',
             borderTop: '1px solid #463f3a20',
-            height: '12vh',
+            height: '8vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
 
