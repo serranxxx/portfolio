@@ -34,7 +34,7 @@ export const HeaderApp = ({
     const [themebg, setThemebg] = useState(false)
     const [languagebg, setLanguagebg] = useState(false)
     const [downloadbg, setDownloadbg] = useState(false)
-    const [visible, setVisible] = useState(true)
+    const [visible, setVisible] = useState(false)
 
     const [primary, setPrimary] = useState('#F5F5F5')
     const [second, setSecond] = useState('#7765e399')

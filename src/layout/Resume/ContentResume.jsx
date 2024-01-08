@@ -46,7 +46,7 @@ export const ContentResume = ({ handleDownload }) => {
 
                         }}>
 
-                            <div
+                            {/* <div
                                 onClick={handleDownload}
                                 // onMouseEnter={() => setOnDownload(!onDownload)}
                                 style={{
@@ -77,7 +77,7 @@ export const ContentResume = ({ handleDownload }) => {
                                         : <></>
                                 }
 
-                            </div>
+                            </div> */}
                         </Row>
 
 
