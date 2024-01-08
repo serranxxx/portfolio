@@ -227,7 +227,7 @@ export const HeaderAppMobile = ({
                     fontWeight: 500, marginRight: '10px',
                     display: position === 'resume' ? '' : 'none',
                     fontStyle:'italic',
-                    marginTop: '-8.5vh'
+                    marginTop: '-8vh'
                 }}> Developer - {t('Resume.uiux')}</p>
             </Col>
 

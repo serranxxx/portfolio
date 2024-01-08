@@ -591,7 +591,7 @@ export const ContentResume = ({ handleDownload }) => {
                                         <p style={{
                                             margin: '0.5vh 0 0 0',
                                             fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
-                                        }}>GitHub / GitLab</p>
+                                        }}>GitHub</p>
                                         <p style={{
                                             margin: '0.5vh 0 0 0',
                                             fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
