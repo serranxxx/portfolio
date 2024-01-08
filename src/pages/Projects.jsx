@@ -1,84 +1,42 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { HomeCards } from './HomeCards'
-import { gifs } from '../hooks/gifsPaths'
 import { Button, Layout, Row } from 'antd'
-import { Link } from 'react-router-dom'
-import { AiFillHome } from "react-icons/ai";
-import { HiOutlineTranslate } from "react-icons/hi";
-import { appContext } from '../../context/appContext'
-import i18n from '../../languages/i18n'
-import { useTranslation } from 'react-i18next'
-import { HeaderProjects } from '../../components/web/HeaderProjects'
-import { ContentProjects } from '../../components/web/ContentProjects'
-import { FooterMobile } from '../../components/mobile/FooterMobile'
-import { HeaderProjectsMobile } from '../../components/mobile/HeaderProjectsMobile'
-import { FooterProjects } from '../../components/mobile/FooterProjects'
+import { ContentProjects } from '../layout/Projects/ContentProjects'
+import { HeaderApp } from '../layout/home/HeaderApp'
+import { appContext } from '../context/appContext'
+import { HeaderAppMobile } from '../layout/home/HeaderAppMobile'
+import { FooterApp } from '../layout/home/FooterApp'
 
 
 
-export const MainProjects = () => {
+export const Projects = () => {
 
-
-    const { newLanguage, language } = useContext(appContext)
-    const [language_, setLanguage] = useState(true)
-    const { t } = useTranslation();
-
-    const setnewLanguage = () => {
-        // setLanguage(!language_)
-        if (language_) i18n.changeLanguage('en')
-        else i18n.changeLanguage('es')
-        newLanguage(language_)
-    }
-
-    useEffect(() => {
-        setnewLanguage()
-    }, [language_])
-
-
-
-    const goTo = (index) => {
-        switch (index) {
-            case gifs.taskify:
-                return `https://serranxxx.github.io/taskify/`
-
-
-            case gifs.avatar:
-                return `https://serranxxx.github.io/avatar-studio/`
-
-
-            case gifs.send:
-                return `https://serranxxx.github.io/send-review/`
-
-
-            case gifs.pancrasio:
-                return `https://serranxxx.github.io/san-pancrasio/`
-
-            case gifs.journal:
-                return `https://serranxxx.github.io/journal/`
-
-
-            default:
-
-        }
-    }
+    const { theme } = useContext(appContext)
 
     return (
         <>
 
             <Layout
                 className='resume-large'
-                style={{ minHeight: '100vh', backgroundColor: '#f4f3ee' }}>
-                <HeaderProjects language_={language_} setLanguage={setLanguage}  />
-                <ContentProjects goTo={goTo}/>
+                style={{ minHeight: '100vh', backgroundColor: theme ? '#F5F5F5' : '#252525' }}>
+                <HeaderApp type={'home'} position={'projects'} code={'AS.'} />
+                <ContentProjects />
             </Layout>
 
             <Layout
+                className='resume-small'
+                style={{ minHeight: '100vh', backgroundColor: theme ? '#F5F5F5' : '#252525' }}>
+                <HeaderAppMobile type={'home'} position={'projects'} code={'AS.'} />
+                <ContentProjects />
+                <FooterApp type={'home'} position={'projects'} code={'AS.'} />
+            </Layout>
+
+            {/* <Layout
                 className='resume-small'
                 style={{ minHeight: '100vh', backgroundColor: '#f4f3ee' }}>
                 <HeaderProjectsMobile language_={language_} setLanguage={setLanguage}  />
                 <ContentProjects goTo={goTo}/>
                 <FooterProjects language_={language_} setLanguage={setLanguage} />
-            </Layout>
+            </Layout> */}
 
 
             {/* <div

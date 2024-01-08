@@ -1,6 +1,6 @@
 import { Button, Col, Layout, Row } from 'antd'
 import React, { useContext, useEffect, useState } from 'react'
-import { assets } from './hooks/gifsPaths'
+import { assets } from '../helpers/gifsPaths'
 import { useNavigate } from 'react-router-dom'
 import { HiOutlineTranslate } from 'react-icons/hi'
 import { useTranslation } from 'react-i18next';

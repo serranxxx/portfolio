@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react'
 import { Button, Col, Layout, Row } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { HomeCards } from '../../layout/Projects/HomeCards';
-import { gifs } from '../../layout/hooks/gifsPaths';
+import { HomeCards } from '../../components/HomeCards';
+import { gifs } from '../../helpers/gifsPaths';
 import { projects } from '../../helpers/projects';
+import { goTo } from '../../helpers/functions';
 
 const { Content } = Layout;
 
-export const ContentProjects = (props) => {
-    const { goTo } = props
-    const { t } = useTranslation();
+export const ContentProjects = ({theme}) => {
 
     return (
         <Content className='scrollable-div'
@@ -19,8 +18,8 @@ export const ContentProjects = (props) => {
                 overflowY: 'scroll',
                 height: 'auto', // Ajusta estos valores según el header y footer
                 display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                flexDirection: 'column', padding:'4% 0 0 0'
-                // backgroundColor: `${bg}70`
+                flexDirection: 'column', padding:'4% 0 0 0',
+                backgroundColor: 'transparent'
             }}
         >
             <HomeCards action={goTo} data={projects} />

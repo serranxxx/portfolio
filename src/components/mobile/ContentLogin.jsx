@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, FloatButton, Layout, Row } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { assets } from '../../layout/hooks/gifsPaths';
+import { assets } from '../../helpers/gifsPaths';
 
 const { Content } = Layout;
 

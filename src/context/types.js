@@ -1,3 +1,4 @@
 export const types = {
-    language: '[App] set Language'
+    language: '[App] set Language',
+    theme: '[App] set theme'
 }

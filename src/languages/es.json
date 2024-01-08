@@ -1,17 +1,20 @@
 {
-    "Login.button.projects": "Proyectos",
+    "Login.button.projects": "Mis proyectos",
     "Login.button.about": "Sobre mi",
 
     "Login.Hello": "Hola.",
     "Login.Alberto": "Soy Alberto.",
     "Login.text": "un Ingeniero Electrónico y una persona creativa. Mi trayectoria me ha llevado a convertirme en un Desarrollador Frontend y diseñador de UI/UX. Creo en crear experiencias digitales que combinen tecnología y creatividad.",
     
+    "nav.Projects": "Proyectos",
+    "nav.Resume": "Curriculum",
+    "nav.Home": "Inicio",
 
     "button.translate": "TRADCUIR",
-    "button.home": "CASA",
+    "button.home": "Inicio",
 
     "Projects.title": "Proyectos",
-    "Projects.button": "CURRICULUM",
+    "Projects.button": "Curriculum",
 
     "Projects.journal":"Una aplicación única para fomentar la reflexión personal y la creatividad. Combina la simplicidad de la escritura con innovadoras características para enriquecer tu experiencia journal. Escribe notas de manera intuitiva, marca tus estados de ánimo en el Calendario Emocional para un seguimiento a lo largo del tiempo y recibe prompts inspiradores cuando necesites superar bloqueos creativos.",
     "Projects.taskify": "Un proyecto clásico de lista de tareas con un toque especial. Aunque se basa en la simplicidad de una lista de tareas tradicional, Taskify está meticulosamente diseñado para centrarse en ofrecer una experiencia de usuario verdaderamente única y creativa. Además de lo convencional le ofrece a los usuarios la opción de crear proyectos con múltiples tareas.",
@@ -31,15 +34,19 @@
     "Resume.experience": "EXPERIENCIA",
     "Resume.metamapDate": "DIC 2021 - Actualidad",
 
-    "Resume.Meta.description": "Desarrollador Frontend / Diseñador UI/UX / Desarrollador Python",
-    "Resume.frontendDev": "Desarrollador Frontend",
+    "Resume.Meta.description": "Desarrollador Backend - Frontend / Diseñador UI/UX / Desarrollador Python",
+    "Resume.frontendDev": "Desarrollador Frontend - Backend",
     "Resume.uiux": "Diseñador UI/UX",
     "Resume.PythonDev": "Desarrollador Python",
+
+    "Resume.full1": "En mi actual posición, me especializo en el desarrollo de interfaces de usuario y aplicaciones web utilizando React JS como principal conjunto de tecnologías, respaldado por antd (Ant Design) como mi librería de UI para mantener una coherencia de diseño en la interfaz de usuario.",
+    "Resume.full2":"Además de mi enfoque en el frontend, he asumido responsabilidades adicionales en diferentes etapas del proyecto. He configurado la base de datos en MongoDB, asegurando una gestión eficiente de los datos. En el ámbito del desarrollo backend, he creado una API completa con sus respectivos endpoints utilizando Node JS.",
+    "Resume.full3":"Este enfoque integral me ha permitido contribuir de manera significativa a todas las fases de un proyecto, desde la configuración de la base de datos y el desarrollo de la API backend hasta el diseño de la interfaz de usuario y la implementación frontend utilizando React JS y antd.",
 
     "Resume.React1": "Actualmente me especializo en React JS como mi principal conjunto de tecnologías. Me encuentro activamente involucrado en el desarrollo de interfaces de usuario y aplicaciones web interactivas.",
     "Resume.React2": "Mi experiencia en React JS me ha permitido construir soluciones frontend robustas y escalables de manera eficiente. Para agilizar el desarrollo y mantener la consistencia en el diseño, confío en antd (Ant Design) como mi librería de interfaz de usuario por excelencia.",
 
-    "Resume.uiux.text": "Tuve un papel fundamental en el desarrollo de diversos proyectos al crear Mockups. Utilicé Adobe Illustrator, Adobe XD y Figma como mi herramienta principal para diseñar detallados y atractivos diseños visuales. Estos Mockups se convirtieron en una referencia esencial para el equipo durante todo el proceso de desarrollo.",
+    "Resume.uiux.text": "Tengo un papel fundamental en el desarrollo de diversos proyectos al crear Mockups. Utilicé Adobe Illustrator, Adobe XD y Figma como mi herramienta principal para diseñar detallados y atractivos diseños visuales. Estos Mockups se convirtieron en una referencia esencial para el equipo durante todo el proceso de desarrollo.",
     "Resume.python.text": "Trabajé como Desarrollador Full Stack, creando aplicaciones de escritorio (windows) con múltiples funcionalidades utilizando Python. Participé en todo el proceso de desarrollo, desde el diseño del frontend de la aplicación utilizando Illustrator y Adobe XD hasta su implementación en el entorno de desarrollo de QT Creator.",
     
     "Resume.internship": "Residencias profesionales",

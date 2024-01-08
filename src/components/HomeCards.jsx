@@ -1,73 +1,68 @@
-import React from 'react'
-import { gifs } from '../hooks/gifsPaths'
+import React, { useContext } from 'react'
+import { gifs } from '../helpers/gifsPaths'
 import { Button, Col, FloatButton, Row, Tag } from 'antd'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { projects } from '../helpers/projects'
+import { appContext } from '../context/appContext'
 
 const text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod "
 
-export const HomeCards = (props) => {
+export const HomeCards = () => {
 
     const { t } = useTranslation();
+    const { theme } = useContext(appContext)
     return (
 
         <>
 
-            <FloatButton.BackTop visibilityHeight={0} style={{ right: '30px', bottom: '100px', opacity: '60%' }} />
+            <FloatButton.BackTop visibilityHeight={0} style={{ right: '30px', bottom: '100px', opacity: '30%' }} />
 
             {
-                props.data.map((project) => (
+                projects.map((project) => (
                     <>
-
-                        <Row
-                            className='home-card-large'
-                            style={{
-                                width: '70%', alignItems: 'center',
-                                justifyContent: 'space-between', flexDirection: 'row',
-                                margin: 0, marginTop: '3vh'
-                            }}>
-                            <p style={{
-                                fontSize: '2.2em', width: '100%', textAlign: `left`,
-                                fontWeight: 650, color: '#a99fea', margin: '0',
-                                width: '25%', fontStyle: 'italic'
-                            }}>{project.name}</p>
-                            <div style={{
-                                width: '75%',
-                                border: '3px solid #7765e360', borderRadius: '2vh',
-                                margin: 0
-                            }} />
-                        </Row>
 
                         <div
                             className='home-card-large'
                             style={{
-                                width: 'auto', height: 'auto', backgroundColor: '#f4f3ee',
-                                marginTop: '0vh', padding: '2% 0 2% 0',
-                                alignItems: 'center', justifyContent: 'center', flexDirection: `${project.order}`
+                                width: 'auto', height: 'auto', backgroundColor: 'transparent',
+                                marginTop: '0vh',
+                                padding: '2% 0 2% 0', width: '85%',
+                                alignItems: 'center', justifyContent: 'space-between', flexDirection: `${project.order}`
                                 // border:'2px solid #463f3a80',
 
                             }}>
 
 
                             <img src={project.gif} style={{
-                                height: '22vw', width: 'auto', borderRadius: '2vh',
-                                boxShadow: '0 0 10px #00000020',
-                                border: '2px solid #463f3a20',
+                                // height: '22vw', width: 'auto', 
+                                width: '50%',
+                                borderRadius: '2vh',
+                                // boxShadow: '0 0 10px #00000020',
+                                border: '1px solid #463f3a20',
                                 marginRight: `${project.order === 'row' ? '2vw' : '0vh'}`,
                                 marginLeft: `${project.order !== 'row' ? '2vw' : '0vh'}`,
                             }} />
 
                             <Col style={{
-                                width: '30vw',
-                                marginLeft: '1vw',
-                                marginRight: '1vw'
+                                width: '45%',
+                                // marginLeft: '1vw',
+                                marginRight: '1vw',
+                                display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+                                flexDirection: 'column'
 
                             }}>
+
+                                <p style={{
+                                    fontSize: '2.2em', width: '100%', textAlign: `left`,
+                                    fontWeight: 650, color: theme ? '#463f3a' : '#f5f5f580', margin: '0',
+                                    fontStyle: 'italic'
+                                }}>{project.name}</p>
 
 
                                 <p style={{
                                     fontSize: '1.2em', width: '100%', textAlign: `justify`,
-                                    fontWeight: 400, wordWrap: 'break-word', color: '#463f3a80',
+                                    fontWeight: 400, wordWrap: 'break-word', color: theme ? '#463f3a80' : '#f5f5f580',
                                     fontStyle: 'italic'
 
                                     // fontStyle:'italic'
@@ -80,9 +75,10 @@ export const HomeCards = (props) => {
                                     {
                                         project.tech.map((tech) => (
                                             <Tag style={{
-                                                marginRight: '2vh', color: '#a99fea',
+                                                marginRight: '2vh', color: theme ? '#463f3a80' : '#f5f5f580',
                                                 fontStyle: 'italic', fontSize: '1.1em',
-                                                marginTop: '2vh'
+                                                marginTop: '2vh', backgroundColor: theme ? '' : '#a99fea20',
+                                                border: theme ? '' : '0px solid #000'
                                             }}>{tech.name}</Tag>
                                         ))
                                     }
@@ -104,8 +100,10 @@ export const HomeCards = (props) => {
                                             // onClick={() => props.action(props.gif)}
                                             style={{
                                                 width: 'auto', fontWeight: 500, height: 'auto',
-                                                color: '#f4f3ee', backgroundColor: '#a99fea',
-                                                borderRadius: '3vh', fontSize: '1.3em'
+                                                color: theme ? '#f4f3ee' : '#f5f5f580', backgroundColor: theme ? '#a99fea' : '#574C98',
+                                                border: theme ? '1.5px solid #a99fea' : '1.5px solid #574C98', fontWeight: 700,
+                                                borderRadius: '3vh',
+                                                // fontSize: '1.3em'
                                             }}
                                         >{t('HomeCards.button')}</Button>
                                     </Link>
@@ -117,13 +115,14 @@ export const HomeCards = (props) => {
                                                     target='_blank'>
                                                     <Button
                                                         className='button'
-                                                        type='secondary'
+                                                        type='ghost'
                                                         // onClick={() => props.action(props.gif)}
                                                         style={{
                                                             width: 'auto', fontWeight: 500, height: 'auto',
-                                                            color: '#a99fea', backgroundColor: '#f4f3ee',
-                                                            borderRadius: '3vh', fontSize: '1.3em',
-                                                            marginLeft: '2vh', border: '1.5px solid #a99fea'
+                                                            color: theme ? '#463f3a80' : '#574C98', 
+                                                            fontWeight: 700, 
+                                                            // fontSize: '1.3em',
+                                                            marginLeft: '15px', border: '0px solid #f5f5f5'
                                                         }}
                                                     >Mock-up</Button>
                                                 </Link>
@@ -138,17 +137,24 @@ export const HomeCards = (props) => {
 
                             </Col>
                         </div>
+                        <div 
+                            className='home-card-large'
+                            style={{
+                                width: '85%',
+                                border: theme ?  '1px solid #463f3a10' : '1px solid #222'  , borderRadius: '2vh',
+                                margin: '4vh 0 4vh 0'
+                            }} />
 
                         <div
                             className='home-card-small'
                             style={{
-                                width: '80%', height: 'auto', backgroundColor: '#f4f3ee',
+                                width: '90%', height: 'auto', backgroundColor: theme ? '#f5f5f5' : '#252525',
                                 margin: '4vh 0 2vh 0',
                                 // paddingBottom: '5%',
                                 alignItems: 'center', justifyContent: 'center', flexDirection: `column`,
-                                border: '2px solid #7765e360',
+                                // border: '2px solid #7765e360',
                                 padding: '3% 2% 2% 2%', borderRadius: '2vh',
-                                boxShadow: '0px 0px 10px #00000030'
+                                // boxShadow: '0px 0px 10px #00000030'
 
                             }}>
 
@@ -160,7 +166,7 @@ export const HomeCards = (props) => {
                             }} />
                             <p style={{
                                 fontSize: '1.8em', width: '95%', textAlign: `left`,
-                                fontWeight: 650, color: '#a99fea', margin: '2vh 0 0vh 0'
+                                fontWeight: 650, color: theme ? '#463f3a' : '#f5f5f580', margin: '2vh 0 0vh 0'
                             }}>{project.name}</p>
 
 
@@ -174,8 +180,10 @@ export const HomeCards = (props) => {
                                 {
                                     project.tech.map((tech) => (
                                         <Tag style={{
-                                            marginRight: '2vh', color: '#a99fea',
-                                            fontStyle: 'italic', fontSize: '1em', marginTop: '3vh'
+                                            marginRight: '2vh', color: theme ? '#463f3a80' : '#f5f5f580',
+                                            fontStyle: 'italic', fontSize: '1em',
+                                            marginTop: '3vh', backgroundColor: theme ? '' : '#a99fea20',
+                                            border: theme ? '' : '0px solid #000'
                                         }}>{tech.name}</Tag>
                                     ))
                                 }
@@ -183,8 +191,9 @@ export const HomeCards = (props) => {
                             </Row>
 
                             <p style={{
-                                fontSize: '1em', width: '94%', textAlign: 'justify',
-                                fontWeight: 400, wordWrap: 'break-word', color: '#463f3a80',
+                                fontSize: '1em', width: '95%', textAlign: `justify`,
+                                fontWeight: 400, wordWrap: 'break-word', color: theme ? '#463f3a80' : '#f5f5f580',
+                                fontStyle: 'italic'
                                 // fontStyle:'italic'
                             }}>{t(project.text)}</p>
 
@@ -202,8 +211,9 @@ export const HomeCards = (props) => {
                                         // onClick={() => props.action(props.gif)}
                                         style={{
                                             width: 'auto', fontWeight: 500, height: 'auto',
-                                            color: '#f4f3ee', backgroundColor: '#a99fea',
-                                            fontSize: '1.3em'
+                                                color: theme ? '#f4f3ee' : '#f5f5f580', backgroundColor: theme ? '#a99fea' : '#574C98',
+                                                border: theme ? '1.5px solid #a99fea' : '1.5px solid #574C98', fontWeight: 700,
+                                                borderRadius: '3vh',
                                         }}
                                     >{t('HomeCards.button')}</Button>
                                 </Link>
@@ -219,9 +229,10 @@ export const HomeCards = (props) => {
                                                     // onClick={() => props.action(props.gif)}
                                                     style={{
                                                         width: 'auto', fontWeight: 500, height: 'auto',
-                                                        color: '#a99fea', backgroundColor: '#f4f3ee',
-                                                         fontSize: '1.3em',
-                                                        marginLeft: '2vh', border: '1.5px solid #a99fea'
+                                                        color: theme ? '#463f3a80' : '#574C98', 
+                                                        fontWeight: 700, 
+                                                        // fontSize: '1.3em',
+                                                        marginLeft: '15px', border: '0px solid #f5f5f5'
                                                     }}
                                                 >Mock-up</Button>
                                             </Link>

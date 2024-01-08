@@ -1,16 +1,20 @@
 {
-    "Login.button.projects": "Projects",
+    "Login.button.projects": "My projects",
     "Login.button.about": "About me",
 
     "Login.Hello": "Hello.",
     "Login.Alberto": "I'm Alberto.",
     "Login.text": "an Electronic Engineer and creative person. My journery has led me to become a Frontend Developer and UI/UX designer. I believe in crafting digital experiencies that blend technology and creativity.",
     
+    "nav.Projects": "Projects",
+    "nav.Resume": "Resume",
+    "nav.Home": "Home",
+
     "button.translate": "TRANSLATE",
-    "button.home": "HOME",
+    "button.home": "Home",
 
     "Projects.title": "Projects",
-    "Projects.button": "RESUME", 
+    "Projects.button": "Resume", 
 
     "Projects.journal": "A unique application designed to foster personal reflection and creativity. It combines the simplicity of writing with innovative features to enrich your journaling experience. Jot down thoughts intuitively, track your daily moods on the Emotional Calendar for insights over time, and receive inspiring prompts when you need to overcome creative blocks.",
     "Projects.taskify": "A classic to-do list project with a twist! While rooted in the simplicity of a traditional to-do list, Taskify is meticulously crafted to focus on delivering a truly unique and creative user experience. It goes beyond the standard by offering users the exciting option to create projects with multiple tasks",
@@ -33,15 +37,19 @@
     "Resume.experience": "EXPERIENCE",
     "Resume.metamapDate": "DEC 2021 - Currently",
 
-    "Resume.Meta.description": "Frontend developer / UI/UX designer / Python developer",
-    "Resume.frontendDev": "Frontend developer",
+    "Resume.Meta.description": "Frontend - Backend developer / UI/UX designer / Python developer",
+    "Resume.frontendDev": "Frontend - Backend developer",
     "Resume.uiux": "UI/UX designer",
     "Resume.PythonDev": "Python developer",
+
+    "Resume.full1": "In my current position, I specialize in developing user interfaces and web applications using React JS as the main set of technologies, supported by antd (Ant Design) as my UI library to maintain design consistency in the user interface.",
+    "Resume.full2":"In addition to my focus on the frontend, I have taken on additional responsibilities in various stages of the project. I have configured the database in MongoDB, ensuring efficient data management. In the realm of backend development, I have created a complete API with its corresponding endpoints using Node JS.",
+    "Resume.full3":"This comprehensive approach has allowed me to contribute significantly to all phases of a project, from configuring the database and developing the backend API to designing the user interface and implementing the frontend using React JS and antd (Ant Design).",
 
     "Resume.React1": "Currently, I specialize in React JS as my primary set of technologies. I am actively involved in the development of user interfaces and interactive web applications.",
     "Resume.React2": "My experience in React JS has allowed me to efficiently build robust and scalable frontend solutions. To streamline development and maintain design consistency, I rely on antd (Ant Design) as my go-to UI library.",
 
-    "Resume.uiux.text": "I played a key role in the development of various projects by creating Mockups. I used Adobe Illustrator, Adobe XD and Figma as my primary tools to design detailed and appealing visual layouts. These Mockups became an essential reference for the team throughout the development process.",
+    "Resume.uiux.text": "I play a key role in the development of various projects by creating Mockups. I used Adobe Illustrator, Adobe XD and Figma as my primary tools to design detailed and appealing visual layouts. These Mockups became an essential reference for the team throughout the development process.",
     "Resume.python.text": "I worked as a Full Stack Developer, creating desktop applications (Windows) with multiple functionalities using Python. I was involved in the entire development process, from designing the frontend of the application using Illustrator and Adobe XD to its implementation in the QT Creator development environment.",
 
     "Resume.internship": "Professional internships",

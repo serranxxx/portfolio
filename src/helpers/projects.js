@@ -1,5 +1,5 @@
 
-import { gifs } from "../layout/hooks/gifsPaths";
+import { gifs } from "./gifsPaths";
 
 export const projects = [
     {
@@ -21,7 +21,7 @@ export const projects = [
 
     },
     {
-        name: 'Azzhakrutt',
+        name: 'Data Base',
         gif: gifs.azz,
         order: 'row-reverse',
         text:'Projects.azzhakrutt',
@@ -47,8 +47,8 @@ export const projects = [
         order: 'row',
         text: 'Projects.journal',
         link: 'https://serranxxx.github.io/journal/',
-        mock: false,
-        web: '',
+        mock: true,
+        web: 'https://www.figma.com/file/yha4SBawOo5L51aLGvInkL/Mindscribe?type=design&mode=design&t=5jP9fHAV4fdSfFO7-1',
         tech: [
             {
                 name:'#ReactJS'
@@ -80,42 +80,42 @@ export const projects = [
 
     },
 
-    {
-        name: 'Sender Reviewer',
-        gif: gifs.send,
-        order: 'row',
-        text: 'Projects.send',
-        link: 'https://serranxxx.github.io/send-review/',
-        mock: false,
-        web: '',
-        tech: [
-            {
-                name:'#ReactJS'
-            },
-            // {
-            //     name:'#AdobeXD'
-            // }
-        ]
+    // {
+    //     name: 'Sender Reviewer',
+    //     gif: gifs.send,
+    //     order: 'row',
+    //     text: 'Projects.send',
+    //     link: 'https://serranxxx.github.io/send-review/',
+    //     mock: false,
+    //     web: '',
+    //     tech: [
+    //         {
+    //             name:'#ReactJS'
+    //         },
+    //         // {
+    //         //     name:'#AdobeXD'
+    //         // }
+    //     ]
 
-    },
+    // },
 
-    {
-        name: 'San Pancrasio',
-        gif: gifs.pancrasio,
-        order: 'row-reverse',
-        text: 'Projects.POS',
-        link: 'https://serranxxx.github.io/san-pancrasio/',
-        mock: false,
-        web: '',
-        tech: [
-            {
-                name:'#ReactJS'
-            },
-            // {
-            //     name:'#AdobeXD'
-            // }
-        ]
+    // {
+    //     name: 'San Pancrasio',
+    //     gif: gifs.pancrasio,
+    //     order: 'row-reverse',
+    //     text: 'Projects.POS',
+    //     link: 'https://serranxxx.github.io/san-pancrasio/',
+    //     mock: false,
+    //     web: '',
+    //     tech: [
+    //         {
+    //             name:'#ReactJS'
+    //         },
+    //         // {
+    //         //     name:'#AdobeXD'
+    //         // }
+    //     ]
 
-    }
+    // }
 ]
 

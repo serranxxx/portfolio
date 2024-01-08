@@ -2,11 +2,13 @@ import { useReducer } from "react";
 import { types } from "./types";
 import { appContext } from "./appContext";
 import { AppReducer } from "./appReudcer";
+import i18n from "../languages/i18n";
 
 const init = () => {
 
     return {
-        language: true
+        language: !!!JSON.parse(localStorage.getItem('language')),
+        theme: !!!JSON.parse(localStorage.getItem('theme')),
     }
 }
 
@@ -14,20 +16,36 @@ export const AppProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(AppReducer, {}, init)
 
-    const newLanguage = (language = true) => {
+    const switchLanguage = (language = true) => {
         const Language = language
         const action = {
             type: types.language,
             payload: Language
         }
-        // localStorage.setItem('items', JSON.stringify(allItems))
+
+        if (Language) i18n.changeLanguage('en')
+        else i18n.changeLanguage('es')
+
+        localStorage.setItem('language', JSON.stringify(Language))
+        dispatch(action)
+    }
+
+    const changeTheme = (theme = true) => {
+        const Theme = theme
+        const action = {
+            type: types.theme,
+            payload: theme
+        }
+
+        localStorage.setItem('theme', JSON.stringify(Theme))
         dispatch(action)
     }
 
     return (
         <appContext.Provider value={{
             ...state,
-            newLanguage
+            switchLanguage,
+            changeTheme
         }}>
             {children}
         </appContext.Provider >
