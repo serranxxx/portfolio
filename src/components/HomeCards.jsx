@@ -165,7 +165,7 @@ export const HomeCards = () => {
                                 border: '2px solid #463f3a20',
                             }} />
                             <p style={{
-                                fontSize: '1.8em', width: '95%', textAlign: `left`,
+                                fontSize: '1.3em', width: '95%', textAlign: `left`,
                                 fontWeight: 650, color: theme ? '#463f3a' : '#f5f5f580', margin: '2vh 0 0vh 0'
                             }}>{project.name}</p>
 
@@ -181,7 +181,7 @@ export const HomeCards = () => {
                                     project.tech.map((tech) => (
                                         <Tag style={{
                                             marginRight: '2vh', color: theme ? '#463f3a80' : '#f5f5f580',
-                                            fontStyle: 'italic', fontSize: '1em',
+                                            fontStyle: 'italic', fontSize: '0.8em',
                                             marginTop: '3vh', backgroundColor: theme ? '' : '#a99fea20',
                                             border: theme ? '' : '0px solid #000'
                                         }}>{tech.name}</Tag>

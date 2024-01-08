@@ -547,12 +547,12 @@ export const ContentResume = ({ handleDownload }) => {
                                 }}>{stringsCorrection(t('Resume.languages'))}</p>
 
                                 <p style={{
-                                    margin: '0 0 0 0',
+                                    margin: '0 0 0 0', textAlign:'right',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>{t('Resume.lan.spanish')}<b>{t('Resume.spanish')}</b></p>
 
                                 <p style={{
-                                    margin: '0.5vh 0 0 0',
+                                    margin: '0.5vh 0 0 0', textAlign:'right',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>{t('Resume.lan.english')}<b>B1</b></p>
 
