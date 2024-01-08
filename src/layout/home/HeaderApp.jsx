@@ -14,7 +14,7 @@ import { IoMoonOutline } from "react-icons/io5";
 import { BsFillBrightnessHighFill, BsFillMoonFill } from "react-icons/bs";
 
 import { IoLanguage } from "react-icons/io5";
-import { MdOutlineWbSunny } from "react-icons/md";
+import { MdDownload, MdOutlineWbSunny } from "react-icons/md";
 import { appContext } from '../../context/appContext';
 import { useTranslation } from 'react-i18next';
 
@@ -22,7 +22,7 @@ const { Header } = Layout;
 
 
 export const HeaderApp = ({
-    type, position, code
+    type, position, code, handleDownload
 }) => {
 
     const { switchLanguage, language, theme, changeTheme } = useContext(appContext)
@@ -33,9 +33,8 @@ export const HeaderApp = ({
     const [onSettings, setOnSettings] = useState(false)
     const [themebg, setThemebg] = useState(false)
     const [languagebg, setLanguagebg] = useState(false)
-    const [lang, setLang] = useState(!!!language)
-    // const [theme, setTheme] = useState(true)
-    const [visible, setVisible] = useState(false)
+    const [downloadbg, setDownloadbg] = useState(false)
+    const [visible, setVisible] = useState(true)
 
     const [primary, setPrimary] = useState('#F5F5F5')
     const [second, setSecond] = useState('#7765e399')
@@ -59,7 +58,7 @@ export const HeaderApp = ({
                         style={{
                             color: `${theme ? '' : (languagebg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'default',
-                            backgroundColor: theme ? `#FAFAFA` : '#252525', borderRadius: '2vh 2vh 0 0',
+                            backgroundColor: theme ? languagebg ? `#f3f3f3` : '#fafafa':  languagebg ? `#222` : '#252525', borderRadius: '2vh 2vh 0 0',
                             // borderBottom: '1px solid #000'
                         }}>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'left', paddingLeft: '1em', paddingRight: '1em' }}>
@@ -99,7 +98,7 @@ export const HeaderApp = ({
                         style={{
                             color: `${theme ? '' : (themebg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'default',
-                            backgroundColor: theme ? `#FAFAFA` : '#252525', borderRadius: '0 0 2vh 2vh'
+                            backgroundColor: theme ? themebg ? `#f3f3f3` : '#fafafa':  themebg ? `#222` : '#252525', borderRadius: '0'
                         }}>
                         <div style={{
                             display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -127,6 +126,54 @@ export const HeaderApp = ({
                                     size="small"
                                     style={{ width: '50%', backgroundColor: theme ? theme ? '#A69AE6' : '#A69AE680' : '', color: '#000' }}
                                 // style={{ width: '50%' }}
+                                />
+                            </div>
+
+                        </div>
+                        {/* <hr/> */}
+                    </Menu.Item>
+
+                    <Menu.Item
+                        onMouseEnter={() => setDownloadbg(true)} onMouseLeave={() => setDownloadbg(false)}
+                        onClick={handleDownload}
+
+                        style={{
+                            color: `${theme ? '' : (downloadbg ? '#f5f5f580' : '#f5f5f580')}`,
+                            height: 50, cursor: 'pointer',
+                            backgroundColor: theme ? downloadbg ?  `#A69AE620` : '#f5f5f5' : downloadbg ? `#A69AE640` : '#252525', borderRadius: '0 0 2vh 2vh'
+                        }}>
+                        <div style={{
+                            display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
+                            paddingLeft: '1em', paddingRight: '1em', position: 'relative'
+                        }}>
+                            <div style={{ width: '15%' }}>
+                                {
+
+                                    !downloadbg ? <IoDocumentTextOutline size={15} /> : <IoDocumentText size={15} style={{}} />
+                                }
+
+                            </div>
+                            <div style={{ width: '70%', fontStyle: 'italic' }}>
+                                {
+                                    language
+                                        ? <p style={{
+                                            color: theme ? '' : '#f5f5f580'
+                                        }}>Download resume</p>
+                                        : <p style={{
+                                                color: theme ? '' : '#f5f5f580'
+                                        }}>Descargar curriculum</p>
+                                }
+                            </div>
+                            <div style={{ width: '20%' }}>
+                                <Button
+                                    style={{
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        backgroundColor: theme ? 'transparent' : 'transparent', border: '0px solid #000',
+                                        borderRadius: '50%'
+                                    }}
+                                    icon={<MdDownload size={25} style={{
+                                        color: theme ? '#00000080' : '#f5f5f580', margin: 0
+                                    }} />}
                                 />
                             </div>
 

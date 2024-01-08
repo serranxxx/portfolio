@@ -36,7 +36,7 @@ export const Resume = () => {
             <Layout
                 className='resume-large'
                 style={{ minHeight: '100vh', backgroundColor: theme ?  '#f5f5f5' : '#252525' }}>
-                <HeaderApp type={'home'} position={'resume'} code={'Luis Alberto Serrano García'}/>
+                <HeaderApp type={'home'} position={'resume'} code={'Luis Alberto Serrano García'} handleDownload={handleDownload}/>
                 {/* <HeaderWeb language_={language_} setLanguage={setLanguage} handleDownload={handleDownload} location={true} /> */}
                 <ContentResume handleDownload={handleDownload}/>
             </Layout>

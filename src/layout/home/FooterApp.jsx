@@ -51,8 +51,8 @@ export const FooterApp = ({
 
                 <Menu style={{
                     backgroundColor: theme ? `#f5f5f5` : '#222', width: 300,
-                    margin: '0 -50px 30px 0', borderRadius: '3vh',
-                    // marginRight: '-40px'
+                    marginBottom: '20px', borderRadius: '3vh',
+                    marginRight: '-70px'
 
                 }}>
 
@@ -61,7 +61,7 @@ export const FooterApp = ({
                         style={{
                             color: `${theme ? '' : (languagebg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'default',
-                            backgroundColor: theme ? `#FAFAFA` : '#222', borderRadius: '2vh 2vh 0 0',
+                            backgroundColor: theme ? languagebg ? `#f3f3f3` : '#fafafa' : languagebg ? `#222` : '#252525', borderRadius: '2vh 2vh 0 0',
                             // borderBottom: '1px solid #000'
                         }}>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'left', paddingLeft: '1em', paddingRight: '1em' }}>
@@ -101,7 +101,7 @@ export const FooterApp = ({
                         style={{
                             color: `${theme ? '' : (themebg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'default',
-                            backgroundColor: theme ? `#FAFAFA` : '#222', borderRadius: '0 0 2vh 2vh'
+                            backgroundColor: theme ? themebg ? `#f3f3f3` : '#fafafa' : themebg ? `#222` : '#252525', borderRadius: '0'
                         }}>
                         <div style={{
                             display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -138,11 +138,12 @@ export const FooterApp = ({
 
                     <Menu.Item
                         onMouseEnter={() => setDownloadbg(true)} onMouseLeave={() => setDownloadbg(false)}
+                        onClick={handleDownload}
 
                         style={{
                             color: `${theme ? '' : (downloadbg ? '#f5f5f580' : '#f5f5f580')}`,
-                            height: 50, cursor: 'default',
-                            backgroundColor: theme ? `#FAFAFA` : '#222', borderRadius: '0 0 2vh 2vh'
+                            height: 50, cursor: 'pointer',
+                            backgroundColor: theme ? `#A69AE620` : `#A69AE640`, borderRadius: '0 0 2vh 2vh'
                         }}>
                         <div style={{
                             display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -151,28 +152,30 @@ export const FooterApp = ({
                             <div style={{ width: '15%' }}>
                                 {
 
-                                    !downloadbg ? <IoDocumentTextOutline size={15} /> : <IoDocumentText size={15} />
+                                    !downloadbg ? <IoDocumentTextOutline size={15} /> : <IoDocumentText size={15} style={{}} />
                                 }
 
                             </div>
                             <div style={{ width: '70%', fontStyle: 'italic' }}>
                                 {
                                     language
-                                        ? <p>Download resume</p>
-                                        : <p>Descargar curriculum</p>
+                                        ? <p style={{
+                                            color: theme ? '' : '#f5f5f580'
+                                        }}>Download resume</p>
+                                        : <p style={{
+                                            color: theme ? '' : '#f5f5f580'
+                                        }}>Descargar curriculum</p>
                                 }
                             </div>
                             <div style={{ width: '20%' }}>
                                 <Button
-                                    onClick={handleDownload}
-                                    // type='ghost'
                                     style={{
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        backgroundColor: theme ? '#A69AE6' : '#A69AE680', border: '0px solid #000',
-                                        borderRadius: '1.5vh'
+                                        backgroundColor: theme ? 'transparent' : 'transparent', border: '0px solid #000',
+                                        borderRadius: '50%'
                                     }}
-                                    icon={<MdDownload size={20} style={{
-                                        color: '#f5f5f5', margin: 0
+                                    icon={<MdDownload size={25} style={{
+                                        color: theme ? '#00000080' : '#f5f5f580', margin: 0
                                     }} />}
                                 />
                             </div>
