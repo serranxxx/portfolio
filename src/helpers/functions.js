@@ -43,3 +43,8 @@ export const handleDownload = (language) => {
     // Simular el clic en el enlace para iniciar la descarga
     link.click();
 };
+
+export function stringsCorrection(str) {
+    // Convierte la primera letra a mayúscula y concatena el resto del string en minúsculas
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  }

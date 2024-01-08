@@ -202,7 +202,7 @@ export const HeaderAppMobile = ({
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             boxShadow: '10px 0px 10px #00000040',
             borderBottom: '1px solid #463f3a20',
-            height: '8vh',
+            height: '9vh',
             display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
         }}>
 
@@ -213,9 +213,9 @@ export const HeaderAppMobile = ({
                 flexDirection: 'column',
             }}>
                 <h2 style={{
-                    fontSize: position === 'resume' ? '1.5em' : '2.5em', color: second,
+                    fontSize: position === 'home' ? '2.5em' : '1.3em', color: second,
                     fontWeight: 800, marginRight: '10px',
-                    fontStyle: position === 'resume' ? '' : 'italic',
+                    fontStyle: position === 'resume' ? 'italic' : 'italic',
                 }}>{code}</h2>
                 {/* <p style={{
                     fontSize: '1.5em' , color: second,
@@ -226,6 +226,7 @@ export const HeaderAppMobile = ({
                     fontSize: '1em', color: theme ? text : '#f5f5f580',
                     fontWeight: 500, marginRight: '10px',
                     display: position === 'resume' ? '' : 'none',
+                    fontStyle:'italic',
                     marginTop: '-8.5vh'
                 }}> Developer - {t('Resume.uiux')}</p>
             </Col>

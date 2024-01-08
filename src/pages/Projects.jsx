@@ -5,6 +5,7 @@ import { HeaderApp } from '../layout/home/HeaderApp'
 import { appContext } from '../context/appContext'
 import { HeaderAppMobile } from '../layout/home/HeaderAppMobile'
 import { FooterApp } from '../layout/home/FooterApp'
+import { t } from 'i18next'
 
 
 
@@ -25,7 +26,7 @@ export const Projects = () => {
             <Layout
                 className='resume-small'
                 style={{ minHeight: '100vh', backgroundColor: theme ? '#F5F5F5' : '#252525' }}>
-                <HeaderAppMobile type={'home'} position={'projects'} code={'AS.'} />
+                <HeaderAppMobile type={'home'} position={'projects'} code={t('nav.Projects')} />
                 <ContentProjects />
                 <FooterApp type={'home'} position={'projects'} code={'AS.'} />
             </Layout>

@@ -143,7 +143,7 @@ export const FooterApp = ({
                         style={{
                             color: `${theme ? '' : (downloadbg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'pointer',
-                            backgroundColor: theme ? `#A69AE620` : `#A69AE640`, borderRadius: '0 0 2vh 2vh'
+                            backgroundColor: theme ? downloadbg ? `#A69AE620` : `#fafafa` : downloadbg ? `#A69AE620` : `#252525`, borderRadius: '0 0 2vh 2vh'
                         }}>
                         <div style={{
                             display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -252,14 +252,14 @@ export const FooterApp = ({
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             boxShadow: '10px 0px 10px #00000040',
             borderTop: '1px solid #463f3a20',
-            height: '8vh',
+            height: '9vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
 
 
             <Row style={{
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                flexDirection: 'row',
+                display: 'flex', alignItems: 'center', justifyContent: 'space-around',
+                flexDirection: 'row',width:'60%'
             }}>
 
                 {
