@@ -8,7 +8,7 @@ const init = () => {
 
     return {
         language: !!!JSON.parse(localStorage.getItem('language')),
-        theme: !!!JSON.parse(localStorage.getItem('theme')),
+        theme: true,
     }
 }
 

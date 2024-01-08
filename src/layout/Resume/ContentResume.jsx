@@ -529,7 +529,7 @@ export const ContentResume = ({ handleDownload }) => {
                 }} />
 
                 <Row style={{
-                    width: '90%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                    width: '85%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
                     flexDirection: 'column'
                 }}>
 

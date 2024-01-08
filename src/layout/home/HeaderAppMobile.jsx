@@ -203,14 +203,14 @@ export const HeaderAppMobile = ({
             boxShadow: '10px 0px 10px #00000040',
             borderBottom: '1px solid #463f3a20',
             height: '12vh',
-            display: 'flex', alignItems: 'center', justifyContent: 'center'
+            display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
         }}>
 
 
 
             <Col style={{
                 display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
-                flexDirection: 'column'
+                flexDirection: 'column',
             }}>
                 <h2 style={{
                     fontSize: position === 'resume' ? '1.5em' : '2.5em', color: second,
@@ -223,11 +223,11 @@ export const HeaderAppMobile = ({
                     display: position === 'resume' ? '' : 'none',
                 }}>-</p> */}
                 <p style={{
-                    fontSize: '0.9em', color: theme ? text : '#f5f5f580',
+                    fontSize: '1em', color: theme ? text : '#f5f5f580',
                     fontWeight: 500, marginRight: '10px',
                     display: position === 'resume' ? '' : 'none',
                     marginTop: '-8vh'
-                }}> {t('Resume.frontendDev')} - {t('Resume.uiux')}</p>
+                }}> Developer - {t('Resume.uiux')}</p>
             </Col>
 
 

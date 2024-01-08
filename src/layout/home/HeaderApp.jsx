@@ -140,7 +140,7 @@ export const HeaderApp = ({
                         style={{
                             color: `${theme ? '' : (downloadbg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'pointer',
-                            backgroundColor: theme ? downloadbg ?  `#A69AE620` : '#f5f5f5' : downloadbg ? `#A69AE640` : '#252525', borderRadius: '0 0 2vh 2vh'
+                            backgroundColor: theme ? downloadbg ?  `#A69AE620` : '#fafafa' : downloadbg ? `#A69AE640` : '#252525', borderRadius: '0 0 2vh 2vh'
                         }}>
                         <div style={{
                             display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
