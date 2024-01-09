@@ -7,7 +7,7 @@ export const projects = [
         gif: gifs.todo,
         order: 'row-reverse',
         text:'Projects.todo',
-        link: 'https://serranxxx.github.io/todo/login',
+        link: 'https://serranxxx.github.io/todo/',
         mock: false,
         web: '',
         tech: [

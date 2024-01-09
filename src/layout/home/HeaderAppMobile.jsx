@@ -48,7 +48,7 @@ export const HeaderAppMobile = ({
             {
 
                 <Menu style={{
-                    backgroundColor: theme ? `#f5f5f5` :'#222', width: 300,
+                    backgroundColor: theme ? `#f5f5f5` : '#222', width: 300,
                     marginTop: '15px', borderRadius: '3vh',
                     marginRight: '-30px'
 
@@ -209,24 +209,42 @@ export const HeaderAppMobile = ({
 
 
             <Col style={{
-                display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
-                flexDirection: 'column',
+                display: 'flex', alignItems: position === 'home' ?  'center' : 'flex-start', justifyContent: 'center',
+                flexDirection: 'column', width:'100%'
             }}>
+                {
+                    position === 'home' ?
+                        <Row style={{
+                            display:'flex', alignItems:'center', justifyContent:'flex-start',
+                            flexDirection:'row', marginTop:'50px'
+                        }}>
+
+                            <p style={{
+                                textAlign: 'left', margin: 0,
+                                fontSize: '2em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
+                            }}>{t('Login.Hello')}</p>
+
+                            <p style={{
+                                textAlign: 'left', 
+                                marginLeft:'10px',
+                                // margin: '-5vh 0 0 0',
+                                fontSize: '1.7em', fontWeight: 650, color: theme ? '#7765e399' : '#7765e380'
+                            }}>{t('Login.Alberto')}</p>
+                        </Row>
+                        : <></>
+                }
+
                 <h2 style={{
                     fontSize: position === 'home' ? '2em' : '1.3em', color: second,
                     fontWeight: 800, marginLeft: '-15px',
                     fontStyle: position === 'resume' ? 'italic' : 'italic',
                 }}>{code}</h2>
-                {/* <p style={{
-                    fontSize: '1.5em' , color: second,
-                    fontWeight: 800, marginRight:'10px',
-                    display: position === 'resume' ? '' : 'none',
-                }}>-</p> */}
+
                 <p style={{
                     fontSize: '1em', color: theme ? `${text}` : '#f5f5f560',
                     fontWeight: 600, marginLeft: '-15px',
                     display: position === 'resume' ? '' : 'none',
-                    fontStyle:'italic',
+                    fontStyle: 'italic',
                     marginTop: '-8vh'
                 }}> Developer - {t('Resume.uiux')}</p>
             </Col>

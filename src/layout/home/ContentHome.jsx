@@ -45,7 +45,7 @@ export const ContentHome = () => {
 
           <p style={{
             width: '100%', textAlign: 'left', margin: '-2vh 0 0 0',
-            fontSize: '6em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
+            fontSize: '6em', fontWeight: 650, color: theme ? '#7765e399' : '#7765e380'
           }}>{t('Login.Alberto')}</p>
 
           <p style={{
@@ -110,18 +110,18 @@ export const ContentHome = () => {
           // className='image-draw'
           src={assets.draw} style={{
 
-            width: '45%',
+            width: '50%',
             // display: theme ? '' : 'none',
-            // marginRight: '5px',
+            // marginRight: '-45px',
             marginBottom:'10px',
           }} />
         <Col style={{
-          width: '80%',
+          width: '60%',
           display: 'flex', alignItems: 'center',
           justifyContent: 'center', flexDirection: 'column',
           
         }}>
-          <p style={{
+          {/* <p style={{
             width: '90%', textAlign: 'left', margin: 0,
             fontSize: '1.5em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
           }}>{t('Login.Hello')}</p>
@@ -129,10 +129,10 @@ export const ContentHome = () => {
           <p style={{
             width: '90%', textAlign: 'left', margin: '0vh 0 0 0',
             fontSize: '1.5em', fontWeight: 650, color: theme ? '#7765e399' : '#7765e380'
-          }}>{t('Login.Alberto')}</p>
+          }}>{t('Login.Alberto')}</p> */}
 
           <p style={{
-            width: '90%', fontSize: '1.2em', fontWeight: 500, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
+            width: '80%', fontSize: '1.3em', fontWeight: 500, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
             textAlign: 'justify'
           }}>{t('Login.text')}</p>
 

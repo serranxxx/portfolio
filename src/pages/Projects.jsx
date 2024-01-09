@@ -25,7 +25,7 @@ export const Projects = () => {
             <Layout
                 className='resume-small'
                 style={{ minHeight: '100vh', backgroundColor: theme ? '#F5F5F5' : '#252525' }}>
-                <HeaderAppMobile type={'home'} position={'projects'} code={''} />
+                <HeaderAppMobile type={'home'} position={'projects'} code={'Projects'} />
                 <ContentProjects />
                 <FooterApp type={'home'} position={'projects'} code={'AS.'} />
             </Layout>
