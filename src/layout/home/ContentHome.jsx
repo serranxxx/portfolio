@@ -97,8 +97,8 @@ export const ContentHome = () => {
 
       <Content className='scrollable-div resume-small'
         style={{
-          marginTop: '0vh', // Ajusta este valor para que el contenido no quede detrás del header
-          marginBottom: '0vh', // Ajusta este valor para que el contenido no quede detrás del footer
+          marginTop: '10vh', // Ajusta este valor para que el contenido no quede detrás del header
+          marginBottom: '12vh', // Ajusta este valor para que el contenido no quede detrás del footer
           // overflowY: 'scroll',
           height: 'auto', // Ajusta estos valores según el header y footer
           alignItems: 'center', justifyContent: 'center',
@@ -110,13 +110,13 @@ export const ContentHome = () => {
           // className='image-draw'
           src={assets.draw} style={{
 
-            width: '50%',
+            width: '70%',
             // display: theme ? '' : 'none',
             // marginRight: '-45px',
             marginBottom:'10px',
           }} />
         <Col style={{
-          width: '60%',
+          width: '75%',
           display: 'flex', alignItems: 'center',
           justifyContent: 'center', flexDirection: 'column',
           
@@ -132,8 +132,8 @@ export const ContentHome = () => {
           }}>{t('Login.Alberto')}</p> */}
 
           <p style={{
-            width: '80%', fontSize: '1.3em', fontWeight: 500, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
-            textAlign: 'justify'
+            width: '100%', fontSize: '1.5em', fontWeight: 600, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
+            textAlign: 'justify', fontStyle:'italic'
           }}>{t('Login.text')}</p>
 
           {/* <Row style={{
