@@ -97,8 +97,8 @@ export const ContentHome = () => {
 
       <Content className='scrollable-div resume-small'
         style={{
-          marginTop: '12vh', // Ajusta este valor para que el contenido no quede detrás del header
-          marginBottom: '14vh', // Ajusta este valor para que el contenido no quede detrás del footer
+          marginTop: '8vh', // Ajusta este valor para que el contenido no quede detrás del header
+          marginBottom: '8vh', // Ajusta este valor para que el contenido no quede detrás del footer
           overflowY: 'scroll',
           height: 'auto', // Ajusta estos valores según el header y footer
           alignItems: 'center', justifyContent: 'center',
@@ -109,27 +109,28 @@ export const ContentHome = () => {
           // className='image-draw'
           src={assets.draw} style={{
 
-            width: '50%',
+            width: '45%',
             // display: theme ? '' : 'none',
-            marginRight: '0px'
+            marginRight: '5px'
           }} />
         <Col style={{
           width: '90%',
-          display: 'flex', alignItems: 'flex-start',
-          justifyContent: 'flex-start', flexDirection: 'column'
+          display: 'flex', alignItems: 'center',
+          justifyContent: 'center', flexDirection: 'column',
+          
         }}>
           <p style={{
-            width: '100%', textAlign: 'left', margin: 0,
-            fontSize: '2em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
+            width: '75%', textAlign: 'left', margin: 0,
+            fontSize: '1.5em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
           }}>{t('Login.Hello')}</p>
 
           <p style={{
-            width: '100%', textAlign: 'left', margin: '-1vh 0 0 0',
-            fontSize: '2em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
+            width: '75%', textAlign: 'left', margin: '0vh 0 0 0',
+            fontSize: '1.5em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
           }}>{t('Login.Alberto')}</p>
 
           <p style={{
-            width: '85%', fontSize: '1.3em', fontWeight: 500, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
+            width: '75%', fontSize: '1.2em', fontWeight: 500, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
             textAlign: 'justify'
           }}>{t('Login.text')}</p>
 

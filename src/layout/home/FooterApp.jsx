@@ -250,7 +250,7 @@ export const FooterApp = ({
             backgroundColor: theme ? '#f5f5f5' : '#252525', backdropFilter: 'blur(16px)',
             // padding:'0 5% 0 5%',
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
-            boxShadow: '10px 0px 10px #00000040',
+            // boxShadow: '10px 0px 10px #00000040',
             borderTop: '1px solid #463f3a20',
             height: '9vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
@@ -259,7 +259,7 @@ export const FooterApp = ({
 
             <Row style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-around',
-                flexDirection: 'row',width:'60%'
+                flexDirection: 'row',width:'80%'
             }}>
 
                 {

@@ -23,7 +23,7 @@ export const HomePage = () => {
             <Layout
                 className='resume-small'
                 style={{ minHeight: '100vh', backgroundColor: theme ? '#f5f5f5' : '#252525' }}>
-                <HeaderAppMobile type={'home'} position={'home'} code={'AS.'} />
+                <HeaderAppMobile type={'home'} position={'home'} code={''} />
                 <ContentHome />
                 <FooterApp type={'home'} position={'home'} code={'AS.'} />
 
