@@ -99,10 +99,11 @@ export const ContentHome = () => {
         style={{
           marginTop: '0vh', // Ajusta este valor para que el contenido no quede detrás del header
           marginBottom: '0vh', // Ajusta este valor para que el contenido no quede detrás del footer
-          overflowY: 'scroll',
+          // overflowY: 'scroll',
           height: 'auto', // Ajusta estos valores según el header y footer
           alignItems: 'center', justifyContent: 'center',
-          flexDirection: 'column', padding: '5%'
+          flexDirection: 'column', 
+          // padding: '5%'
           // backgroundColor: `${bg}70`
         }}>
         <img
@@ -111,27 +112,27 @@ export const ContentHome = () => {
 
             width: '45%',
             // display: theme ? '' : 'none',
-            marginRight: '5px',
-            marginBottom:'15px',
+            // marginRight: '5px',
+            marginBottom:'10px',
           }} />
         <Col style={{
-          width: '90%',
+          width: '80%',
           display: 'flex', alignItems: 'center',
           justifyContent: 'center', flexDirection: 'column',
           
         }}>
           <p style={{
-            width: '75%', textAlign: 'left', margin: 0,
+            width: '90%', textAlign: 'left', margin: 0,
             fontSize: '1.5em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
           }}>{t('Login.Hello')}</p>
 
           <p style={{
-            width: '75%', textAlign: 'left', margin: '0vh 0 0 0',
-            fontSize: '1.5em', fontWeight: 650, color: theme ? '#7765e3' : '#7765e380'
+            width: '90%', textAlign: 'left', margin: '0vh 0 0 0',
+            fontSize: '1.5em', fontWeight: 650, color: theme ? '#7765e399' : '#7765e380'
           }}>{t('Login.Alberto')}</p>
 
           <p style={{
-            width: '75%', fontSize: '1.2em', fontWeight: 500, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
+            width: '90%', fontSize: '1.2em', fontWeight: 500, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
             textAlign: 'justify'
           }}>{t('Login.text')}</p>
 

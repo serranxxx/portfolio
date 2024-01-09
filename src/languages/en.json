@@ -52,10 +52,10 @@
     "Resume.uiux.text": "I play a key role in the development of various projects by creating Mockups. I used Adobe Illustrator, Adobe XD and Figma as my primary tools to design detailed and appealing visual layouts. These Mockups became an essential reference for the team throughout the development process.",
     "Resume.python.text": "I worked as a Full Stack Developer, creating desktop applications (Windows) with multiple functionalities using Python. I was involved in the entire development process, from designing the frontend of the application using Illustrator and Adobe XD to its implementation in the QT Creator development environment.",
 
-    "Resume.internship": "Professional internships",
+    "Resume.internship": "Internships",
     "Resume.internship_": "Graduate Laboratory of Instituto tecnológico de Chihauhua",
     "Resume.internshipDate": "AUG 2021 - JAN 2022",
-    "Resume.internshipSubtitle":"Internship - Computer Vision and Machine Learning Curriculum Renewal",
+    "Resume.internshipSubtitle":"Computer Vision and Machine Learning Curriculum Renewal",
 
     "Resume.intern.text": "I actively participated in the renewal of the curriculum for Computer Vision and Machine Learning Systems. My main responsibilities included developing Python-based exercises using the Google Colab environment.",
     "Resume.intern.text2": "I designed a series of practical exercises covering various topics, from the fundamentals of machine learning to digital image processing. These hands-on sessions involved the use of Python libraries such as Matplotlib, OpenCV, scikit-learn, among others.",

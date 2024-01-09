@@ -166,7 +166,7 @@ export const HomeCards = () => {
                             }} />
                             <p style={{
                                 fontSize: '1.3em', width: '95%', textAlign: `left`,
-                                fontWeight: 650, color: theme ? '#463f3a' : '#f5f5f580', margin: '2vh 0 0vh 0'
+                                fontWeight: 650, color: theme ? '#463f3a99' : '#f5f5f580', margin: '2vh 0 0vh 0'
                             }}>{project.name}</p>
 
 

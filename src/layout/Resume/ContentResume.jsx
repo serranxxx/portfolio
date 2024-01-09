@@ -466,7 +466,7 @@ export const ContentResume = ({ handleDownload }) => {
                         }}>
 
                             <div className='Education' style={{
-                                width: '28%', display: 'flex', alignItems: 'flex-end',
+                                width: '28%', display: 'flex', alignItems: 'flex-start',
                                 justifyContent: 'flexx-start', flexDirection: 'column',
                                 // borderLeft:'1px solid red'
                             }}>
@@ -479,15 +479,15 @@ export const ContentResume = ({ handleDownload }) => {
                                 <p style={{
                                     margin: '0 0 0 0',
                                     fontWeight: 550, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em',
-                                    textAlign: 'right'
+                                    textAlign: 'left'
                                 }}>{t('Resume.education.text')}</p>
                                 <p style={{
-                                    margin: '0 0 0 0', textAlign: 'right', width: '100%',
+                                    margin: '0 0 0 0', textAlign: 'left', width: '100%',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>Instituto Tecnológico de Chihuahua</p>
 
                                 <p style={{
-                                    margin: '0 0 0 0', fontStyle: 'italic', textAlign: 'right',
+                                    margin: '0 0 0 0', fontStyle: 'italic', textAlign: 'left',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>{t('Resume.education.speacilization')}</p>
 
@@ -537,7 +537,7 @@ export const ContentResume = ({ handleDownload }) => {
                             marginBottom: '1vh'
                         }}>
                             <div className='languages' style={{
-                                width: '28%', display: 'flex', alignItems: 'flex-end',
+                                width: '28%', display: 'flex', alignItems: 'flex-start',
                                 justifyContent: 'flexx-start', flexDirection: 'column',
                             }}>
                                 <p style={{
@@ -547,12 +547,12 @@ export const ContentResume = ({ handleDownload }) => {
                                 }}>{stringsCorrection(t('Resume.languages'))}</p>
 
                                 <p style={{
-                                    margin: '0 0 0 0', textAlign:'right',
+                                    margin: '0 0 0 0', textAlign:'left',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>{t('Resume.lan.spanish')}<b>{t('Resume.spanish')}</b></p>
 
                                 <p style={{
-                                    margin: '0.5vh 0 0 0', textAlign:'right',
+                                    margin: '0.5vh 0 0 0', textAlign:'left',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>{t('Resume.lan.english')}<b>B1</b></p>
 
@@ -560,7 +560,7 @@ export const ContentResume = ({ handleDownload }) => {
                             </div>
 
                             <div style={{
-                                width: '2px', height: '100px',
+                                width: '2px', height: '70px',
                                 backgroundColor: '#463f3a30', margin: '10% 5% 0 5%',
                                 borderRadius: '3vh'
                             }} />
@@ -653,7 +653,7 @@ export const ContentResume = ({ handleDownload }) => {
                             }}>
                                 <p style={{
                                     margin: '0 0 0 0',
-                                    fontWeight: 550, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1em'
+                                    fontWeight: 550, color: theme ? '#463f3a99' : '#f5f5f580', fontSize: '1em'
                                 }}>MAS <b>Meta</b>Map</p>
 
                                 <p style={{
@@ -718,11 +718,11 @@ export const ContentResume = ({ handleDownload }) => {
                                 <Col>
                                     <p style={{
                                         margin: '5vh 0 0 0',
-                                        fontWeight: 650, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1em'
+                                        fontWeight: 650, color: theme ? '#463f3a99' : '#f5f5f580', fontSize: '1em'
                                     }}>{t('Resume.internship')}</p>
                                     <p style={{
                                         margin: '0 0 0 0',
-                                        fontWeight: 550, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1em'
+                                        fontWeight: 550, color: theme ? '#463f3a99' : '#f5f5f580', fontSize: '1em'
                                     }}>{t('Resume.internship_')}</p>
                                 </Col>
 
@@ -785,9 +785,9 @@ export const ContentResume = ({ handleDownload }) => {
                                 // borderRadius: '3vh',
 
                             }}>
-                                <FaPhoneAlt size={16} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
+                                <FaPhoneAlt size={16} style={{ color: theme ? '#463f3a99' : '#f5f5f580' }} />
                                 <p style={{
-                                    fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
+                                    fontWeight: 600, color: theme ? '#463f3a99' : '#f5f5f580',
                                     marginLeft: '10px', margin: '8px'
                                 }}>614 539 48 36</p>
                             </Row>
@@ -801,9 +801,9 @@ export const ContentResume = ({ handleDownload }) => {
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 backgroundColor: 'transparent', padding: '0 2% 0 2%', borderRadius: '3vh'
                             }}>
-                                <FaLinkedin size={20} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
+                                <FaLinkedin size={20} style={{ color: theme ? '#463f3a99' : '#f5f5f580' }} />
                                 <p style={{
-                                    fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
+                                    fontWeight: 600, color: theme ? '#463f3a99' : '#f5f5f580',
                                     marginLeft: '10px', margin: '8px'
                                 }}>albserranog</p>
                             </Row>
@@ -813,9 +813,9 @@ export const ContentResume = ({ handleDownload }) => {
                                 backgroundColor: 'transparent', padding: '0 2% 0 2%',
                                 // borderRadius: '3vh'
                             }}>
-                                <MdEmail size={20} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
+                                <MdEmail size={20} style={{ color: theme ? '#463f3a99' : '#f5f5f580' }} />
                                 <p style={{
-                                    fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
+                                    fontWeight: 600, color: theme ? '#463f3a99' : '#f5f5f580',
                                     marginLeft: '10px', margin: '8px'
                                 }}>albserrano8@gmail.com</p>
                             </Row>
