@@ -54,14 +54,14 @@ export const HomeCards = () => {
                             }}>
 
                                 <p style={{
-                                    fontSize: '2.2em', width: '100%', textAlign: `left`,
-                                    fontWeight: 650, color: theme ? '#463f3a' : '#f5f5f580', margin: '0',
+                                    fontSize: '1.5em', width: '100%', textAlign: `left`,
+                                    fontWeight: 700, color: theme ? '#463f3a99' : '#f5f5f580', margin: '0',
                                     fontStyle: 'italic'
                                 }}>{project.name}</p>
 
 
                                 <p style={{
-                                    fontSize: '1.2em', width: '100%', textAlign: `justify`,
+                                    fontSize: '1.1em', width: '100%', textAlign: `justify`,
                                     fontWeight: 400, wordWrap: 'break-word', color: theme ? '#463f3a80' : '#f5f5f580',
                                     fontStyle: 'italic'
 
@@ -76,7 +76,7 @@ export const HomeCards = () => {
                                         project.tech.map((tech) => (
                                             <Tag style={{
                                                 marginRight: '2vh', color: theme ? '#463f3a80' : '#f5f5f580',
-                                                fontStyle: 'italic', fontSize: '1.1em',
+                                                fontStyle: 'italic', fontSize: '1em',
                                                 marginTop: '2vh', backgroundColor: theme ? '' : '#a99fea20',
                                                 border: theme ? '' : '0px solid #000'
                                             }}>{tech.name}</Tag>

@@ -23,7 +23,7 @@ export const ContentProjects = ({ theme }) => {
                     backgroundColor: 'transparent'
                 }}
             >
-                <HomeCards action={goTo} data={projects} />
+                <HomeCards />
 
             </Content>
 
@@ -38,7 +38,7 @@ export const ContentProjects = ({ theme }) => {
                     backgroundColor: 'transparent'
                 }}
             >
-                <HomeCards action={goTo} data={projects} />
+                <HomeCards />
 
             </Content>
         </>

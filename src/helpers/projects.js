@@ -3,29 +3,11 @@ import { gifs } from "./gifsPaths";
 
 export const projects = [
     {
-        name: 'Taskify',
-        gif: gifs.taskify,
-        order: 'row',
-        text:'Projects.taskify',
-        link: 'https://serranxxx.github.io/taskify/',
-        mock: true,
-        web: 'https://www.figma.com/file/6dhK160MWtNuA2rc1wREZi/Taskify---web?type=design&t=XKKrhBBbdaE7xfrq-6',
-        tech: [
-            {
-                name:'#ReactJS'
-            },
-            {
-                name:'#Figma'
-            }
-        ]
-
-    },
-    {
-        name: 'Data Base',
-        gif: gifs.azz,
+        name: 'To do list',
+        gif: gifs.todo,
         order: 'row-reverse',
-        text:'Projects.azzhakrutt',
-        link: 'https://serranxxx.github.io/azzhakrutt/',
+        text:'Projects.todo',
+        link: 'https://serranxxx.github.io/todo/login',
         mock: false,
         web: '',
         tech: [
@@ -33,10 +15,7 @@ export const projects = [
                 name:'#ReactJS'
             },
             {
-                name:'#NodeJS'
-            },
-            {
-                name:'#MongoDB'
+                name:'#mockAPI'
             }
         ]
 
@@ -60,6 +39,46 @@ export const projects = [
 
     },
 
+    {
+        name: 'Data Base',
+        gif: gifs.azz,
+        order: 'row-reverse',
+        text:'Projects.azzhakrutt',
+        link: 'https://serranxxx.github.io/azzhakrutt/',
+        mock: false,
+        web: '',
+        tech: [
+            {
+                name:'#ReactJS'
+            },
+            {
+                name:'#NodeJS'
+            },
+            {
+                name:'#MongoDB'
+            }
+        ]
+
+    },
+   
+    {
+        name: 'Taskify',
+        gif: gifs.taskify,
+        order: 'row',
+        text:'Projects.taskify',
+        link: 'https://serranxxx.github.io/taskify/',
+        mock: true,
+        web: 'https://www.figma.com/file/6dhK160MWtNuA2rc1wREZi/Taskify---web?type=design&t=XKKrhBBbdaE7xfrq-6',
+        tech: [
+            {
+                name:'#ReactJS'
+            },
+            {
+                name:'#Figma'
+            }
+        ]
+
+    },
 
     {
         name: 'Avatar Studio',

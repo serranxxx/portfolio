@@ -2,8 +2,9 @@ import avatar from '../assets/gifs/avatar-1.gif'
 import taskify from '../assets/gifs/taskify-1.gif'
 import pancrasio from '../assets/gifs/pancrasio-1.gif'
 import send from '../assets/gifs/send-1.gif'
-import journal from '../assets/gifs/journal-1.gif'
+import journal from '../assets/gifs/journal.gif'
 import azz from '../assets/gifs/azz-1.gif'
+import todo from '../assets/gifs/todo.gif'
 
 
 import text from '../assets/SVG/Header_1.svg'
@@ -20,7 +21,8 @@ export const gifs = {
     pancrasio,
     send,
     journal,
-    azz
+    azz,
+    todo
 }
 
 export const assets = {

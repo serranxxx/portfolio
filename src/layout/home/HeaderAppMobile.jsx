@@ -201,7 +201,7 @@ export const HeaderAppMobile = ({
             // padding:'0 5% 0 5%',
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             // boxShadow: '10px 0px 10px #00000040',
-            borderBottom: '1px solid #463f3a20',
+            borderBottom: theme ? '1px solid #463f3a20' : '1px solid #f5f5f510',
             height: '9vh',
             display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
         }}>
