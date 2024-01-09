@@ -209,7 +209,7 @@ export const HeaderAppMobile = ({
 
 
             <Col style={{
-                display: 'flex', alignItems:  'flex-end', justifyContent: 'center',
+                display: 'flex', alignItems:  'flex-start', justifyContent: 'center',
                 flexDirection: 'column', width: position === 'home' ? '60%' : '100%'
             }}>
                 
@@ -222,10 +222,10 @@ export const HeaderAppMobile = ({
 
                 <p style={{
                     fontSize: '1em', color: theme ? `${text}` : '#f5f5f560',
-                    fontWeight: 600, marginLeft: '-15px',
+                    fontWeight: 500, marginLeft: '-15px',
                     display: position === 'resume' ? '' : 'none',
                     fontStyle: 'italic',
-                    marginTop: '-8vh'
+                    marginTop: '-7.5vh'
                 }}> Developer - {t('Resume.uiux')}</p>
             </Col>
 
