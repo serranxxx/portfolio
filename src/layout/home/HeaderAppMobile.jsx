@@ -223,7 +223,7 @@ export const HeaderAppMobile = ({
                     display: position === 'resume' ? '' : 'none',
                 }}>-</p> */}
                 <p style={{
-                    fontSize: '1em', color: theme ? `${text}99` : '#f5f5f560',
+                    fontSize: '1em', color: theme ? `${text}` : '#f5f5f560',
                     fontWeight: 600, marginLeft: '-15px',
                     display: position === 'resume' ? '' : 'none',
                     fontStyle:'italic',

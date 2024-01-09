@@ -472,8 +472,8 @@ export const ContentResume = ({ handleDownload }) => {
                             }}>
                                 <p style={{
 
-                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.2em',
-                                    fontWeight: 600
+                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
+                                    
                                 }}>{stringsCorrection(t('Resume.education'))}</p>
 
                                 <p style={{
@@ -510,8 +510,8 @@ export const ContentResume = ({ handleDownload }) => {
                             }}>
                                 <p style={{
 
-                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.2em',
-                                    fontWeight: 600
+                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
+                                    
                                 }}>{stringsCorrection(t('Resume.Summary'))}</p>
 
                                 <p style={{
@@ -542,8 +542,8 @@ export const ContentResume = ({ handleDownload }) => {
                             }}>
                                 <p style={{
 
-                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.2em',
-                                    fontWeight: 600
+                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
+                                    
                                 }}>{stringsCorrection(t('Resume.languages'))}</p>
 
                                 <p style={{
@@ -570,8 +570,8 @@ export const ContentResume = ({ handleDownload }) => {
                             }}>
                                 <p style={{
 
-                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.2em',
-                                    fontWeight: 600,
+                                    fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
+                                    
                                 }}>{stringsCorrection(t('Resume.skills'))}</p>
 
 
@@ -643,8 +643,8 @@ export const ContentResume = ({ handleDownload }) => {
                         }} className='Experience'>
                             <p style={{
 
-                                fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.2em',
-                                fontWeight: 600
+                                fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
+                               
                             }}>{stringsCorrection(t('Resume.experience'))}</p>
 
                             <div style={{
