@@ -97,8 +97,8 @@ export const ContentHome = () => {
 
       <Content className='scrollable-div resume-small'
         style={{
-          marginTop: '8vh', // Ajusta este valor para que el contenido no quede detrás del header
-          marginBottom: '8vh', // Ajusta este valor para que el contenido no quede detrás del footer
+          marginTop: '0vh', // Ajusta este valor para que el contenido no quede detrás del header
+          marginBottom: '0vh', // Ajusta este valor para que el contenido no quede detrás del footer
           overflowY: 'scroll',
           height: 'auto', // Ajusta estos valores según el header y footer
           alignItems: 'center', justifyContent: 'center',
@@ -111,7 +111,8 @@ export const ContentHome = () => {
 
             width: '45%',
             // display: theme ? '' : 'none',
-            marginRight: '5px'
+            marginRight: '5px',
+            marginBottom:'15px',
           }} />
         <Col style={{
           width: '90%',
@@ -126,7 +127,7 @@ export const ContentHome = () => {
 
           <p style={{
             width: '75%', textAlign: 'left', margin: '0vh 0 0 0',
-            fontSize: '1.5em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
+            fontSize: '1.5em', fontWeight: 650, color: theme ? '#7765e3' : '#7765e380'
           }}>{t('Login.Alberto')}</p>
 
           <p style={{
