@@ -209,30 +209,10 @@ export const HeaderAppMobile = ({
 
 
             <Col style={{
-                display: 'flex', alignItems: position === 'home' ?  'center' : 'flex-start', justifyContent: 'center',
-                flexDirection: 'column', width:'100%'
+                display: 'flex', alignItems:  'flex-end', justifyContent: 'center',
+                flexDirection: 'column', width: position === 'home' ? '60%' : '100%'
             }}>
-                {
-                    position === 'home' ?
-                        <Row style={{
-                            display:'flex', alignItems:'center', justifyContent:'flex-start',
-                            flexDirection:'row', marginTop:'50px'
-                        }}>
-
-                            <p style={{
-                                textAlign: 'left', margin: 0,
-                                fontSize: '2em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
-                            }}>{t('Login.Hello')}</p>
-
-                            <p style={{
-                                textAlign: 'left', 
-                                marginLeft:'10px',
-                                // margin: '-5vh 0 0 0',
-                                fontSize: '1.7em', fontWeight: 650, color: theme ? '#7765e399' : '#7765e380'
-                            }}>{t('Login.Alberto')}</p>
-                        </Row>
-                        : <></>
-                }
+                
 
                 <h2 style={{
                     fontSize: position === 'home' ? '2em' : '1.3em', color: second,

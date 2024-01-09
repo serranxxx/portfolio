@@ -54,41 +54,41 @@ export const ContentHome = () => {
           }}>{t('Login.text')}</p>
 
           <Row style={{
-          width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-          flexDirection: 'row', marginTop: '40px',
-          // border:'1px solid red'
-        }}>
-
-          <Link to={"/portfolio/projects"} style={{
-            width: '35%', marginRight: '20px',
+            width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+            flexDirection: 'row', marginTop: '40px',
+            // border:'1px solid red'
           }}>
-            <Button style={{
-              width: '100%', borderRadius: '3vh',
-              backgroundColor: '#7765e399', height: '5vh',
-              color: theme ? '#F5F5F5' : '#F5F5F590', fontWeight: 'bolder',
-               border: '0px solid #000'
+
+            <Link to={"/portfolio/projects"} style={{
+              width: '35%', marginRight: '20px',
             }}>
-              {t('Login.button.projects')}
-            </Button>
-          </Link>
-
-
-          <Link to={"/portfolio/resume"} style={{
-            width: '35%'
-          }}>
-            <Button
-              type='ghost'
-              style={{
+              <Button style={{
                 width: '100%', borderRadius: '3vh',
-                border: '2px solid #7765e399', height: '5vh',
-                color: '#7765e399', fontWeight: 'bolder'
+                backgroundColor: '#7765e399', height: '5vh',
+                color: theme ? '#F5F5F5' : '#F5F5F590', fontWeight: 'bolder',
+                border: '0px solid #000'
               }}>
-              {t('Login.button.about')}
-            </Button>
-          </Link>
+                {t('Login.button.projects')}
+              </Button>
+            </Link>
 
 
-        </Row>
+            <Link to={"/portfolio/resume"} style={{
+              width: '35%'
+            }}>
+              <Button
+                type='ghost'
+                style={{
+                  width: '100%', borderRadius: '3vh',
+                  border: '2px solid #7765e399', height: '5vh',
+                  color: '#7765e399', fontWeight: 'bolder'
+                }}>
+                {t('Login.button.about')}
+              </Button>
+            </Link>
+
+
+          </Row>
         </Col>
 
 
@@ -97,12 +97,12 @@ export const ContentHome = () => {
 
       <Content className='scrollable-div resume-small'
         style={{
-          marginTop: '10vh', // Ajusta este valor para que el contenido no quede detrás del header
-          marginBottom: '12vh', // Ajusta este valor para que el contenido no quede detrás del footer
+          marginTop: '0', // Ajusta este valor para que el contenido no quede detrás del header
+          marginBottom: '0', // Ajusta este valor para que el contenido no quede detrás del footer
           // overflowY: 'scroll',
           height: 'auto', // Ajusta estos valores según el header y footer
           alignItems: 'center', justifyContent: 'center',
-          flexDirection: 'column', 
+          flexDirection: 'column',
           // padding: '5%'
           // backgroundColor: `${bg}70`
         }}>
@@ -110,30 +110,32 @@ export const ContentHome = () => {
           // className='image-draw'
           src={assets.draw} style={{
 
-            width: '70%',
+            width: '60%',
             // display: theme ? '' : 'none',
             // marginRight: '-45px',
-            marginBottom:'10px',
+            marginBottom: '20px',
           }} />
         <Col style={{
           width: '75%',
           display: 'flex', alignItems: 'center',
           justifyContent: 'center', flexDirection: 'column',
-          
+
         }}>
-          {/* <p style={{
+          <p style={{
             width: '90%', textAlign: 'left', margin: 0,
             fontSize: '1.5em', fontWeight: 650, color: theme ? '#463f3a' : '#F5F5F580'
           }}>{t('Login.Hello')}</p>
 
           <p style={{
-            width: '90%', textAlign: 'left', margin: '0vh 0 0 0',
+            width: '90%', textAlign: 'left', margin: '0vh 0 1vh 0',
             fontSize: '1.5em', fontWeight: 650, color: theme ? '#7765e399' : '#7765e380'
-          }}>{t('Login.Alberto')}</p> */}
+          }}>{t('Login.Alberto')}</p>
+          
 
           <p style={{
-            width: '100%', fontSize: '1.5em', fontWeight: 600, color: theme ? '#463f3a' : '#F5F5F580', margin: '1vh 0 0 0',
-            textAlign: 'justify', fontStyle:'italic'
+            width: '90%', fontSize: '1.1em', fontWeight: 600, color: theme ? '#463f3a' : '#F5F5F580', margin: '0vh 0 0 0',
+            textAlign: 'justify', 
+            // fontStyle: 'italic'
           }}>{t('Login.text')}</p>
 
           {/* <Row style={{
