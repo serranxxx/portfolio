@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.3fea2369.css",
-    "main.js": "/portfolio/static/js/main.7660a0b5.js",
+    "main.js": "/portfolio/static/js/main.d37d6f2d.js",
     "static/media/journal.gif": "/portfolio/static/media/journal.16d726beaa1b74d983dc.gif",
     "static/media/taskify.gif": "/portfolio/static/media/taskify.cf755e12f7c4ca7ba707.gif",
     "static/media/todo.gif": "/portfolio/static/media/todo.a39f4df317d1738a5c4e.gif",
@@ -12,15 +12,15 @@
     "static/media/draw_black.png": "/portfolio/static/media/draw_black.95d740884fd4a4a02bdc.png",
     "static/media/spanish_head.svg": "/portfolio/static/media/spanish_head.f8cf87c181cd2f53fb0b877c07c18207.svg",
     "static/media/Header_1.svg": "/portfolio/static/media/Header_1.8d8a3f2538125bbd3913a45f665e0865.svg",
-    "static/media/Resume-AlbertoSerrano.pdf": "/portfolio/static/media/Resume-AlbertoSerrano.b6abae8b26cb11c1fc67.pdf",
-    "static/media/Curriculum-AlbertoSerrano.pdf": "/portfolio/static/media/Curriculum-AlbertoSerrano.81f2a8fb3781ab358c3a.pdf",
+    "static/media/Resume-AlbertoSerrano.pdf": "/portfolio/static/media/Resume-AlbertoSerrano.65de3718585c532f2cde.pdf",
+    "static/media/Curriculum-AlbertoSerrano.pdf": "/portfolio/static/media/Curriculum-AlbertoSerrano.a35e705e43af3584d196.pdf",
     "static/media/draw_1.svg": "/portfolio/static/media/draw_1.f45b03d9d0b90aad2c9e4193121cfb14.svg",
     "index.html": "/portfolio/index.html",
     "main.3fea2369.css.map": "/portfolio/static/css/main.3fea2369.css.map",
-    "main.7660a0b5.js.map": "/portfolio/static/js/main.7660a0b5.js.map"
+    "main.d37d6f2d.js.map": "/portfolio/static/js/main.d37d6f2d.js.map"
   },
   "entrypoints": [
     "static/css/main.3fea2369.css",
-    "static/js/main.7660a0b5.js"
+    "static/js/main.d37d6f2d.js"
   ]
 }
