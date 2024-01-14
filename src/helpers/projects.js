@@ -87,7 +87,7 @@ export const projects = [
         gif: gifs.avatar,
         order: 'row-reverse',
         text:'Projects.avatar',
-        link: 'https://serranxxx.github.io/avatar-studio/',
+        link: 'https://serranxxx.github.io/avatar-studio/login',
         mock: false,
         web: '',
         tech: [
