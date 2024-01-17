@@ -2,6 +2,25 @@
 import { gifs } from "./gifsPaths";
 
 export const projects = [
+    
+    {
+        name: 'Avatar Studio',
+        gif: gifs.avatar,
+        order: 'row',
+        text:'Projects.avatar',
+        link: 'https://serranxxx.github.io/avatar-studio/',
+        mock: false,
+        web: '',
+        tech: [
+            {
+                name:'#ReactJS'
+            },
+            // {
+            //     name:'#AdobeXD'
+            // }
+        ]
+
+    },
     {
         name: 'To do list',
         gif: gifs.todo,
@@ -82,24 +101,7 @@ export const projects = [
    
     
 
-    {
-        name: 'Avatar Studio',
-        gif: gifs.avatar,
-        order: 'row-reverse',
-        text:'Projects.avatar',
-        link: 'https://serranxxx.github.io/avatar-studio/',
-        mock: false,
-        web: '',
-        tech: [
-            {
-                name:'#ReactJS'
-            },
-            // {
-            //     name:'#AdobeXD'
-            // }
-        ]
-
-    },
+   
 
     // {
     //     name: 'Sender Reviewer',

@@ -1,4 +1,4 @@
-import avatar from '../assets/gifs/avatar-1.gif'
+import avatar from '../assets/gifs/avatar.gif'
 import taskify from '../assets/gifs/taskify.gif'
 import pancrasio from '../assets/gifs/pancrasio-1.gif'
 import send from '../assets/gifs/send-1.gif'
