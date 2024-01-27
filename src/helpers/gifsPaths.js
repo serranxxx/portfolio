@@ -5,6 +5,7 @@ import send from '../assets/gifs/send-1.gif'
 import journal from '../assets/gifs/journal.gif'
 import azz from '../assets/gifs/azz-1.gif'
 import todo from '../assets/gifs/todo.gif'
+import todo_native from '../assets/gifs/todo-native.gif'
 
 
 import text from '../assets/SVG/Header_1.svg'
@@ -22,7 +23,8 @@ export const gifs = {
     send,
     journal,
     azz,
-    todo
+    todo,
+    todo_native
 }
 
 export const assets = {

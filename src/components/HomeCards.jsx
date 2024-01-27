@@ -34,18 +34,60 @@ export const HomeCards = () => {
                             }}>
 
 
-                            <img src={project.gif} style={{
-                                // height: '22vw', width: 'auto', 
-                                width: '50%',
-                                borderRadius: '2vh',
-                                // boxShadow: '0 0 10px #00000020',
-                                border: '1px solid #463f3a20',
-                                marginRight: `${project.order === 'row' ? '2vw' : '0vh'}`,
-                                marginLeft: `${project.order !== 'row' ? '2vw' : '0vh'}`,
-                            }} />
+                            {
+                                project.native ?
+                                    <Row style={{
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        flexDirection: 'row', width: '70%'
+                                    }}>
+
+
+                                        <img src={project.nativegif} style={{
+                                            // height: '22vw', width: 'auto',
+                                            width: '20%', marginRight: '20px',
+                                            borderRadius: '2vh',
+                                            boxShadow: '0 0 10px #00000020',
+                                            border: '1px solid #463f3a20',
+                                            // marginRight: `${project.order === 'row' ? '2vw' : '0vh'}`,
+                                            // marginLeft: `${project.order !== 'row' ? '2vw' : '0vh'}`,
+                                        }} />
+
+                                        <img src={project.gif} style={{
+                                            // height: '22vw', width: 'auto', 
+                                            width: '77%',
+                                            borderRadius: '2vh',
+                                            // boxShadow: '0 0 10px #00000020',
+                                            border: '1px solid #463f3a20',
+                                            // marginRight: `${project.order === 'row' ? '2vw' : '0vh'}`,
+                                            // marginLeft: `${project.order !== 'row' ? '2vw' : '0vh'}`,
+                                        }} />
+
+
+
+
+
+
+
+                                    </Row>
+                                    :
+                                    <img src={project.gif} style={{
+                                        // height: '22vw', width: 'auto', 
+                                        width: '50%',
+                                        borderRadius: '2vh',
+                                        // boxShadow: '0 0 10px #00000020',
+                                        border: '1px solid #463f3a20',
+                                        marginRight: `${project.order === 'row' ? '2vw' : '0vh'}`,
+                                        marginLeft: `${project.order !== 'row' ? '2vw' : '0vh'}`,
+                                    }} />
+
+                            }
+
+
+
+
 
                             <Col style={{
-                                width: '45%',
+                                width: project.native ? '27%' : '45%',
                                 // marginLeft: '1vw',
                                 marginRight: '1vw',
                                 display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
@@ -119,8 +161,8 @@ export const HomeCards = () => {
                                                         // onClick={() => props.action(props.gif)}
                                                         style={{
                                                             width: 'auto', fontWeight: 500, height: 'auto',
-                                                            color: theme ? '#463f3a80' : '#574C98', 
-                                                            fontWeight: 700, 
+                                                            color: theme ? '#463f3a80' : '#574C98',
+                                                            fontWeight: 700,
                                                             // fontSize: '1.3em',
                                                             marginLeft: '15px', border: '0px solid #f5f5f5'
                                                         }}
@@ -137,11 +179,11 @@ export const HomeCards = () => {
 
                             </Col>
                         </div>
-                        <div 
+                        <div
                             className='home-card-large'
                             style={{
                                 width: '85%',
-                                border: theme ?  '1px solid #463f3a10' : '1px solid #222'  , borderRadius: '2vh',
+                                border: theme ? '1px solid #463f3a10' : '1px solid #222', borderRadius: '2vh',
                                 margin: '4vh 0 4vh 0'
                             }} />
 
@@ -158,12 +200,56 @@ export const HomeCards = () => {
 
                             }}>
 
+                            {
+                                project.native ?
+                                    <Row style={{
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        flexDirection: 'row', width: '98%'
+                                    }}>
 
-                            <img src={project.gif} style={{
+
+                                        <img src={project.nativegif} style={{
+                                            // height: '22vw', width: 'auto',
+                                            width: '20%',
+                                            marginRight: '10px',
+                                            borderRadius: '1vh',
+                                            boxShadow: '0 0 10px #00000020',
+                                            border: '1px solid #463f3a20',
+                                            // marginRight: `${project.order === 'row' ? '2vw' : '0vh'}`,
+                                            // marginLeft: `${project.order !== 'row' ? '2vw' : '0vh'}`,
+                                        }} />
+
+                                        <img src={project.gif} style={{
+                                            // height: '22vw', width: 'auto', 
+                                            width: '75%',
+                                            borderRadius: '1vh',
+                                            // boxShadow: '0 0 10px #00000020',
+                                            border: '1px solid #463f3a20',
+                                            // marginRight: `${project.order === 'row' ? '2vw' : '0vh'}`,
+                                            // marginLeft: `${project.order !== 'row' ? '2vw' : '0vh'}`,
+                                        }} />
+
+
+
+
+
+
+
+                                    </Row>
+                                    :
+                                    <img src={project.gif} style={{
+                                        height: 'auto', width: '98%', borderRadius: '2vh',
+                                        boxShadow: '0 0 20px #000000050',
+                                        border: '0px solid #463f3a20',
+                                    }} />
+
+                            }
+
+                            {/* <img src={project.gif} style={{
                                 height: 'auto', width: '98%', borderRadius: '2vh',
                                 boxShadow: '0 0 20px #000000050',
                                 border: '2px solid #463f3a20',
-                            }} />
+                            }} /> */}
                             <p style={{
                                 fontSize: '1.3em', width: '95%', textAlign: `left`,
                                 fontWeight: 650, color: theme ? '#463f3a99' : '#f5f5f580', margin: '2vh 0 0vh 0'
@@ -211,9 +297,9 @@ export const HomeCards = () => {
                                         // onClick={() => props.action(props.gif)}
                                         style={{
                                             width: 'auto', fontWeight: 500, height: 'auto',
-                                                color: theme ? '#f4f3ee' : '#f5f5f580', backgroundColor: theme ? '#a99fea' : '#574C98',
-                                                border: theme ? '1.5px solid #a99fea' : '1.5px solid #574C98', fontWeight: 700,
-                                                borderRadius: '3vh',
+                                            color: theme ? '#f4f3ee' : '#f5f5f580', backgroundColor: theme ? '#a99fea' : '#574C98',
+                                            border: theme ? '1.5px solid #a99fea' : '1.5px solid #574C98', fontWeight: 700,
+                                            borderRadius: '3vh',
                                         }}
                                     >{t('HomeCards.button')}</Button>
                                 </Link>
@@ -229,8 +315,8 @@ export const HomeCards = () => {
                                                     // onClick={() => props.action(props.gif)}
                                                     style={{
                                                         width: 'auto', fontWeight: 500, height: 'auto',
-                                                        color: theme ? '#463f3a80' : '#574C98', 
-                                                        fontWeight: 700, 
+                                                        color: theme ? '#463f3a80' : '#574C98',
+                                                        fontWeight: 700,
                                                         // fontSize: '1.3em',
                                                         marginLeft: '15px', border: '0px solid #f5f5f5'
                                                     }}

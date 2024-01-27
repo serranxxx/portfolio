@@ -2,18 +2,21 @@
 import { gifs } from "./gifsPaths";
 
 export const projects = [
-    
+
     {
         name: 'Avatar Studio',
         gif: gifs.avatar,
         order: 'row',
-        text:'Projects.avatar',
+        text: 'Projects.avatar',
         link: 'https://serranxxx.github.io/avatar-studio/',
         mock: false,
+        native: false,
+        nativegif: null,
+        git: '',
         web: '',
         tech: [
             {
-                name:'#ReactJS'
+                name: '#ReactJS'
             },
             // {
             //     name:'#AdobeXD'
@@ -25,16 +28,22 @@ export const projects = [
         name: 'To do list',
         gif: gifs.todo,
         order: 'row-reverse',
-        text:'Projects.todo',
+        text: 'Projects.todo',
         link: 'https://serranxxx.github.io/todo/',
         mock: false,
+        native: true,
+        nativegif: gifs.todo_native,
+        git: '',
         web: '',
         tech: [
             {
-                name:'#ReactJS'
+                name: '#ReactJS'
             },
             {
-                name:'#mockAPI'
+                name: '#ReactNative'
+            },
+            {
+                name: '#mockAPI'
             }
         ]
 
@@ -46,10 +55,13 @@ export const projects = [
         text: 'Projects.journal',
         link: 'https://serranxxx.github.io/journal/',
         mock: true,
+        native: false,
+        nativegif: null,
+        git: '',
         web: 'https://www.figma.com/file/yha4SBawOo5L51aLGvInkL/Mindscribe?type=design&mode=design&t=5jP9fHAV4fdSfFO7-1',
         tech: [
             {
-                name:'#ReactJS'
+                name: '#ReactJS'
             },
             // {
             //     name:'#AdobeXD'
@@ -62,16 +74,19 @@ export const projects = [
         name: 'Taskify',
         gif: gifs.taskify,
         order: 'row-reverse',
-        text:'Projects.taskify',
+        text: 'Projects.taskify',
         link: 'https://serranxxx.github.io/taskify/',
         mock: true,
+        native: false,
+        nativegif: null,
+        git: '',
         web: 'https://www.figma.com/file/6dhK160MWtNuA2rc1wREZi/Taskify---web?type=design&t=XKKrhBBbdaE7xfrq-6',
         tech: [
             {
-                name:'#ReactJS'
+                name: '#ReactJS'
             },
             {
-                name:'#Figma'
+                name: '#Figma'
             }
         ]
 
@@ -81,27 +96,30 @@ export const projects = [
         name: 'Data Base',
         gif: gifs.azz,
         order: 'row',
-        text:'Projects.azzhakrutt',
+        text: 'Projects.azzhakrutt',
         link: 'https://serranxxx.github.io/azzhakrutt/',
         mock: false,
+        native: false,
+        nativegif: null,
+        git: '',
         web: '',
         tech: [
             {
-                name:'#ReactJS'
+                name: '#ReactJS'
             },
             {
-                name:'#NodeJS'
+                name: '#NodeJS'
             },
             {
-                name:'#MongoDB'
+                name: '#MongoDB'
             }
         ]
 
     },
-   
-    
 
-   
+
+
+
 
     // {
     //     name: 'Sender Reviewer',
