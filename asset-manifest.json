@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.3fea2369.css",
-    "main.js": "/portfolio/static/js/main.bebd774f.js",
+    "main.js": "/portfolio/static/js/main.7608e59c.js",
     "static/media/send-1.gif": "/portfolio/static/media/send-1.ec11b6455829e8409a21.gif",
     "static/media/azz-1.gif": "/portfolio/static/media/azz-1.c1d4d6c53dd8af24a4c7.gif",
     "static/media/pancrasio-1.gif": "/portfolio/static/media/pancrasio-1.19e0eddfe86ee85853f0.gif",
@@ -10,18 +10,20 @@
     "static/media/taskify.gif": "/portfolio/static/media/taskify.ac3366d979cf4b2739c0.gif",
     "static/media/todo.gif": "/portfolio/static/media/todo.790341045eb0d70e3945.gif",
     "static/media/todo-native.gif": "/portfolio/static/media/todo-native.346221f70e5c42721fc6.gif",
-    "static/media/draw_black.png": "/portfolio/static/media/draw_black.95d740884fd4a4a02bdc.png",
     "static/media/spanish_head.svg": "/portfolio/static/media/spanish_head.f8cf87c181cd2f53fb0b877c07c18207.svg",
     "static/media/Header_1.svg": "/portfolio/static/media/Header_1.8d8a3f2538125bbd3913a45f665e0865.svg",
     "static/media/Resume-AlbertoSerrano.pdf": "/portfolio/static/media/Resume-AlbertoSerrano.65de3718585c532f2cde.pdf",
     "static/media/Curriculum-AlbertoSerrano.pdf": "/portfolio/static/media/Curriculum-AlbertoSerrano.a35e705e43af3584d196.pdf",
     "static/media/draw_1.svg": "/portfolio/static/media/draw_1.f45b03d9d0b90aad2c9e4193121cfb14.svg",
+    "static/media/draw_2.svg": "/portfolio/static/media/draw_2.74ceefd1f52306f6b07b009f153c6212.svg",
+    "static/media/head-black.svg": "/portfolio/static/media/head-black.e6565c0083d1eb82282d9a2188b25f30.svg",
+    "static/media/head.svg": "/portfolio/static/media/head.333f66dccab3d19b9e4a254d6bd197f0.svg",
     "index.html": "/portfolio/index.html",
     "main.3fea2369.css.map": "/portfolio/static/css/main.3fea2369.css.map",
-    "main.bebd774f.js.map": "/portfolio/static/js/main.bebd774f.js.map"
+    "main.7608e59c.js.map": "/portfolio/static/js/main.7608e59c.js.map"
   },
   "entrypoints": [
     "static/css/main.3fea2369.css",
-    "static/js/main.bebd774f.js"
+    "static/js/main.7608e59c.js"
   ]
 }
