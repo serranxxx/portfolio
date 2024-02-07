@@ -27,7 +27,7 @@ export const ContentHome = () => {
         }}>
         <img
           // className='image-draw'
-          src={assets.draw} style={{
+          src={theme ? assets.draw : assets.black} style={{
 
             width: '20%',
             // display: theme ? '' : 'none',
@@ -108,7 +108,7 @@ export const ContentHome = () => {
         }}>
         <img
           // className='image-draw'
-          src={assets.draw} style={{
+          src={theme ? assets.draw : assets.black} style={{
 
             width: '60%',
             // display: theme ? '' : 'none',
@@ -130,11 +130,11 @@ export const ContentHome = () => {
             width: '90%', textAlign: 'left', margin: '0vh 0 1vh 0',
             fontSize: '1.5em', fontWeight: 650, color: theme ? '#7765e399' : '#7765e380'
           }}>{t('Login.Alberto')}</p>
-          
+
 
           <p style={{
             width: '90%', fontSize: '1.1em', fontWeight: 600, color: theme ? '#463f3a' : '#F5F5F580', margin: '0vh 0 0 0',
-            textAlign: 'justify', 
+            textAlign: 'justify',
             // fontStyle: 'italic'
           }}>{t('Login.text')}</p>
 

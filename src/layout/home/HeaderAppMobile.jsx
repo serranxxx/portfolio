@@ -17,6 +17,7 @@ import { IoLanguage } from "react-icons/io5";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { appContext } from '../../context/appContext';
 import { useTranslation } from 'react-i18next';
+import { assets } from '../../helpers/gifsPaths';
 
 const { Header } = Layout;
 
@@ -206,28 +207,46 @@ export const HeaderAppMobile = ({
             display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
         }}>
 
+            {
+                position === 'home'
+                    ? <div style={{
+                        width: '100%',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    }}>
+                        <img
+                            // className='image-draw'
+                            src={theme ? assets.head : assets.head_black} style={{
+
+                                width: '100%',
+                                // height: 15
+
+                            }} />
+                    </div>
+                    : <Col style={{
+                        display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+                        flexDirection: 'column', width: position === 'home' ? '60%' : '100%'
+                    }}>
 
 
-            <Col style={{
-                display: 'flex', alignItems:  'flex-start', justifyContent: 'center',
-                flexDirection: 'column', width: position === 'home' ? '60%' : '100%'
-            }}>
-                
+                        <h2 style={{
+                            fontSize: position === 'home' ? '2em' : '1.3em', color: second,
+                            fontWeight: 800, marginLeft: '-15px',
+                            fontStyle: position === 'resume' ? 'italic' : 'italic',
+                        }}>{code}</h2>
 
-                <h2 style={{
-                    fontSize: position === 'home' ? '2em' : '1.3em', color: second,
-                    fontWeight: 800, marginLeft: '-15px',
-                    fontStyle: position === 'resume' ? 'italic' : 'italic',
-                }}>{code}</h2>
+                        <p style={{
+                            fontSize: '1em', color: theme ? `${text}` : '#f5f5f560',
+                            fontWeight: 500, marginLeft: '-15px',
+                            display: position === 'resume' ? '' : 'none',
+                            fontStyle: 'italic',
+                            marginTop: '-7.5vh'
+                        }}> Developer - {t('Resume.uiux')}</p>
+                    </Col>
 
-                <p style={{
-                    fontSize: '1em', color: theme ? `${text}` : '#f5f5f560',
-                    fontWeight: 500, marginLeft: '-15px',
-                    display: position === 'resume' ? '' : 'none',
-                    fontStyle: 'italic',
-                    marginTop: '-7.5vh'
-                }}> Developer - {t('Resume.uiux')}</p>
-            </Col>
+            }
+
+
+
 
 
         </Header>

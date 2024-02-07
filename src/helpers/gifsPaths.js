@@ -10,8 +10,10 @@ import todo_native from '../assets/gifs/todo-native.gif'
 
 import text from '../assets/SVG/Header_1.svg'
 import draw from '../assets/SVG/draw_1.svg'
-import black from '../assets/SVG/draw_black.png'
+import black from '../assets/SVG/draw_2.svg'
 import text_spanish from '../assets/SVG/spanish_head.svg'
+import head from '../assets/SVG/head.svg'
+import head_black from '../assets/SVG/head-black.svg'
 
 import resume from '../assets/PDF/Resume-AlbertoSerrano.pdf'
 import cv from '../assets/PDF/Curriculum-AlbertoSerrano.pdf'
@@ -33,6 +35,8 @@ export const assets = {
     draw,
     black,
     cv,
-    resume
+    resume,
+    head,
+    head_black
 }
 
