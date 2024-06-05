@@ -32,14 +32,14 @@ export const HomePage = () => {
             <Layout
                 className='resume-large'
                 style={{ minHeight: '100vh', backgroundColor: theme ? '#f5f5f5' : '#252525' }}>
-                <HeaderApp type={'home'} position={'home'} code={'AS.'} handleDownload={handleDownload}/>
+                <HeaderApp type={'home'} position={'home'} code={'AS.'} handleDownload={handleDownload} />
                 <ContentHome />
             </Layout>
 
             <Layout
                 className='resume-small'
-                style={{ minHeight: '100vh', backgroundColor: theme ? '#f5f5f5' : '#252525' }}>
-                <HeaderAppMobile type={'home'} position={'home'} code={''} />
+                style={{ height: '100vh', backgroundColor: theme ? '#f5f5f5' : '#252525' }}>
+                {/* <HeaderAppMobile type={'home'} position={'home'} code={''} /> */}
                 <ContentHome />
                 <FooterApp type={'home'} position={'home'} code={'AS.'} handleDownload={handleDownload} />
 

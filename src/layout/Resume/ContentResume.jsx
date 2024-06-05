@@ -21,7 +21,7 @@ export const ContentResume = ({ handleDownload }) => {
         <>
             <Content className='scrollable-div resume-large'
                 style={{
-                    marginTop: '15vh', // Ajusta este valor para que el contenido no quede detrás del header
+                    marginTop: '120px', // Ajusta este valor para que el contenido no quede detrás del header
                     marginBottom: '14vh', // Ajusta este valor para que el contenido no quede detrás del footer
                     overflowY: 'scroll',
                     height: 'auto', // Ajusta estos valores según el header y footer
@@ -30,112 +30,7 @@ export const ContentResume = ({ handleDownload }) => {
                     // backgroundColor: `${bg}70`
                 }}
             >
-                <Row style={{
-                    width: '93%',
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    flexDirection: 'row', margin: '3vh 0 2vh 0', position: 'relative',
-                    // borderBottom:'1px solid #000'
-                }}>
-                    <Row style={{
-                        width: '70%', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
 
-                    }}>
-
-                        <Row style={{
-                            position: 'absolute', right: '20px', display: 'flex', alignItems: 'center',
-                            justifyContent: 'flex-end', width: '25%',
-
-                        }}>
-
-                            {/* <div
-                                onClick={handleDownload}
-                                // onMouseEnter={() => setOnDownload(!onDownload)}
-                                style={{
-                                    padding: onDownload ? '3% 5% 3% 12%' : '5%',
-                                    borderRadius: '3vh', position: 'relative',
-                                    display: 'flex', alignItems: 'center',
-                                    justifyContent: 'flex-end', cursor: 'pointer',
-                                    transition: 'transform 0.25s ease-out',
-                                    backgroundColor: theme ? '#463f3a20' : '#f5f5f520'
-                                }}>
-                                <Button
-
-                                    // onClick={handleDownload}
-                                    icon={<MdDownload size={18} style={{ color: theme ? '#F5F5F5' : '#252525' }} />}
-                                    style={{
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        backgroundColor: theme ? '#463f3a' : '#f5f5f580', borderRadius: '50%',
-                                        color: '#F5F5F5', fontWeight: '600', position: 'absolute',
-                                        left: onDownload ? '3px' : '1px', transition: 'transform 0.25s ease-out',
-                                        border: '0px solid #463f3a'
-                                    }} />
-                                {
-                                    onDownload ?
-                                        <p style={{
-                                            fontWeight: 600, margin: 0, transition: 'transform 0.25s ease-out',
-                                            marginLeft: '5px', color: theme ? '#463f3a' : '#f5f5f580'
-                                        }}>Download</p>
-                                        : <></>
-                                }
-
-                            </div> */}
-                        </Row>
-
-
-
-                        <Row style={{
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            backgroundColor: 'transparent', padding: '0 2% 0 2%',
-                            // borderRadius: '3vh'
-                        }}>
-                            <MdEmail size={20} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
-                            <p style={{
-                                fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
-                                marginLeft: '10px', margin: '8px'
-                            }}>albserrano8@gmail.com</p>
-                        </Row>
-                        <div style={{
-                            width: '1.5px', height: '20px', backgroundColor: theme ? '#463f3a' : '#f5f5f580',
-                            borderRadius: '3vh'
-                        }} />
-
-                        <Row style={{
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            backgroundColor: 'transparent', padding: '0 2% 0 2%', borderRadius: '3vh'
-                        }}>
-                            <FaLinkedin size={20} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
-                            <p style={{
-                                fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
-                                marginLeft: '10px', margin: '8px'
-                            }}>albserranog</p>
-                        </Row>
-                        <div style={{
-                            width: '1.5px', height: '20px', backgroundColor: theme ? '#463f3a' : '#f5f5f580',
-                            borderRadius: '3vh'
-                        }} />
-                        <Row style={{
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            backgroundColor: 'transparent', padding: '0 2% 0 2%',
-
-                            // borderRight:'1px solid #000'
-                            // borderRadius: '3vh',
-
-                        }}>
-                            <FaPhoneAlt size={16} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
-                            <p style={{
-                                fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
-                                marginLeft: '10px', margin: '8px'
-                            }}>614 539 48 36</p>
-                        </Row>
-
-                    </Row>
-
-                </Row>
-
-                <hr style={{
-                    width: '90%', border: theme ? '1px solid #463f3a30' : '1px solid #F5F5F520',
-                    borderRadius: '2vh'
-                }} />
 
                 <Row style={{
                     width: '90%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
@@ -162,6 +57,57 @@ export const ContentResume = ({ handleDownload }) => {
                                 <p style={{
                                     margin: '0 0 0 0',
                                     fontWeight: 550, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.3em'
+                                }}>CANPLAST / Frama-Tech</p>
+
+                                <p style={{
+                                    margin: '0 0 0 0',
+                                    fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                                }}>{t('Resume.canplastDate')}</p>
+
+                            </div>
+
+
+
+                            <p style={{
+                                margin: '0 0 0 0',
+                                fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                            }}>UI/UX Developer</p>
+
+                            <ul>
+
+                                <li style={{ marginTop: '3vh' }}><p style={{
+                                    margin: '0 0 0 0', fontStyle: 'italic',
+                                    fontWeight: 500, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                                }}>{t('Resume.Ecommerce')}</p>
+                                    <p style={{
+                                        margin: '1vh 0 0 0', fontStyle: 'italic',
+                                        fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em',
+                                        textAlign: 'justify'
+                                    }}>{t('Resume.full1')}</p>
+
+                                </li>
+
+                                <li style={{ marginTop: '3vh', }}><p style={{
+                                    margin: '0 0 0 0', fontStyle: 'italic',
+                                    fontWeight: 500, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                                }}>{t('Resume.uiux')}</p>
+                                    <p style={{
+                                        margin: '1vh 0 0 0', fontStyle: 'italic', textAlign: 'justify',
+                                        fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                                    }}>{t('Resume.Canplast.uiux')}</p>
+
+
+                                </li>
+
+                            </ul>
+
+                            <div style={{
+                                width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                                flexDirection: 'row', marginTop: '5vh'
+                            }}>
+                                <p style={{
+                                    margin: '0 0 0 0',
+                                    fontWeight: 550, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.3em'
                                 }}>MAS <b>Meta</b>Map</p>
 
                                 <p style={{
@@ -176,7 +122,7 @@ export const ContentResume = ({ handleDownload }) => {
                             <p style={{
                                 margin: '0 0 0 0',
                                 fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
-                            }}>{t('Resume.Meta.description')}</p>
+                            }}>App Developer</p>
 
                             <ul>
 
@@ -362,19 +308,20 @@ export const ContentResume = ({ handleDownload }) => {
                                     <p style={{
                                         margin: '0.5vh 0 0 0',
                                         fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                                    }}>Vue JS</p>
+                                    <p style={{
+                                        margin: '0.5vh 0 0 0',
+                                        fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                                    }}>Liquid</p>
+                                    <p style={{
+                                        margin: '0.5vh 0 0 0',
+                                        fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
                                     }}>MongoDB</p>
                                     <p style={{
                                         margin: '0.5vh 0 0 0',
                                         fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
                                     }}>GitHub / GitLab</p>
-                                    <p style={{
-                                        margin: '0.5vh 0 0 0',
-                                        fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
-                                    }}>Postman</p>
-                                    <p style={{
-                                        margin: '0.5vh 0 0 0',
-                                        fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
-                                    }}>Node JS</p>
+
                                 </Col>
                                 <Col style={{
                                     display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
@@ -395,7 +342,12 @@ export const ContentResume = ({ handleDownload }) => {
                                     <p style={{
                                         margin: '0.5vh 0 0 0',
                                         fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
-                                    }}>QT Creator</p>
+                                    }}>Postman</p>
+                                    <p style={{
+                                        margin: '0.5vh 0 0 0',
+                                        fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
+                                    }}>Node JS</p>
+
 
 
                                 </Col>
@@ -423,12 +375,71 @@ export const ContentResume = ({ handleDownload }) => {
                             <p style={{
                                 margin: '0.5vh 0 0 0',
                                 fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em'
-                            }}>{t('Resume.lan.english')}<b>B1</b></p>
+                            }}>{t('Resume.lan.english')}<b>B2</b></p>
 
 
                         </div>
                     </Col>
                 </Row>
+
+                <Row style={{
+                    width: '100%',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    flexDirection: 'row', marginTop: '80px', position: 'relative',
+                    // borderBottom:'1px solid #000'
+                }}>
+
+
+
+                    <Row style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        backgroundColor: 'transparent', padding: '0 2% 0 2%',
+                        // borderRadius: '3vh'
+                    }}>
+                        <MdEmail size={20} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
+                        <p style={{
+                            fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
+                            marginLeft: '10px', margin: '8px'
+                        }}>albserrano8@gmail.com</p>
+                    </Row>
+                    <div style={{
+                        width: '1.5px', height: '20px', backgroundColor: theme ? '#463f3a' : '#f5f5f580',
+                        borderRadius: '3vh'
+                    }} />
+
+                    <Row style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        backgroundColor: 'transparent', padding: '0 2% 0 2%', borderRadius: '3vh'
+                    }}>
+                        <FaLinkedin size={20} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
+                        <a href='https://www.linkedin.com/in/albserranog/' style={{
+                            fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
+                            marginLeft: '10px', margin: '8px'
+                        }}>albserranog</a>
+                    </Row>
+                    <div style={{
+                        width: '1.5px', height: '20px', backgroundColor: theme ? '#463f3a' : '#f5f5f580',
+                        borderRadius: '3vh'
+                    }} />
+                    <Row style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        backgroundColor: 'transparent', padding: '0 2% 0 2%',
+
+                        // borderRight:'1px solid #000'
+                        // borderRadius: '3vh',
+
+                    }}>
+                        <FaPhoneAlt size={16} style={{ color: theme ? '#463f3a' : '#f5f5f580' }} />
+                        <p style={{
+                            fontWeight: 600, color: theme ? '#463f3a' : '#f5f5f580',
+                            marginLeft: '10px', margin: '8px'
+                        }}>614 539 48 36</p>
+                    </Row>
+
+                </Row>
+
+
+
 
 
             </Content>
@@ -473,7 +484,7 @@ export const ContentResume = ({ handleDownload }) => {
                                 <p style={{
 
                                     fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
-                                    
+
                                 }}>{stringsCorrection(t('Resume.education'))}</p>
 
                                 <p style={{
@@ -511,7 +522,7 @@ export const ContentResume = ({ handleDownload }) => {
                                 <p style={{
 
                                     fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
-                                    
+
                                 }}>{stringsCorrection(t('Resume.Summary'))}</p>
 
                                 <p style={{
@@ -543,16 +554,16 @@ export const ContentResume = ({ handleDownload }) => {
                                 <p style={{
 
                                     fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
-                                    
+
                                 }}>{stringsCorrection(t('Resume.languages'))}</p>
 
                                 <p style={{
-                                    margin: '0 0 0 0', textAlign:'left',
+                                    margin: '0 0 0 0', textAlign: 'left',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>{t('Resume.lan.spanish')}<b>{t('Resume.spanish')}</b></p>
 
                                 <p style={{
-                                    margin: '0.5vh 0 0 0', textAlign:'left',
+                                    margin: '0.5vh 0 0 0', textAlign: 'left',
                                     fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
                                 }}>{t('Resume.lan.english')}<b>B1</b></p>
 
@@ -571,7 +582,7 @@ export const ContentResume = ({ handleDownload }) => {
                                 <p style={{
 
                                     fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
-                                    
+
                                 }}>{stringsCorrection(t('Resume.skills'))}</p>
 
 
@@ -644,7 +655,7 @@ export const ContentResume = ({ handleDownload }) => {
                             <p style={{
 
                                 fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
-                               
+
                             }}>{stringsCorrection(t('Resume.experience'))}</p>
 
                             <div style={{
@@ -764,7 +775,7 @@ export const ContentResume = ({ handleDownload }) => {
 
                     <hr style={{
                         width: '70%', border: theme ? '1px solid #463f3a30' : '1px solid #F5F5F520',
-                        borderRadius: '2vh', marginTop:'4vh', marginBottom:'3vh'
+                        borderRadius: '2vh', marginTop: '4vh', marginBottom: '3vh'
                     }} />
 
                     <Row style={{
@@ -824,7 +835,7 @@ export const ContentResume = ({ handleDownload }) => {
 
                     </Row>
 
-                    
+
 
 
                 </Row>

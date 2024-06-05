@@ -36,11 +36,17 @@
 
     "Resume.experience": "EXPERIENCE",
     "Resume.metamapDate": "DEC 2021 - Currently",
+    "Resume.canplastDate": "FEB 2024 - Currently",
 
     "Resume.Meta.description": "Frontend - Backend developer / UI/UX designer / Python developer",
     "Resume.frontendDev": "Frontend - Backend developer",
+    "Resume.Ecommerce": "Redesign and Restructure of the Digital Store",
     "Resume.uiux": "UI/UX designer",
     "Resume.PythonDev": "Python developer",
+
+    "Resume.Ec1": "In my role as a Front-End Developer and UI/UX Designer, I participated in the redesign and restructuring project of the company’s online store, utilizing Shopify and Liquid. This project involved implementing new functionalities and optimizing the website’s performance, resulting in a significant improvement in the user experience and interface.",
+    "Resume.Canplast.uiux": "Additionally, I have worked on designing user interfaces for various applications managed by the company. My approach has always been user-centered design, creating intuitive, responsive, and accessible experiences. To ensure the precise implementation of my designs, I consistently collaborated with other developers, maintaining visual consistency across all company products.",
+    
 
     "Resume.full1": "In my current position, I specialize in developing user interfaces and web applications using React JS as the main set of technologies, supported by antd (Ant Design) as my UI library to maintain design consistency in the user interface.",
     "Resume.full2":"In addition to my focus on the frontend, I have taken on additional responsibilities in various stages of the project. I have configured the database in MongoDB, ensuring efficient data management. In the realm of backend development, I have created a complete API with its corresponding endpoints using Node JS.",

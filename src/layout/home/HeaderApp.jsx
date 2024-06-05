@@ -47,7 +47,7 @@ export const HeaderApp = ({
             {
 
                 <Menu style={{
-                    backgroundColor: theme ? `#f5f5f5` :'#222', width: 300,
+                    backgroundColor: theme ? `#f5f5f5` : '#222', width: 300,
                     marginTop: '15px', borderRadius: '3vh',
                     marginRight: '-30px'
 
@@ -58,7 +58,7 @@ export const HeaderApp = ({
                         style={{
                             color: `${theme ? '' : (languagebg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'default',
-                            backgroundColor: theme ? languagebg ? `#f3f3f3` : '#fafafa':  languagebg ? `#222` : '#252525', borderRadius: '2vh 2vh 0 0',
+                            backgroundColor: theme ? languagebg ? `#f3f3f3` : '#fafafa' : languagebg ? `#222` : '#252525', borderRadius: '2vh 2vh 0 0',
                             // borderBottom: '1px solid #000'
                         }}>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'left', paddingLeft: '1em', paddingRight: '1em' }}>
@@ -98,7 +98,7 @@ export const HeaderApp = ({
                         style={{
                             color: `${theme ? '' : (themebg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'default',
-                            backgroundColor: theme ? themebg ? `#f3f3f3` : '#fafafa':  themebg ? `#222` : '#252525', borderRadius: '0'
+                            backgroundColor: theme ? themebg ? `#f3f3f3` : '#fafafa' : themebg ? `#222` : '#252525', borderRadius: '0'
                         }}>
                         <div style={{
                             display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -140,7 +140,7 @@ export const HeaderApp = ({
                         style={{
                             color: `${theme ? '' : (downloadbg ? '#f5f5f580' : '#f5f5f580')}`,
                             height: 50, cursor: 'pointer',
-                            backgroundColor: theme ? downloadbg ?  `#A69AE620` : '#fafafa' : downloadbg ? `#A69AE640` : '#252525', borderRadius: '0 0 2vh 2vh'
+                            backgroundColor: theme ? downloadbg ? `#A69AE620` : '#fafafa' : downloadbg ? `#A69AE640` : '#252525', borderRadius: '0 0 2vh 2vh'
                         }}>
                         <div style={{
                             display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -160,7 +160,7 @@ export const HeaderApp = ({
                                             color: theme ? '' : '#f5f5f580'
                                         }}>Download resume</p>
                                         : <p style={{
-                                                color: theme ? '' : '#f5f5f580'
+                                            color: theme ? '' : '#f5f5f580'
                                         }}>Descargar curriculum</p>
                                 }
                             </div>
@@ -260,9 +260,10 @@ export const HeaderApp = ({
                 flexDirection: 'column'
             }}>
                 <h2 style={{
-                    fontSize: position === 'resume' ? '1.5em' : '2.5em', color: second,
-                    fontWeight: 800, marginRight: '10px',
-                    fontStyle: position === 'resume' ? '' : 'italic',
+                    fontSize: position === 'resume' ? '2em' : '2.5em', color: second,
+                    fontWeight: 800,
+                    fontStyle: position === 'resume' ? '' : 'italic', lineHeight: '1',
+                    margin: '0px'
                 }}>{code}</h2>
                 {/* <p style={{
                     fontSize: '1.5em' , color: second,
@@ -273,8 +274,9 @@ export const HeaderApp = ({
                     fontSize: '1.2em', color: theme ? text : '#f5f5f580',
                     fontWeight: 500, marginRight: '10px',
                     display: position === 'resume' ? '' : 'none',
-                    marginTop: '-8vh'
-                }}> {t('Resume.frontendDev')} - {t('Resume.uiux')}</p>
+                    margin: '0px', lineHeight: '1',
+                    marginTop: '10px'
+                }}> Developer - UI/UX Designer</p>
             </Col>
 
 
@@ -329,7 +331,7 @@ export const HeaderApp = ({
                             <Button
                                 onClick={() => handlePages('projects')}
                                 type='ghost'
-                                icon={<IoHammerOutline size={25} style={{ color: theme ? text : `${third}80`  }} />}
+                                icon={<IoHammerOutline size={25} style={{ color: theme ? text : `${third}80` }} />}
                             />
                         </Link>
 
@@ -354,7 +356,7 @@ export const HeaderApp = ({
                             <Button
                                 onClick={() => handlePages('resume')}
                                 type='ghost'
-                                icon={<IoDocumentTextOutline size={25} style={{ color: theme ? text : `${third}80`  }} />}
+                                icon={<IoDocumentTextOutline size={25} style={{ color: theme ? text : `${third}80` }} />}
                                 style={{
 
                                 }} />
@@ -373,7 +375,7 @@ export const HeaderApp = ({
                                 backgroundColor: visible ? second : 'transparent',
                                 border: '0px solid #000', color: theme ? third : '#F5F5F590',
                             }}
-                            icon={visible ? <IoSettingsSharp size={22} style={{ color: visible ? third : theme ? text : `${third}80`  }} /> : <IoSettingsOutline size={22} style={{ color: visible ? third : theme ? text : `${third}80`  }} />} />
+                            icon={visible ? <IoSettingsSharp size={22} style={{ color: visible ? third : theme ? text : `${third}80` }} /> : <IoSettingsOutline size={22} style={{ color: visible ? third : theme ? text : `${third}80` }} />} />
                     </Dropdown>
 
 

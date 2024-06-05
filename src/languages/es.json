@@ -34,12 +34,18 @@
 
     "Resume.experience": "EXPERIENCIA",
     "Resume.metamapDate": "DIC 2021 - Actualidad",
+    "Resume.canplastDate": "FEB 2024 - Actualidad",
 
     "Resume.Meta.description": "Desarrollador Backend - Frontend / Diseñador UI/UX / Desarrollador Python",
     "Resume.frontendDev": "Desarrollador Frontend - Backend",
+    "Resume.Ecommerce": "Rediseño y reestructura de la tienda digital",
     "Resume.uiux": "Diseñador UI/UX",
     "Resume.PythonDev": "Desarrollador Python",
 
+    "Resume.Ec1": "En mi rol de Desarrollador Front-End y Diseñador UI/UX, participé el proyecto de rediseño y reestructuración de la tienda en línea de la empresa, utilizando Shopify y Liquid. Este proyecto ha involucrado la implementación de nuevas funcionalidades y la optimización del rendimiento del sitio web, lo cual resultó en una mejora significativa de la experiencia y la interfaz de usuario. ",
+    "Resume.Canplast.uiux": "Además, he trabajado en el diseño de interfaces de usuario para diversas aplicaciones que maneja la empresa. Mi enfoque ha sido siempre el diseño centrado en el usuario, creando experiencias intuitivas, responsivas y accesibles. Para asegurar la implementación precisa de mis diseños, colaboré de manera constante con otros desarrolladores manteniendo la coherencia visual en todos los productos de la empresa.",
+
+    
     "Resume.full1": "En mi actual posición, me especializo en el desarrollo de interfaces de usuario y aplicaciones web utilizando React JS como principal conjunto de tecnologías, respaldado por antd (Ant Design) como mi librería de UI para mantener una coherencia de diseño en la interfaz de usuario.",
     "Resume.full2":"Además de mi enfoque en el frontend, he asumido responsabilidades adicionales en diferentes etapas del proyecto. He configurado la base de datos en MongoDB, asegurando una gestión eficiente de los datos. En el ámbito del desarrollo backend, he creado una API completa con sus respectivos endpoints utilizando Node JS.",
     "Resume.full3":"Este enfoque integral me ha permitido contribuir de manera significativa a todas las fases de un proyecto, desde la configuración de la base de datos y el desarrollo de la API backend hasta el diseño de la interfaz de usuario y la implementación frontend utilizando React JS y antd.",

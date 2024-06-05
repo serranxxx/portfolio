@@ -41,22 +41,11 @@ export const LayoutApp = () => {
         className='container login-large'
         style={{
           height: '100vh', width: '100%', backgroundColor: '#f4f3ee',
-           alignItems: 'center', justifyContent: 'center',
-          flexDirection: 'row', position: 'relative'
+          alignItems: 'center', justifyContent: 'center',
+          flexDirection: 'row', position: 'relative',
+
         }}
       >
-        {/* <Button
-          icon={<HiOutlineTranslate style={{ color: `${!language_ ? '#bcb8b1' : '#f4f3ee'}` }} />}
-          className='button'
-          onClick={() => setLanguage(!language_)}
-          style={{
-            position: 'absolute', top: '3%', right: '3%',
-            margin: '0 0.5vh 0 0.5vh',
-             fontWeight: 500, height: 'auto',
-            backgroundColor: `${language_ ? '#bcb8b1' : 'transparent'}`,
-            borderRadius: '1vh', fontSize: '1em', color:`${!language_ ? '#bcb8b1' : '#f4f3ee'}`,
-            border: `${language_ ? '0px solid #bcb8b1' : '2px solid #bcb8b1'}`
-          }}>{t('button.translate')}</Button> */}
 
         <Button
           icon={language_ ? <IoLanguageOutline size={25} style={{ color: '#463f3a' }} /> : <IoLanguageSharp size={25} style={{ color: '#463f3a' }} />}
@@ -129,7 +118,7 @@ export const LayoutApp = () => {
         className='container login-medium'
         style={{
           height: '100vh', width: '100%', backgroundColor: '#f4f3ee',
-           alignItems: 'center', justifyContent: 'center',
+          alignItems: 'center', justifyContent: 'center',
           flexDirection: 'row', position: 'relative'
         }}
       >
