@@ -83,7 +83,7 @@ export const ContentResume = ({ handleDownload }) => {
                                         margin: '1vh 0 0 0', fontStyle: 'italic',
                                         fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1.2em',
                                         textAlign: 'justify'
-                                    }}>{t('Resume.full1')}</p>
+                                    }}>{t('Resume.Ec1')}</p>
 
                                 </li>
 
@@ -657,6 +657,50 @@ export const ContentResume = ({ handleDownload }) => {
                                 fontWeight: 500, color: theme ? '#463f3a' : '#f5f5f580', fontSize: '1.1em',
 
                             }}>{stringsCorrection(t('Resume.experience'))}</p>
+
+                            <div style={{
+                                width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                                flexDirection: 'row'
+                            }}>
+                                <p style={{
+                                    margin: '0 0 0 0',
+                                    fontWeight: 550, color: theme ? '#463f3a99' : '#f5f5f580', fontSize: '1em'
+                                }}>CANPLAST / Frama-Tech</p>
+
+                                <p style={{
+                                    margin: '0 0 0 0',
+                                    fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
+                                }}>{t('Resume.canplastDate')}</p>
+
+                            </div>
+
+
+
+                            <p style={{
+                                margin: '0 0 0 0',
+                                fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
+                            }}>UI/UX Developer</p>
+
+                            <p style={{
+                                margin: '2vh 0 0 0', fontStyle: 'italic',
+                                fontWeight: 500, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
+                            }}>{t('Resume.Ecommerce')}</p>
+                            <p style={{
+                                margin: '1vh 0 0 0', fontStyle: 'italic',
+                                fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em',
+                                textAlign: 'justify'
+                            }}>{t('Resume.Ec1')}</p>
+
+                            <p style={{
+                                margin: '2vh 0 0 0', fontStyle: 'italic',
+                                fontWeight: 500, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em'
+                            }}>{t('Resume.uiux')}</p>
+                            <p style={{
+                                margin: '1vh 0 3vh 0', fontStyle: 'italic',
+                                fontWeight: 400, color: theme ? '#463f3a80' : '#f5f5f580', fontSize: '1em',
+                                textAlign: 'justify'
+                            }}>{t('Resume.Canplast.uiux')}</p>
+
 
                             <div style={{
                                 width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
